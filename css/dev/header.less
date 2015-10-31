@@ -1,3 +1,194 @@
 .header {
+	background: url(../img/header_bg.png) top center no-repeat;
+	// background-size: 100%;
+	margin-bottom: 14px;
+	&__top {
+		margin-bottom: 39px;
+	}
+	&__logo-text {
+		font-family: 'Exo';
+		font-size: 50px;
+		color: #3d434f;
+		text-transform: uppercase;
+		margin: -15px 0 0 0;
+		display: inline-block;
+		letter-spacing: 2px;
+	}
+	// главное меню
+	&__menu {
+		&-list {
+			padding: 0;
+			margin: 13px 0 0 0;
+			& * {
+				-webkit-transition: all 0.4s ease;
+				-moz-transition: all 0.4s ease;
+				-ms-transition: all 0.4s ease;
+				-o-transition: all 0.4s ease;
+				transition: all 0.4s ease;
+			}
+		}
+		&-item {
+			display: inline-block;
+			margin-left: -4px;
+			padding: 5px 21px;
+			border-right: 1px solid #124e7a;
+			border-left: 1px solid #052449;
+			&:first-child {
+				padding-left: 0;
+				border-left: none;
+			}
+			&:last-child {
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+		&-link {
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 15px;
+			display: block;
+			&:hover {
+				color: #fff;
+				text-decoration: none;
+				color: darken(#fff, 10%);
+			}
+			
+		}
+	}
+	// список городов
+	&__city {
+		&-link {
+			color: #fff;
+			display: inline-block;
+			font-weight: 300;
+			margin: 20px 10px 5px 9px;
+			line-height: 18px;
+			font-size: 16px;
+			border-bottom: 1px dotted #849ab0;
+			position: relative;
+			-webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
+			-o-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 7px;
+				right: -12px;
+				width: 0;
+				height: 0;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 4px solid #849ab0;
 
+			}
+			&:hover {
+				border-bottom: 1px dotted transparent;
+				color: #fff;
+				text-decoration: none;
+			}
+			&:focus,
+			&:active {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		&-img {
+			position: relative;
+			top: -2px;
+			max-width: 13px;
+			max-height: 16px;
+		}
+		&-list {
+			background: #fff;
+			position: absolute;
+			top: 50px;
+			right: 0;
+			width: 100%;
+			border: 1px solid #849ab0;
+			padding: 5px 5px 15px 5px;
+			box-sizing: border-box;
+			margin: 0;
+			display: none;
+			z-index: 10;
+			& a {
+				max-width: 125px;
+				white-space: nowrap;
+				color: #000;
+				font-weight: 400;
+				margin: 12px 0 -5px 8px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				&:after {display: none;}
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+		&-item {
+			text-align: left;
+		}
+	}
+	&__phone {
+		color: #3d434f;
+		font-weight: 400;
+		font-size: 34px;
+		margin-left: 6%;
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: none;
+			color: #3d434f;
+		}
+	}
+	&__btn {
+		display: inline-block;
+		color: #2f83d6;
+		font-size: 15px;
+		position: relative;
+		font-weight: 400;
+		line-height: 17px;
+		display: block;
+		border-radius: @radius;
+	    box-sizing: border-box;
+	    border: 2px solid #2f83d6;
+	    text-align: center;
+	    margin: -6px 15px 0 0px;
+	    padding: 15px 29px 13px 50px;
+	    -webkit-transition: all 0.4s ease;
+	    -moz-transition: all 0.4s ease;
+	    -ms-transition: all 0.4s ease;
+	    -o-transition: all 0.4s ease;
+	    transition: all 0.4s ease;
+	    span {
+	    	border-bottom: 1px solid #c0daf3;
+	    	display: inline-block;
+	    	position: relative;
+	    	&:after {
+	    		content: '';
+	    		position: absolute;
+	    		background: url(../img/header_sprite.png) 0 0 no-repeat;
+	    		width: 15px;
+	    		height: 21px;
+	    		top: -2px;
+	    		left: -23px;
+	    	}
+	    	&._call {
+	    		&:after {
+	    			background-position: -29px 0px;
+	    		}
+	    	}
+	    }
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			color: #2f83d6;
+			border: 2px solid #08315b;
+			span {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
 }

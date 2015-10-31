@@ -1,4 +1,34 @@
 header.header
-	.container-fluid
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+	.container
+		.header__top
+			.row
+				.col-sm-8
+					ul.header__menu-list
+						each item in menu
+							li.header__menu-item: a.header__menu-link(href="#") #{item}
+				.col-sm-2.text-right.pull-right
+					img.header__city-img(src="img/moscow_pic.png", alt="")
+					a.header__city-link.toggle(href="#") Москва
+					ul.header__city-list
+						li.header__city-item
+							img.header__city-img(src="img/moscow_pic.png", alt="")
+							a.header__city-link(href="#") Санкт-Петербург123123
+						li.header__city-item
+							img.header__city-img(src="img/moscow_pic.png", alt="")
+							a.header__city-link(href="#") Город №2
+		.header__bottom
+			.row
+				.col-sm-3
+					a.header__logo(href="/")
+						p.header__logo-text coplast
+				.col-sm-9
+					.row
+						.col-sm-5
+							a.header__phone(href="tel:+88003334910") #{phone}
+						.pull-right
+							a.header__btn(href="#") 
+								span._call Вызвать замерщика
+						.pull-right
+							a.header__btn(href="#") 
+								span._calc Рассчитать стоимость
+						

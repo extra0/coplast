@@ -1,3 +1,218 @@
 extends _layout
 block content
-	p .
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail узнайте подробнее 
+			a(href="#") о производстве
+	.slider__block
+		ul.slider__list
+			li.slider__list-item(style="background: url(../img/content/slider_bg_1.jpg) top center no-repeat;")
+				.container
+					.row
+						.col-sm-7.text-right.padding-top-50
+							p.slider__title Скидка 20%
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							.slider__countdown
+								p.slider__countdown-text закончится через
+								#countdown_dashboard
+									.dash.hours_dash
+										.digit 0
+										.digit 0
+										span.dash_title Часов
+									.dash.minutes_dash
+										.digit 0
+										.digit 0
+										span.dash_title Минут
+									.dash.seconds_dash
+										.digit 0
+										.digit 0
+										span.dash_title Секунд
+						.col-sm-5.padding-top-50
+							.slider__text-wrap
+								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+								a.btn.btn-yellow(href="#") Спешите заказать!
+			li.slider__list-item(style="background: url(../img/content/slider_bg_2.jpg) top center no-repeat;")
+				.container
+	.item-top__block
+		.container
+			h2.subtitle Сатиновый натяжной потолок на кухню
+			p.item-top__text Разнообразие фактур и цвета, широкие возможности для дизайна, практичность и функциональность - достоинства полотен ПВХ.
+			.item-top__article-preview.pull-left
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Теплый контур
+						|  и i-стекло в каждом окне. Они дарят тепло и экономят электроэнергию
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img2.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Удобная рассрочка без переплаты и взносов
+						| . Просто делим сумму на 3–12 месяцев
+			.item-top__description-block.pull-left
+				a(href="#")
+					img.item-top__description-img(src="img/content/main_img_1.jpg", alt="")
+				.item-top__description-info
+					p.item-top__description-text В среднем по Москве:
+					p.item-top__description-old-price.replace 18970
+						i.rubl a
+					p.item-top__description-text У нас:
+					p.item-top__description-price.replace 16590
+						i.rubl a
+					p.item-top__description-text площадь 9,2 м<sup>2</sup>
+					p.item-top__description-text марка полотна Pinpai
+					p.item-top__description-text цвет белый
+					a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+	.item-top__block
+		.container
+			h2.subtitle Сатиновый натяжной потолок на кухню
+			p.item-top__text Разнообразие фактур и цвета, широкие возможности для дизайна, практичность и функциональность - достоинства полотен ПВХ.
+			.item-top__article-preview.pull-left
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Теплый контур
+						|  и i-стекло в каждом окне. Они дарят тепло и экономят электроэнергию
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img2.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Удобная рассрочка без переплаты и взносов
+						| . Просто делим сумму на 3–12 месяцев
+			.item-top__description-block.pull-left
+				a(href="#")
+					img.item-top__description-img(src="img/content/main_img_1.jpg", alt="")
+				.item-top__description-info
+					p.item-top__description-text В среднем по Москве:
+					p.item-top__description-old-price.replace 18970
+						i.rubl a
+					p.item-top__description-text У нас:
+					p.item-top__description-price.replace 16590
+						i.rubl a
+					p.item-top__description-text площадь 9,2 м<sup>2</sup>
+					p.item-top__description-text марка полотна Pinpai
+					p.item-top__description-text цвет белый
+					a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+	.item-top__block
+		.container
+			h2.subtitle Сатиновый натяжной потолок на кухню
+			p.item-top__text Разнообразие фактур и цвета, широкие возможности для дизайна, практичность и функциональность - достоинства полотен ПВХ.
+			.item-top__article-preview.pull-left
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Теплый контур
+						|  и i-стекло в каждом окне. Они дарят тепло и экономят электроэнергию
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img2.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Удобная рассрочка без переплаты и взносов
+						| . Просто делим сумму на 3–12 месяцев
+			.item-top__description-block.pull-left
+				a(href="#")
+					img.item-top__description-img(src="img/content/main_img_2.jpg", alt="")
+				.item-top__description-info
+					p.item-top__description-text В среднем по Москве:
+					p.item-top__description-old-price.replace 18970
+						i.rubl a
+					p.item-top__description-text У нас:
+					p.item-top__description-price.replace 16590
+						i.rubl a
+					p.item-top__description-text площадь 9,2 м<sup>2</sup>
+					p.item-top__description-text марка полотна Pinpai
+					p.item-top__description-text цвет белый
+					a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+	.item-top__block
+		.container
+			h2.subtitle Матовый натяжной потолок в спальню
+			p.item-top__text Разнообразие фактур и цвета, широкие возможности для дизайна, практичность и функциональность - достоинства полотен ПВХ.
+			.item-top__article-preview.pull-left
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Теплый контур
+						|  и i-стекло в каждом окне. Они дарят тепло и экономят электроэнергию
+				.item-top__article-preview-block
+					a(href="#")
+						img.item-top__article-preview-img(src="img/content/img2.png", alt="")
+					p.item-top__article-preview-text 
+						a.item-top__article-preview-link(href="#") 
+							span.line Удобная рассрочка без переплаты и взносов
+						| . Просто делим сумму на 3–12 месяцев
+			.item-top__description-block.pull-left
+				a(href="#")
+					img.item-top__description-img(src="img/content/main_img_1.jpg", alt="")
+				.item-top__description-info
+					p.item-top__description-text В среднем по Москве:
+					p.item-top__description-old-price.replace 18970
+						i.rubl a
+					p.item-top__description-text У нас:
+					p.item-top__description-price.replace 16590
+						i.rubl a
+					p.item-top__description-text площадь 9,2 м<sup>2</sup>
+					p.item-top__description-text марка полотна Pinpai
+					p.item-top__description-text цвет белый
+					a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+	.calculation__block
+		.container
+			h2.subtitle.text-center Не подошло ни одно решение?
+			p.text-center Не беда, мы можем реализовать любую вашу задумку
+	.inform__block(style="background: url(../img/content/people.jpg) top center no-repeat;")
+		.container
+			.inform__inner-block
+				.row
+					.col-sm-4
+						p.inform__number.text-right 60
+					.col-sm-7
+						p.inform__text Сотрудников работают в нашей компании
+			ul.inform__link-list
+				li.inform__link-item
+					a.inform__link(href="javascript:void(0);" data-style="background: url(../img/content/people.jpg) top center no-repeat;")
+						span.line 
+							b.inform__link-number 200 
+							span.inform__link-text объектов успешно сдаем каждый месяц
+				li.inform__link-item
+					a.inform__link.active(href="javascript:void(0);" data-style="background: url(../img/content/people_2.jpg) top center no-repeat;")
+						span.line 
+							b.inform__link-number 60 
+							span.inform__link-text сотрудников работают в нашей команде
+				li.inform__link-item
+					a.inform__link(href="javascript:void(0);" data-style="background: url(../img/content/people_3.jpg) top center no-repeat;")
+						span.line 
+							b.inform__link-number 6 м<sup>2</sup> 
+							span.inform__link-text натяжных потолков установили в 2014 году

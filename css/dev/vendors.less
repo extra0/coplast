@@ -237,14 +237,6 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	left: -5px;
-	background: #fff;
-	
-	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
 	-moz-transform: translatez(0);
     	-ms-transform: translatez(0);
@@ -291,52 +283,52 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
-	text-indent: -9999px;
-	display: block;
-	width: 10px;
-	height: 10px;
+	width: 30px;
+	height: 152px;
 	margin: 0 5px;
 	outline: 0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	opacity: 0.8;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-	left: 10px;
-	// background: url(images/controls.png) no-repeat 0 -32px;
+	left: 78px;
+	background: url(../img/arrow.png) no-repeat 0 0;
 }
 
 .bx-wrapper .bx-next {
-	right: 10px;
-	// background: url(images/controls.png) no-repeat -43px -32px;
+	right: 78px;
+	background: url(../img/arrow.png) no-repeat 0 0;
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
+.bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-prev:hover {
-	background-position: 0 0;
-}
-
-.bx-wrapper .bx-next:hover {
-	background-position: -43px 0;
+	opacity: 0.8;
 }
 
 .bx-wrapper .bx-controls-direction a {
 	position: absolute;
-	top: 50%;
+	top: 38%;
 	margin-top: -16px;
 	outline: 0;
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 152px;
 	text-indent: -9999px;
 	z-index: 9999;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {
@@ -408,4 +400,114 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+//  таймер
+#countdown_dashboard {
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  margin-right: 65px;
+}
+#countdown_dashboard:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dash {
+  width: 94px;
+  height: 70px;
+  background: transparent url('../img/counter_bg.png') 0 0 no-repeat;
+  float: left;
+  margin-left: -2px;
+  position: relative;
+  background-size: 100%;
+}
+
+.dash .digit {
+  font-size: 53px;
+  font-weight: bold;
+  float: left;
+  width: 40px;
+  text-align: center;
+  font-family: 'Uni Sans';
+  color: #343434;
+  position: relative;
+  top: -4px;
+  left: 1px;
+  margin: 0 3px;
+}
+
+.dash_title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: #fff;
+  bottom: -14px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.dev_comment {
+  font-size: 14pt;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+  margin: 40px 10px;
+}
+
+#subscribe_form {
+  position: relative;
+} 
+
+#email_field {
+  font-size: 16pt;
+  padding: 6px 10px;
+  width: 300px;
+}
+
+#subscribe_button {
+  font-size: 14pt;
+  color: #333;
+  padding: 4px 8px;
+}
+
+.copyright {
+  font-size: 9pt;
+  color: #333;
+  margin: 40px 0px;
+}
+
+.faded {
+  color: #999;
+}
+
+.form_message {
+  width: 400px;
+  padding: 10px;
+  margin: 15px auto;
+  display: none;
+}
+
+#error_message {
+  background-color: #ffe;
+  border-left: 5px solid #bb3;
+  border-right: 5px solid #bb3;
+  color: #770;
+}
+
+#info_message {
+  background-color: #f0f9ff;
+  border: 1px solid #eef;
+}
+
+#loading {
+  text-align: center;
+  margin: 10px;
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 60px;
 }

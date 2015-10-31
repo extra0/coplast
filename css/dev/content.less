@@ -1,0 +1,301 @@
+// блок с пояснения после хедера на главной
+.clarification {
+	&__block {
+		border-radius: @radius;
+		background: #efefef;
+		box-sizing: border-box;
+		padding: 0px 16px 0px 31px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: -14px;
+			left: 94px;
+			border-left: 18px solid transparent;
+			border-right: 18px solid transparent;
+			border-bottom: 14px solid #efefef;
+		}
+	}
+	&__text {
+		font-size: 20px;
+		margin: 22px 34px 22px 0;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__img {
+		margin-right: 7px;
+	}
+	&__detail {
+		position: relative;
+		font-style: italic;
+		margin: 5px 0 0 14%;
+		&:before {
+			content: '';
+		    position: absolute;
+		    background: url(../img/line.png) 0 0 no-repeat;
+		    width: 64px;
+		    height: 43px;
+		    top: -23px;
+		    left: -78px;
+		}
+		a {
+			color: #2f83d6;
+			border-bottom: 1px solid #97c1ea;
+			display: inline-block;
+			line-height: 11px;
+			&:hover {
+				text-decoration: none;
+				color: #2f83d6;
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+}
+// слайдер на главной
+.slider {
+	&__block {
+		margin-top: 5px;
+		overflow: hidden;
+	}
+	&__title {
+		font-size: 78px;
+		font-weight: bold;
+		margin: 0 15px 15px 0;
+		text-transform: uppercase;
+		color: #fff;
+		padding-right: 50px;
+		border-right: 1px solid #9ac6dc;
+	}
+	&__list-item {
+		padding-bottom: 20px;
+		min-height: 288px;
+	}
+	&__countdown-text {
+		color: #fff;
+		font-size: 30px;
+		margin: 12px 9px 0 0;
+		display: inline-block;
+		font-weight: 400;
+		vertical-align: top;
+	}
+	&__text-wrap {
+		margin-left: 14px;
+	}
+	&__text {
+		color: #fff;
+		margin: 6px 25px 34px 0;
+		line-height: 30px;
+		font-weight: 300;
+		font-size: 20px;
+	}
+}
+// блок с топовыми предложениями на главной
+.item-top {
+	&__block {
+		padding: 51px 0 94px 0;
+		&:nth-child(even) {background: #f8f8f8;}
+		&:nth-child(odd) {background: #ececed;}
+	}
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		margin: 0 0 24px 0;
+	}
+	// блок описания топового объекта
+	&__description {
+		&-block {
+			position: relative;
+			vertical-align: top;
+		}
+		&-img {
+			border: 10px solid #fff;
+		}
+		&-info {
+			background: #f9f9f9;
+		    border-radius: 5px 5px 0 5px;
+		    box-sizing: border-box;
+		    position: absolute;
+		    width: 244px;
+		    top: 41px;
+		    right: -53px;
+		    padding: 17px 20px 20px 20px;
+		    z-index: 10;
+			&:before {
+				content: '';
+				position: absolute;
+			    background: url(../img/triangle.png) 0 0 no-repeat;
+			    width: 52px;
+			    height: 35px;
+			    bottom: -35px;
+			    right: 0;
+			}
+		}
+		&-text {
+			color: #898989;
+			margin: 0 0 8px 18px;
+			font-weight: 400;
+		}
+		&-old-price {
+			color: #000;
+			font-size: 22px;
+			font-weight: 400;
+			margin: -13px 0 -2px 18px;
+			position: relative;
+			display: inline-block;
+			&:before {
+				content: '';
+				position: absolute;
+				background: #f20;
+				width: 100%;
+				height: 1px;
+				top: 16px;
+				left: 0;
+				-moz-transform: rotate(-7deg);
+				-webkit-transform: rotate(-7deg);
+				-o-transform: rotate(-7deg);
+				-ms-transform: rotate(-7deg);
+				transform: rotate(-7deg);
+			}
+		}
+		&-price {
+			color: #000;
+			margin: -18px 0 2px 18px;
+			font-size: 32px;
+		}
+		&-link {
+			font-size: 16px;
+			font-weight: bold;
+			padding: 14px 15px 14px 19px;
+		}
+	}
+	// левый блок со статьями на главной
+	&__article-preview {
+		width: 20%;
+		margin: 10px 27px 10px 0;
+		&-block {
+			margin-bottom: 42px;
+		}
+		&-img {
+			border-radius: 50%;
+			width: 108px;
+			height: 108px;
+			margin-bottom: 10px;
+		}
+		&-text {
+			margin: 0;
+			font-weight: 400;
+			line-height: 21px;
+		}
+		&-link {
+			color: #2f83d6;
+			font-size: 50%;
+			border-bottom: 1px solid #97c1ea;
+			&:hover {
+				text-decoration: none;
+				color: #2f83d6;
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+}
+// информационный блок после калькулятора на главной
+.inform {
+	&__block {
+		padding-bottom: 20px;
+		overflow: hidden;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	&__inner-block {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+	&__number {
+		font-family: 'Fira Sans Heavy';
+		font-size: 190px;
+		color: #fff;
+		vertical-align: top;
+		margin: 15px 0 -13px 0;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		top: 0;
+		position: relative;
+		opacity: 1;
+		&.active {
+			top: -300px;
+			opacity: 0;
+		}
+	}
+	&__text {
+		font-size: 54px;
+		line-height: 67px;
+		color: #fff;
+		vertical-align: top;
+		margin: 81px 0 0 -6px;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		position: relative;
+		opacity: 1;
+		right: 0;
+		&.active {
+			right: -600px;
+			opacity: 0;
+		}
+	}
+	&__link {
+		font-size: 60%;
+		color: #fff;
+		font-weight: 300;
+		opacity: 0.8;
+		outline: none;
+		border-bottom: 1px dotted #fff;
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		&:hover,
+		&:active,
+		&.active {
+			opacity: 1;
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 1px dotted transparent;
+		}
+	}
+	&__link-number {
+		font-style: normal;
+		font-weight: normal
+	}
+	&__link-list {
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		position: relative;
+		z-index: 20;
+	}
+	&__link-item {
+		text-align: left;
+		display: inline-block;
+		margin: 0 1%;
+		width: 21%;
+		vertical-align: top;
+		line-height: 15px;
+	}
+}
