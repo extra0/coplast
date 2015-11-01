@@ -191,7 +191,123 @@ block content
 	.calculation__block
 		.container
 			h2.subtitle.text-center Не подошло ни одно решение?
-			p.text-center Не беда, мы можем реализовать любую вашу задумку
+			p.calculation__main-text Не беда, мы можем реализовать любую вашу задумку
+			form(action="#" method="post")
+				.row
+					.col-sm-4
+						h3.calculation__title Площадь потолка
+						input.calculation__amount(type="text" readonly)
+						.calculation__slider
+							span.calculation__metrs M<sup>2</sup>
+					.col-sm-8
+						h3.calculation__title количество светильников
+						.row
+							.col-sm-2
+								input.calculation__lights-input.only-numbers(type="text" value="5")
+								span.calculation__metrs._bottom ШТ.
+							.col-sm-10
+								.calculation__light-block
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+									input.calculation__light-circle(type="radio" name="lighting")
+									label.calculation__light-label
+				h3.calculation__title._sizeM выбор материала
+				.calculation__material-section
+					.calculation__material-block
+						.calculation__tooltip.tooltip-right
+							p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+						input.calculation__material-input#material-1(type="radio" name="material" checked)
+						label.calculation__material-label(for="material-1" data-coef="4")
+							img.calculation__material-img(src="img/content/material.jpg", alt="")
+						p.calculation__material-name
+							img.calculation__material-country-production(src="img/rus.png", alt="")
+							| DESCOR (Тканевые потолки)
+					.calculation__material-block
+						.calculation__tooltip.tooltip-right
+							p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+						input.calculation__material-input#material-2(type="radio" name="material")
+						label.calculation__material-label(for="material-2" data-coef="5")
+							img.calculation__material-img(src="img/content/material.jpg", alt="")
+						p.calculation__material-name
+							img.calculation__material-country-production(src="img/fr.png", alt="")
+							| Polyplast (Бельгия)
+					.calculation__material-block
+						.calculation__tooltip.tooltip-right
+							p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+						input.calculation__material-input#material-3(type="radio" name="material")
+						label.calculation__material-label(for="material-3" data-coef="1")
+							img.calculation__material-img(src="img/content/material.jpg", alt="")
+						p.calculation__material-name
+							img.calculation__material-country-production(src="img/not_ger.png", alt="")
+							| Clipso (Тканевые)
+					.calculation__material-block
+						.calculation__tooltip.tooltip-left
+							p.calculation__tooltip-text Достойный экономичный вариант.вете и в 3х фактурах: мат, глянец и сатин.
+						input.calculation__material-input#material-4(type="radio" name="material")
+						label.calculation__material-label(for="material-4" data-coef="2")
+							img.calculation__material-img(src="img/content/material.jpg", alt="")
+						p.calculation__material-name
+							img.calculation__material-country-production(src="img/ger.png", alt="")
+							| CeilBlank
+					.calculation__material-block
+						.calculation__tooltip.tooltip-left
+							p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+						input.calculation__material-input#material-5(type="radio" name="material")
+						label.calculation__material-label(for="material-5" data-coef="3")
+							img.calculation__material-img(src="img/content/material.jpg", alt="")
+						p.calculation__material-name
+							img.calculation__material-country-production(src="img/rus.png", alt="")
+							| Pongs (ПВХ)
+				.calculation__total-wrap-block
+					.calculation__total-block
+						span.calculation__total-text Примерная стоимость:
+						.calculation__total-old-wrap
+							span.calculation__total-old-price.replace 21341
+							i.rubl a
+							p.calculation__total-description в среднем по Москве
+						.calculation__total-price-wrap
+							span.calculation__total-price.replace 16590
+							i.rubl a
+						button.calculation__total-submit.btn.btn-blue(type="submit") 
+							| Заказать
+							<br>
+							span и получить скидку 20%
 	.inform__block(style="background: url(../img/content/people.jpg) top center no-repeat;")
 		.container
 			.inform__inner-block
@@ -216,3 +332,61 @@ block content
 						span.line 
 							b.inform__link-number 6 м<sup>2</sup> 
 							span.inform__link-text натяжных потолков установили в 2014 году
+	.advantages__block
+		.container
+			.row
+				.col-sm-4
+					img.advantages__img(src="img/adv_1.png", alt="")
+					h3.advantages__title Комплексный подход
+					p.advantages__text Выезд, замер и консультация — всегда бесплатно. И в удобное для вас время. В какой бы части Москвы и Подмосковья вы не находились.				
+				.col-sm-4
+					img.advantages__img(src="img/adv_2.png", alt="")
+					h3.advantages__title Точно в срок
+					p.advantages__text Мы работаем официально, с гарантией качества своих услуг не только в устной форме, но и на бумаге. Мы никуда не пропадаем и всегда заканчиваем начатое.				
+				.col-sm-4
+					img.advantages__img(src="img/adv_3.png", alt="")
+					h3.advantages__title РАБОТАЕМ РУКАМИ
+					p.advantages__text Наши сотрудники постоянно обучаются, за их работой ведется постоянный контроль качества. Поэтому они, как и наши потолки, всегда на высоте!
+	.map__block
+		.map__header-block.text-center
+			.container
+				.map__header-block-text
+					span.map__text Работаем по всей
+					a.map__tab-link.active(href="javascript:void(0);") Москве и МО,
+					a.map__tab-link(href="javascript:void(0);") Питеру, и Ленинградской области!
+				.map__btn-block
+					a.map__btn.btn.btn-blue._calc(href="#") Рассчитать стоимость
+					a.map__btn.btn.btn-blue._phone(href="#") Вызвать замерщика
+		.map__wrap
+			#map
+	.description__section
+		.container
+			.row
+				.col-sm-6
+					.description___block
+						h2.description__title Мы устанавливаем натяжные потолки по всей Москве и Московской области
+						p.description__text Заказать натяжной потолок в нашей компании очень просто – позвоните и пригласите замерщика! Монтаж производится в самые сжатые сроки, а стоимость соответствует качеству, доступна для россиян со средним доходом. Предложенная линейка продукции удовлетворит самого взыскательного и требовательного клиента. 
+						p.description__text Вы сможете установить натяжной потолок класса «премиум» или эконом-варианта, в любом районе столицы или Подмосковья, в помещении любого размера и назначения. Звоните и заказывайте! Профессионально установленный натяжных потолков создаст уют в доме и хорошее настроение у хозяев!
+				.col-sm-6
+					.info__block
+						h2.info__title
+							a.info__title-link(href="#")
+								span.line Справочная информация
+						.info__article-block
+							.info__article-img-wrap
+								a(href="#")
+									img.info__article-img(src="img/content/img.jpg", alt="")
+							.info__article-text-block
+								h3.info__article-title
+									a.info__article-link(href="#")
+										span.line Монтаж тканевых натяжных потолков: секреты профессионалов
+								p.info__article-preview-text Установка тканевых натяжных потолков имеет свои особенности. Пр1офессиональный монтаж делает потолок безупречно гладким и ровным, изысканным и стильным…
+						.info__article-block
+							.info__article-img-wrap
+								a(href="#")
+									img.info__article-img(src="img/content/img.jpg", alt="")
+							.info__article-text-block
+								h3.info__article-title
+									a.info__article-link(href="#")
+										span.line Достоинства тканевого натяжного потолка: выбираем качество!
+								p.info__article-preview-text Тканевые натяжные потолки пользуются популярностью у многих собственников недвижимости, независимо от финансовых возможностей.
