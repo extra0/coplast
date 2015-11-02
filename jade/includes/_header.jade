@@ -2,13 +2,12 @@ header.header
 	.container
 		.header__top
 			.row
-				.col-sm-8
-					.header__menu-list-block
-						span.header__fixed-menu-btn
-						ul.header__menu-list
-							each item in menu
-								li.header__menu-item: a.header__menu-link(href="#") #{item}
-				.col-sm-2.text-right.pull-right
+				.col-sm-8.header__menu-list-block
+					span.header__fixed-menu-btn
+					ul.header__menu-list
+						each item in menu
+							li.header__menu-item: a.header__menu-link(href="#") #{item}
+				.col-sm-2.text-right.pull-right.header__city-block
 					img.header__city-img(src="img/moscow_pic.png", alt="")
 					a.header__city-link.toggle(href="#") Москва
 					ul.header__city-list
@@ -25,12 +24,12 @@ header.header
 						p.header__logo-text coplast
 				.col-sm-9
 					.row
-						.col-sm-5
+						.col-sm-5.text-right
 							a.header__phone(href="tel:+88003334910") #{phone}
-						.pull-right
+						.pull-right.header__btn-wrap
 							a.header__btn(href="#") 
 								span._call Вызвать замерщика
-						.pull-right
+						.pull-right.header__btn-wrap
 							a.header__btn(href="#") 
 								span._calc Рассчитать стоимость
 						

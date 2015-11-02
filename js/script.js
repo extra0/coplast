@@ -214,14 +214,36 @@ $(function() {
 	var $header = $(".header");
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 50) {
-			// $header.addClass('fixed');
+			$header.addClass('fixed');
 
-			$('.header__fixed-menu-btn').addClass('fixed');
+			$('.header__fixed-menu-btn, .header__logo-text, .header__phone, .header__menu-list, .header__menu-list-block, .header__top, .header__btn').addClass('fixed');
+
+			$('.header__city-block').hide();
 		} else if ($(this).scrollTop() <= 50) {
-			// $header.removeClass('fixed');
+			$header.removeClass('fixed');
 
-			// $('.header__fixed-menu-btn').removeClass('fixed');
+			$('.header__fixed-menu-btn, .header__logo-text, .header__phone, .header__menu-list, .header__menu-list-block, .header__top, .header__btn').removeClass('fixed');
+
+			$('.header__city-block').show();
 		}
+	});
+
+	// показываем меню по клику на кнопку при минимизированной шапке
+	$('.header__fixed-menu-btn').click(function(){
+
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		}
+
+		if ($('.header__menu-list.fixed').hasClass('active')) {
+			$('.header__menu-list.fixed').removeClass('active');
+		} else {
+			$('.header__menu-list.fixed').addClass('active');
+		}
+		
+		$('.header__menu-list.fixed').slideToggle(500);
 	});
 
 });
