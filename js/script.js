@@ -218,11 +218,15 @@ $(function() {
 
 			$('.header__fixed-menu-btn, .header__logo-text, .header__phone, .header__menu-list, .header__menu-list-block, .header__top, .header__btn').addClass('fixed');
 
+			$('.header__menu-list').removeClass('static');
+
 			$('.header__city-block').hide();
 		} else if ($(this).scrollTop() <= 50) {
 			$header.removeClass('fixed');
 
 			$('.header__fixed-menu-btn, .header__logo-text, .header__phone, .header__menu-list, .header__menu-list-block, .header__top, .header__btn').removeClass('fixed');
+
+			$('.header__menu-list').addClass('static');
 
 			$('.header__city-block').show();
 		}
@@ -242,7 +246,7 @@ $(function() {
 		} else {
 			$('.header__menu-list.fixed').addClass('active');
 		}
-		
+
 		$('.header__menu-list.fixed').slideToggle(500);
 	});
 
