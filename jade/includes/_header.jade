@@ -3,9 +3,11 @@ header.header
 		.header__top
 			.row
 				.col-sm-8
-					ul.header__menu-list
-						each item in menu
-							li.header__menu-item: a.header__menu-link(href="#") #{item}
+					.header__menu-list-block
+						span.header__fixed-menu-btn
+						ul.header__menu-list
+							each item in menu
+								li.header__menu-item: a.header__menu-link(href="#") #{item}
 				.col-sm-2.text-right.pull-right
 					img.header__city-img(src="img/moscow_pic.png", alt="")
 					a.header__city-link.toggle(href="#") Москва

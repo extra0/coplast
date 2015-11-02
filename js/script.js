@@ -210,4 +210,18 @@ $(function() {
 
 	ymaps.ready(init);
 
+	// фикс шапки при скролле
+	var $header = $(".header");
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 50) {
+			// $header.addClass('fixed');
+
+			$('.header__fixed-menu-btn').addClass('fixed');
+		} else if ($(this).scrollTop() <= 50) {
+			// $header.removeClass('fixed');
+
+			// $('.header__fixed-menu-btn').removeClass('fixed');
+		}
+	});
+
 });

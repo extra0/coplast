@@ -31,7 +31,7 @@
 	}
 	&__detail {
 		position: relative;
-		font-style: italic;
+		font-family: 'Fira Sans Light Italic';
 		margin: 5px 0 0 14%;
 		&:before {
 			content: '';
@@ -63,7 +63,7 @@
 	}
 	&__title {
 		font-size: 78px;
-		font-weight: bold;
+		font-family: 'Fira Sans Bold';
 		margin: 0 15px 15px 0;
 		text-transform: uppercase;
 		color: #fff;
@@ -79,7 +79,7 @@
 		font-size: 30px;
 		margin: 12px 9px 0 0;
 		display: inline-block;
-		font-weight: 400;
+		font-family: 'Fira Sans Regular';
 		vertical-align: top;
 	}
 	&__text-wrap {
@@ -89,7 +89,7 @@
 		color: #fff;
 		margin: 6px 25px 34px 0;
 		line-height: 30px;
-		font-weight: 300;
+		font-family: 'Fira Sans Light';
 		font-size: 20px;
 	}
 }
@@ -102,7 +102,7 @@
 	}
 	&__text {
 		font-size: 16px;
-		font-weight: 400;
+		font-family: 'Fira Sans Light';
 		margin: 0 0 24px 0;
 	}
 	// блок описания топового объекта
@@ -137,12 +137,12 @@
 		&-text {
 			color: #898989;
 			margin: 0 0 8px 18px;
-			font-weight: 400;
+			font-family: 'Fira Sans Light';
 		}
 		&-old-price {
 			color: #000;
 			font-size: 22px;
-			font-weight: 400;
+			font-family: 'Fira Sans Regular';
 			margin: -13px 0 -2px 18px;
 			position: relative;
 			display: inline-block;
@@ -168,7 +168,7 @@
 		}
 		&-link {
 			font-size: 16px;
-			font-weight: bold;
+			font-family: 'Fira Sans Bold';
 			padding: 14px 15px 14px 19px;
 		}
 	}
@@ -187,7 +187,7 @@
 		}
 		&-text {
 			margin: 0;
-			font-weight: 400;
+			font-family: 'Fira Sans Light';
 			line-height: 21px;
 		}
 		&-link {
@@ -220,7 +220,7 @@
 	&__main-text {
 		text-align: center;
 		margin: 6px 0 19px 0;
-		font-weight: 400;
+		font-family: 'Fira Sans Light';
 		font-size: 16px;
 	}
 	&__slider {
@@ -256,7 +256,7 @@
 		bottom: 5px;
 		right: -45px;
 		font-size: 16px;
-		font-weight: 300;
+		font-family: 'Fira Sans Light';
 		&._bottom {
 			bottom: 20px;
 			right: -20px;
@@ -339,7 +339,7 @@
 		&-name {
 			text-align: center;
 			margin: 3px 0 0;
-			font-weight: 400;
+			font-family: 'Fira Sans Light';
 		}
 		&-country-production {
 			vertical-align: top;
@@ -393,7 +393,7 @@
 		}
 		&-text {
 			font-size: 18px;
-			font-weight: 400;
+			font-family: 'Fira Sans Light';
 			line-height: 27px;
 			margin: 0;
 			letter-spacing: -1px;
@@ -430,6 +430,8 @@
 		&-old-wrap {
 			display: inline-block;
 			position: relative;
+			width: 135px;
+			text-align: center;
 		}
 		&-old-price {
 			position: relative;
@@ -457,18 +459,18 @@
 		}
 		&-price-wrap {
 			background: url(../img/price_bg.png) center center no-repeat;
-			min-width: 180px;
-			min-height: 56px;
+			width: 180px;
+			height: 56px;
 			text-align: center;
 			display: inline-block;
 			margin-left: 10px;
-			margin-right: 26px;
+			margin-right: 6px;
 		}
 		&-price {
 			color: #000;
 			margin: 0;
 			font-size: 40px;
-			font-weight: bold;
+			font-family: 'Fira Sans Bold';
 			& + .rubl {
 				font-size: 40px;
 				color: #000;
@@ -477,7 +479,7 @@
 		}
 		&-submit {
 			font-size: 40px;
-			font-weight: bold;
+			font-family: 'Fira Sans Bold';
 			text-align: center;
 			padding: 22px 50px 5px 50px;
 			border-radius: @radius!important;
@@ -490,7 +492,7 @@
 		}
 		&-description {
 			color: #a1a1a1;
-			font-weight: 400;
+			font-family: 'Fira Sans Light';
 			margin: 0;
 			width: 160px;
 			bottom: -30px;
@@ -569,7 +571,7 @@
 	&__link {
 		font-size: 60%;
 		color: #fff;
-		font-weight: 300;
+		font-family: 'Fira Sans Light';
 		opacity: 0.8;
 		outline: none;
 		border-bottom: 1px dotted #fff;
@@ -614,7 +616,7 @@
 		padding: 44px 0 38px 0;
 	}
 	&__title {
-		font-weight: bold;
+		font-family: 'Fira Sans Bold';
 		text-transform: uppercase;
 		font-size: 22px;
 		margin: 0;
@@ -626,7 +628,7 @@
 	}
 	&__text {
 		margin: 0;
-		font-weight: 400;
+		font-family: 'Fira Sans Light';
 		font-size: 16px;
 		line-height: 28px;
 	}
@@ -639,7 +641,7 @@
 	&__text {
 		font-size: 32px;
 		margin: 0 10px 0;
-		font-weight: 300;
+		font-family: 'Fira Sans Light';
 	}
 	&__tab-link {
 		color: #2f83d6;
@@ -647,7 +649,7 @@
 		border-bottom: 1px dotted #e0ecf7;
 		display: inline-block;
 		line-height: 30px;
-		font-weight: 300;
+		font-family: 'Fira Sans Light';
 		margin-right: 5px;
 		&:active,
 		&:focus,
@@ -678,7 +680,7 @@
 	}
 	&__btn {
 		font-size: 15px;
-		font-weight: 400;
+		font-family: 'Fira Sans Regular';
 		padding: 15px 29px 15px 50px;
 		position: relative;
 		margin: 0 0px  0 20px;
@@ -724,7 +726,7 @@
 	}
 	&__text {
 		font-size: 16px;
-		font-weight: 400;
+		font-family: 'Fira Sans Light';
 		line-height: 28px;
 		margin: 0 0 28px 0;
 	}
@@ -770,14 +772,14 @@
 		margin: -8px 0 0 109px;
 	}
 	&__article-title {
-		font-weight: 400;
+		font-family: 'Fira Sans Regular';
 		margin: 0 0 5px 0;
 		font-size: 100%;
 	}
 	&__article-link {
 		color: #2f83d6;
 		font-size: 70%;
-		fomt-weight: 400;
+		font-family: 'Fira Sans Regular';
 		border-bottom: 1px solid #bbd5ee;
 		&:hover {
 			border-bottom: 1px solid transparent;
@@ -787,7 +789,7 @@
 	}
 	&__article-preview-text {
 		font-size: 16px;
-		font-weight: 400;
+		font-family: 'Fira Sans Light';
 		margin: 0;
 		line-height: 27px;
 	}
