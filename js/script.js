@@ -60,6 +60,8 @@ $(function() {
 		max: 400,
 		slide: function(event, ui) {
 			$(".calculation__amount").val(ui.value);
+		},
+		stop: function(event, ui) {
 			calculation();
 		}
 	});
@@ -124,9 +126,10 @@ $(function() {
 
 	function calculation() {
 		sum = 0;
+		amount = parseInt($(".calculation__amount").val());
 		k = $('.calculation__lights-input').val() * oneLightSum;
 		x = $('.calculation__amount').val() * metrSum;
-		sum = sum + k;
+		sum = sum + k + amount;
 
 		oldSum.html(sum * 1.2);
 		oldSum.html(numberWithCommas(oldSum.html()));
