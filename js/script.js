@@ -120,18 +120,26 @@ $(function() {
 		oldSum = $('.calculation__total-old-price'),
 		oneLightSum = 100,
 		metrSum = 200,
-		material = 0,
-		sum = 0;
+		material = 0;
 
 	function calculation() {
+		sum = 0;
 		k = $('.calculation__lights-input').val() * oneLightSum;
 		x = $('.calculation__amount').val() * metrSum;
 		sum = sum + k;
 
 		oldSum.html(sum * 1.2);
 		oldSum.html(numberWithCommas(oldSum.html()));
+
+		var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
+
+		totalSum.animateNumber({ number: sum, numberStep: comma_separator_number_step });
+		oldSum.animateNumber({ number: sum*1.2, numberStep: comma_separator_number_step });
+
 		totalSum.html(sum);
 		totalSum.html(numberWithCommas(totalSum.html()));
+
+		
 	}
 
 	// карта
