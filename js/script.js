@@ -12,7 +12,7 @@ $(function() {
 	$('.slider__list').bxSlider({
 		pager: false,
 		auto: true,
-		pause: 3000
+		pause: 7000
 
 	});
 
@@ -120,8 +120,8 @@ $(function() {
 	// просчет калькулятора
 	var totalSum = $('.calculation__total-price'),
 		oldSum = $('.calculation__total-old-price'),
-		oneLightSum = 100,
-		metrSum = 200,
+		oneLightSum = 1000,
+		metrSum = 750,
 		material = 0;
 
 	function calculation() {
@@ -131,13 +131,13 @@ $(function() {
 		x = $('.calculation__amount').val() * metrSum;
 		sum = sum + k + amount;
 
-		oldSum.html(sum * 1.2);
+		oldSum.html(sum * 5);
 		oldSum.html(numberWithCommas(oldSum.html()));
 
 		var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
 
 		totalSum.animateNumber({ number: sum, numberStep: comma_separator_number_step });
-		oldSum.animateNumber({ number: sum*1.2, numberStep: comma_separator_number_step });
+		oldSum.animateNumber({ number: sum*5, numberStep: comma_separator_number_step });
 
 		totalSum.html(sum);
 		totalSum.html(numberWithCommas(totalSum.html()));
@@ -145,13 +145,213 @@ $(function() {
 		
 	}
 
+	calculation();
+
 	// карта
 	function init() {
 		var MapPlaces = new ymaps.Map('map', {
 			center: offices[0].center,
-			zoom: 12,
+			zoom: 11,
 			controls: ['zoomControl']
 		});
+
+		MapPlaces.geoObjects
+			
+				.add(new ymaps.Placemark([55.777697023347606, 37.70197299999995], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6701370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6701370232536, 37.57420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([54.6701370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6501370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6401370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.81326802337879, 37.48407599999996], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.1501370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.5501370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.51326802337879, 37.48407599999996], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+
+
+
+			.add(new ymaps.Placemark([54.777697023347606, 37.70197299999995], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([54.5701370232536, 37.77420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6701370232536, 36.57420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([54.6701370232536, 36.23420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([54.6701370232536, 34.77440299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.0501370232536, 37.17420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.4401370232536, 37.47420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.86326802337879, 37.68407599999996], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6301370232536, 37.87440299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.6601370232536, 37.17420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.2201370232536, 37.17420299999994], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
+				.add(new ymaps.Placemark([55.71326802337879, 37.45407599999996], {
+					hintContent: 'Собственный значок метки'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'img/marker.png',
+					iconImageSize: [35, 42],
+					iconImageOffset: [-31, -42]
+				}))
 
 		for (var i = 0, l = offices.length; i < l; i++) {
 			createGroup(offices[i]);
@@ -160,7 +360,7 @@ $(function() {
 		function createGroup(office) {
 			collection = new ymaps.GeoObjectCollection(null, {
 				iconLayout: 'default#image',
-				iconImageHref: '/img/marker.png',
+				iconImageHref: 'img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			});
