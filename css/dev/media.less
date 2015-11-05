@@ -1,10 +1,130 @@
 @media (max-width: 767px) {
 }
 @media (min-width: 768px) {
+	.header {
+		&__menu {
+			&-item {
+				padding: 5px 8px;
+			}
+			&-link {
+				font-size: 14px;
+			}
+		}
+		&__btn {
+			padding: 15px 9px 13px 35px;
+		}
+	}
+	.map {
+		&__text,
+		&__tab-link {
+			font-size: 22px;
+		}
+		&__wrap {
+			height: 425px;
+		}
+	}
+	.calculation {
+		&__material-section {
+			justify-content: space-around;
+			-webkit-justify-content: space-around;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.clarification {
+		&__block {
+			text-align: center;
+			padding: 15px 16px 15px 31px;
+		}
+		&__text {
+			margin: 7px 15px;
+		}
+	}
+	.calculation {
+		&__total-wrap-block {
+			padding: 0;
+		}
+		&__total-block {
+			text-align: center;
+		}
+		&__total-text {
+			display: block;
+		}
+		&__total-submit {
+			padding: 22px 40px 5px 40px;
+		}
+	}
+	.inform {
+		&__number {
+			text-align: center;
+			margin: 0 0 -120px 0;
+		}
+		&__text {
+			margin: 81px 0 20px -6px;
+		}
+		&__link-item {
+			width: 29%;
+			text-align: center;
+		}
+	}
 }
 @media (min-width: 992px) {
+	.header {
+		&__menu {
+			&-item {
+				padding: 5px 21px;
+			}
+			&-link {
+				font-size: 15px;
+			}
+		}
+		&__btn {
+			padding: 15px 10px 13px 31px;
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.clarification {
+		&__text {
+			font-size: 15px;
+			margin: 16px 34px 16px 0;
+		}
+	}
+	.footer {
+		&__text {
+			&._email-marg {
+				margin-left: -31px;
+			}
+		}
+	}
+	.calculation {
+		&__light-block {
+			float: left;
+		}
+	}
 }
 @media (min-width: 1200px) {
-}
-@media (min-width: 1450px) {
+	.header {
+		&__phone {
+			margin-right: 14%;
+		}
+		&__btn {
+			padding: 15px 29px 13px 50px;
+		}
+	}
+	.map {
+		&__text,
+		&__tab-link {
+			font-size: 32px;
+		}
+		&__wrap {
+			height: 555px;
+		}
+	}
+	.calculation {
+		&__material-section {
+			justify-content: space-between;
+			-webkit-justify-content: space-between;
+		}
+	}
 }
