@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="/favicon.ico">
+    <link href="css/grid.css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="row">
+              <div class="col-sm-10 header__menu-list-block"><span class="header__fixed-menu-btn"></span>
+                <ul class="header__menu-list static">
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">О потолках</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Цены</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Работы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Отзывы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Корпоративным клиентам</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-2 text-right pull-right header__city-block"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link toggle">Москва</a>
+                <ul class="header__city-list">
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Санкт-Петербург123123</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Город №2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="row">
+              <div class="col-sm-3"><a href="/" class="header__logo">
+                  <p class="header__logo-text">coplast</p></a></div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-5 text-right hidden-sm"><a href="tel:+88003334910" class="header__phone">8 (800) 333-49-10</a></div>
+                  <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_call">Вызвать замерщика</span></a></div>
+                  <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_calc">Рассчитать стоимость</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="clarification__block">
+          <p class="clarification__text">Производим и устанавливаем натяжные потолки</p>
+          <p class="clarification__text"> <img src="img/light.png" alt="" class="clarification__img">На 7% быстрее</p>
+          <p class="clarification__text"> <img src="img/diamond.png" alt="" class="clarification__img">На 6% лучше</p>
+          <p class="clarification__text"> <img src="img/cash.png" alt="" class="clarification__img">На 9% дешевле</p>
+        </div>
+        <p class="clarification__detail hidden-sm">узнайте подробнее <a href="#">о производстве</a></p>
+      </div>
+      <div class="slider__block">
+        <ul class="slider__list">
+          <li style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;" class="slider__list-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-7 text-right padding-top-50">
+                  <p class="slider__title">Скидка 20%</p>
+                  <!-- вызов счетчика обратного отсчета-->
+                  <script>
+                    $(document).ready(function(){
+                    	$('#countdown_dashboard').countDown({
+                    		targetDate: {
+                    			'day': 25,
+                    			'month': 11,
+                    			'year': 2015,
+                    			'hour': 13,
+                    			'min': 0,
+                    			'sec': 0
+                    		}
+                    	});
+                    });
+                  </script>
+                  <div class="slider__countdown">
+                    <p class="slider__countdown-text">закончится через</p>
+                    <div id="countdown_dashboard">
+                      <div class="dash hours_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div><span class="dash_title">Часов</span>
+                      </div>
+                      <div class="dash minutes_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div><span class="dash_title">Минут</span>
+                      </div>
+                      <div class="dash seconds_dash">
+                        <div class="digit">0</div>
+                        <div class="digit">0</div><span class="dash_title">Секунд</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5 padding-top-50">
+                  <div class="slider__text-wrap">
+                    <p class="slider__text">При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже</p><a href="#" class="btn btn-yellow">Спешите заказать!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;" class="slider__list-item">
+            <div class="container"></div>
+          </li>
+          <li style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;" class="slider__list-item">
+            <div class="container"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="main__content">
+        <div class="container">
+          <h1 class="title">Наши работы</h1>
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-9">
+              <div class="univ__content-wrap">
+                <div class="univ__title-block"><a href="#" class="univ__title-btn btn btn-blue">Оставить отзыв</a>
+                  <p class="univ__title-text">Оставьте отзыв и получите 3% скидку на следующий заказ!</p>
+                </div>
+                <div class="univ__block">
+                  <p class="univ__text">Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span></p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_1" class="fancybox">							<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_1" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_1" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_1" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                  </div>
+                  <div class="review__block">
+                    <div class="row">
+                      <div class="col-sm-2 col-md-3 col-lg-2"><img src="img/content/ava.jpg" alt="" class="review__autor-img"></div>
+                      <div class="col-sm-10 col-md-9 col-lg-10">
+                        <p class="review__autor">Максим Молоточкин, <span class="review__date">13 ноября 2015</span></p>
+                        <p class="review__text">Перед тем, как заказать потолок, обзвонили несколько компаний. Решили выбрать Випсилинг, показалось более надежным вариантом. В принципе, все условия выполнили, никаких критичных замечаний нет, но вот хочется отметить, что монтажники натоптали и наследили, и не вынесли мусор. Это немного подпортило впечатление. Просьба поблагодарить менеджера Ольгу – очень приятная и толковая девушка. Спасибо.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Общее впечатление:</label>
+                        <div class="review__rating-block"><span style="width: 20%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Обслуживание:</label>
+                        <div class="review__rating-block"><span style="width: 40%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Качество:</label>
+                        <div class="review__rating-block"><span style="width: 80%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Скорость:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="univ__block">
+                  <p class="univ__text">Бесшовный матовый натяжной потолок в коридор 8,8 м2 за <span class="univ__text-bold">34100 руб</span></p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_2" class="fancybox">							<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_2" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_2" class="fancybox">								<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_2" class="fancybox">								<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                  </div>
+                  <div class="review__block">
+                    <div class="row">
+                      <div class="col-sm-2 col-md-3 col-lg-2"><img src="img/content/ava_2.jpg" alt="" class="review__autor-img"></div>
+                      <div class="col-sm-10 col-md-9 col-lg-10">
+                        <p class="review__autor">Жанна, <span class="review__date">13 ноября 2015</span></p>
+                        <p class="review__text">Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Общее впечатление:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Обслуживание:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Качество:</label>
+                        <div class="review__rating-block"><span style="width: 20%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Скорость:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="univ__block">
+                  <p class="univ__text">Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span></p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_3" class="fancybox">							<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_3" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_3" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_3" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                  </div>
+                  <div class="review__block">
+                    <div class="row">
+                      <div class="col-sm-2 col-md-3 col-lg-2"><img src="img/content/ava_2.jpg" alt="" class="review__autor-img"></div>
+                      <div class="col-sm-10 col-md-9 col-lg-10">
+                        <p class="review__autor">Жанна, <span class="review__date">13 ноября 2015</span></p>
+                        <p class="review__text">Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Общее впечатление:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Обслуживание:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Качество:</label>
+                        <div class="review__rating-block"><span style="width: 20%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Скорость:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="univ__block">
+                  <p class="univ__text">Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span></p>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_2.jpg" rel="gallery_4" class="fancybox">							<img src="img/content/work_2.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_4" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_4" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="univ__img-wrap"><a href="img/content/work_1.jpg" rel="gallery_4" class="fancybox">								<img src="img/content/work_1.jpg" alt="" class="univ__img"></a></div>
+                    </div>
+                  </div>
+                  <div class="review__block">
+                    <div class="row">
+                      <div class="col-sm-2 col-md-3 col-lg-2"><img src="img/content/ava_2.jpg" alt="" class="review__autor-img"></div>
+                      <div class="col-sm-10 col-md-9 col-lg-10">
+                        <p class="review__autor">Жанна, <span class="review__date">13 ноября 2015</span></p>
+                        <p class="review__text">Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! </p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Общее впечатление:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Обслуживание:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Качество:</label>
+                        <div class="review__rating-block"><span style="width: 20%;" class="review__rating-active"></span></div>
+                      </div>
+                      <div class="col-sm-3">
+                        <label class="review__rating-title">Скорость:</label>
+                        <div class="review__rating-block"><span style="width: 100%;" class="review__rating-active"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 hidden-sm">
+              <div class="action__block mouthpiece_bg">
+                <div class="action__block-content">
+                  <h3 class="action__title">Cкидка 20%</h3>
+                  <p class="action__text">При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже</p>
+                  <!-- вызов счетчика обратного отсчета-->
+                  <script>
+                    $(document).ready(function(){
+                    	$('#countdown_dashboard_action').countDown({
+                    		targetDate: {
+                    			'day': 25,
+                    			'month': 11,
+                    			'year': 2015,
+                    			'hour': 13,
+                    			'min': 0,
+                    			'sec': 0
+                    		}
+                    	});
+                    });
+                  </script>
+                  <p class="action__countdown-text">закончится через</p>
+                  <div id="countdown_dashboard_action">
+                    <div class="dash hours_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Часов</span>
+                    </div>
+                    <div class="dash minutes_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Минут</span>
+                    </div>
+                    <div class="dash seconds_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Секунд</span>
+                    </div>
+                  </div><a href="#" class="btn btn-yellow action__btn">Спешите заказать!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-sm-5 col-md-4">
+              <p class="footer__text">115035, Москва, <br>ул. Артиллерийская, 58, стр. 1, оф. 18</p>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-2">
+              <p class="footer__text _phone-marg">Телефон:<br>8 (800) 333-49-10</p>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-3">
+              <p class="footer__text _email-marg">Электронная почта:<br><a class="footer__link" href="mailto:hello@coplast.ru">hello@coplast.ru</a></p>
+            </div>
+            <div class="col-md-3 hidden-sm">
+              <div class="footer__link-wrap pull-right"><a href="#">Написать нам</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="footer__text">© 2015 - Coplast</p>
+            </div>
+            <div class="col-sm-7 text-center"><span class="footer__text">Мы в соц.сетях:</span><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/social.png" alt=""></a></div>
+            <div class="col-sm-2"><a href="#" class="pull-right">
+                <p class="footer__develop"></p></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -812,6 +812,11 @@
 	&__title-block {
 		padding: 0 36px;
 		background: #e4ecf5;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
 	}
 	&__list {
 		margin: 0 0 0 -13px;
@@ -890,6 +895,17 @@
 		position: relative;
 		z-index: 20;
 	}
+	&__title-text {
+		padding: 27px 0 15px 0;
+		font-family: 'Fira Sans Regular';
+		font-size: 16px;
+		margin: 0;
+	}
+	&__title-btn {
+		float: right;
+		margin: 10px 0 10px 20px;
+		padding: 15px 27px;
+	}
 }
 // блок с акцией
 .action {
@@ -907,6 +923,18 @@
 				height: 1145px;
 				top: 243px;
 				left: -393px;
+				z-index: -2;
+			}
+		}
+		&.mouthpiece_bg {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(/img/mouthpiece.png) 0 0 no-repeat;
+				width: 479px;
+				height: 609px;
+				top: 328px;
+			    left: -62px;
 				z-index: -2;
 			}
 		}
@@ -945,4 +973,43 @@
 #countdown_dashboard_action {
 	margin: 0 auto;
 	display: inline-block;
+}
+// блок с отзывом
+.review {
+	&__block {
+		margin-bottom: 24px;
+		margin-top: 7px;
+	}
+	&__autor-img {
+		width: 82px;
+		height: 82px;
+		border-radius: 50%;
+	}
+	&__autor {
+		font-family: 'Fira Sans Light Italic';
+		margin: -2px 0 6px -16px;
+	}
+	&__date {
+		font-family: 'Fira Sans Medium';
+		font-style: italic;
+	}
+	&__text {
+		font-family: 'Fira Sans Light';
+		font-size: 16px;
+		margin: 0 0 25px -16px;
+		line-height: 28px;
+	}
+	&__rating-block {
+		margin-top: 4px;
+		position: relative;
+		width: 105px;
+		height: 19px;
+		background: url(/img/star.png) 0 0 repeat-x;
+	}
+	&__rating-active {
+		height: 19px;
+		background: url(/img/active_star.png) 0 0 repeat-x;
+		display: block;
+		width: 21px;
+	}
 }

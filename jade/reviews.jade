@@ -1,0 +1,275 @@
+extends _layout
+block content
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail.hidden-sm узнайте подробнее 
+			a(href="#") о производстве
+	.slider__block
+		ul.slider__list
+			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
+				.container
+					.row
+						.col-sm-7.text-right.padding-top-50
+							p.slider__title Скидка 20%
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							.slider__countdown
+								p.slider__countdown-text закончится через
+								#countdown_dashboard
+									.dash.hours_dash
+										.digit 0
+										.digit 0
+										span.dash_title Часов
+									.dash.minutes_dash
+										.digit 0
+										.digit 0
+										span.dash_title Минут
+									.dash.seconds_dash
+										.digit 0
+										.digit 0
+										span.dash_title Секунд
+						.col-sm-5.padding-top-50
+							.slider__text-wrap
+								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+								a.btn.btn-yellow(href="#") Спешите заказать!
+			li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
+				.container
+			li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
+				.container
+	.main__content
+		.container
+			h1.title Наши работы
+			.row
+				.col-sm-12.col-md-8.col-lg-9
+					.univ__content-wrap
+						.univ__title-block
+							a.univ__title-btn.btn.btn-blue(href="#") Оставить отзыв
+							p.univ__title-text Оставьте отзыв и получите 3% скидку на следующий заказ!
+						.univ__block
+							p.univ__text Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span>
+							.row
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_1")							
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_1")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_1")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_1")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+							.review__block
+								.row
+									.col-sm-2.col-md-3.col-lg-2
+										img.review__autor-img(src="img/content/ava.jpg", alt="")
+									.col-sm-10.col-md-9.col-lg-10
+										p.review__autor Максим Молоточкин, <span class="review__date">13 ноября 2015</span>
+										p.review__text Перед тем, как заказать потолок, обзвонили несколько компаний. Решили выбрать Випсилинг, показалось более надежным вариантом. В принципе, все условия выполнили, никаких критичных замечаний нет, но вот хочется отметить, что монтажники натоптали и наследили, и не вынесли мусор. Это немного подпортило впечатление. Просьба поблагодарить менеджера Ольгу – очень приятная и толковая девушка. Спасибо.
+								.row
+									.col-sm-3
+										label.review__rating-title Общее впечатление:
+										.review__rating-block
+											span.review__rating-active(style="width: 20%;")
+									.col-sm-3
+										label.review__rating-title Обслуживание:
+										.review__rating-block
+											span.review__rating-active(style="width: 40%;")
+									.col-sm-3
+										label.review__rating-title Качество:
+										.review__rating-block
+											span.review__rating-active(style="width: 80%;")
+									.col-sm-3
+										label.review__rating-title Скорость:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+						.univ__block
+							p.univ__text Бесшовный матовый натяжной потолок в коридор 8,8 м2 за <span class="univ__text-bold">34100 руб</span>
+							.row
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_2")							
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_2")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_2")								
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_2")								
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+							.review__block
+								.row
+									.col-sm-2.col-md-3.col-lg-2
+										img.review__autor-img(src="img/content/ava_2.jpg", alt="")
+									.col-sm-10.col-md-9.col-lg-10
+										p.review__autor Жанна, <span class="review__date">13 ноября 2015</span>
+										p.review__text Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! 
+								.row
+									.col-sm-3
+										label.review__rating-title Общее впечатление:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Обслуживание:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Качество:
+										.review__rating-block
+											span.review__rating-active(style="width: 20%;")
+									.col-sm-3
+										label.review__rating-title Скорость:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+						.univ__block
+							p.univ__text Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span>
+							.row
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_3")							
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_3")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_3")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_3")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+							.review__block
+								.row
+									.col-sm-2.col-md-3.col-lg-2
+										img.review__autor-img(src="img/content/ava_2.jpg", alt="")
+									.col-sm-10.col-md-9.col-lg-10
+										p.review__autor Жанна, <span class="review__date">13 ноября 2015</span>
+										p.review__text Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! 
+								.row
+									.col-sm-3
+										label.review__rating-title Общее впечатление:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Обслуживание:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Качество:
+										.review__rating-block
+											span.review__rating-active(style="width: 20%;")
+									.col-sm-3
+										label.review__rating-title Скорость:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+						.univ__block
+							p.univ__text Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span>
+							.row
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_2.jpg" rel="gallery_4")							
+											img.univ__img(src="img/content/work_2.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_4")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_4")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+								.col-sm-3
+									.univ__img-wrap
+										a.fancybox(href="img/content/work_1.jpg" rel="gallery_4")								
+											img.univ__img(src="img/content/work_1.jpg", alt="")
+							.review__block
+								.row
+									.col-sm-2.col-md-3.col-lg-2
+										img.review__autor-img(src="img/content/ava_2.jpg", alt="")
+									.col-sm-10.col-md-9.col-lg-10
+										p.review__autor Жанна, <span class="review__date">13 ноября 2015</span>
+										p.review__text Мы с супругой делали ремонт в новой квартире, вопрос встал о натяжных потолках. Долго искали, обращались и в маленькие фирмы, и в крупные, но, в итоге, вернулись к ВИПСИЛИНГ – это лучшая компания для нас! Ребята приехали быстро, замерщик все сделал оперативно, а главное – цена, цена нас устроила, ничуть она не выше оказалась, чем в мелких, халтурных  фирмах, которые делают без гарантии. Огромное спасибо компании ВИПСИЛИНГ! 
+								.row
+									.col-sm-3
+										label.review__rating-title Общее впечатление:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Обслуживание:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+									.col-sm-3
+										label.review__rating-title Качество:
+										.review__rating-block
+											span.review__rating-active(style="width: 20%;")
+									.col-sm-3
+										label.review__rating-title Скорость:
+										.review__rating-block
+											span.review__rating-active(style="width: 100%;")
+				.col-md-4.col-lg-3.hidden-sm
+					.action__block.mouthpiece_bg
+						.action__block-content
+							h3.action__title Cкидка 20%
+							p.action__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard_action').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							p.action__countdown-text закончится через
+							#countdown_dashboard_action
+								.dash.hours_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Часов
+								.dash.minutes_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Минут
+								.dash.seconds_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Секунд
+							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
