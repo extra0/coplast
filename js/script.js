@@ -11,7 +11,7 @@ $(function() {
 	// слайдер на главной
 	$('.slider__list').bxSlider({
 		pager: false,
-		// auto: true,
+		auto: true,
 		pause: 7000
 
 	});
