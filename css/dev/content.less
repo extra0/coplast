@@ -807,3 +807,137 @@
 		line-height: 27px;
 	}
 }
+// универсальные блоки
+.univ {
+	&__title-block {
+		padding: 0 36px;
+		background: #e4ecf5;
+	}
+	&__list {
+		margin: 0 0 0 -13px;
+		padding: 21px 0 0 0;
+	}
+	&__item {
+		display: inline-block;
+		margin-left: -4px;
+		vertical-align: top;
+	}
+	&__link {
+		font-size: 57%;
+		display: inline-block;
+		padding: 9px 18px 30px 18px;
+		color: #2f83d6;
+		font-family: 'Fira Sans Regular';
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+		.line {
+			border-bottom: 1px dotted #2f83d6;
+			display: inline-block;
+			line-height: 18px;
+		}
+		&.active,
+		&:hover {
+			color: #2f83d6;
+			text-decoration: none;
+			border-radius: 12px 12px 0 0;
+			color: #fff;
+			background: #2f83d6;
+			.line {
+				border-bottom: 1px dotted transparent;
+			}
+		}
+		&.active {
+			cursor: default;
+		}
+	}
+	// универстальный блок с картинками
+	&__block {
+		padding: 36px 38px 16px 38px;
+		&:nth-child(odd) {
+			background: #f8f8f8;
+		}
+		&:nth-child(even) {
+			background: #ececed;
+		}
+	}
+	&__text {
+		line-height: 32px;
+		margin: 0 0 8px 0;
+		font-size: 24px;
+		font-family: 'Fira Sans Regular';
+	}
+	&__text-bold {
+		font-family: 'Fira Sans Medium';
+	}
+	&__img-wrap {
+		margin-bottom: 20px;
+		background: #fff;
+		border: 1px solid #e9e9e9;
+		padding: 5px
+	}
+	&__btn {
+		font-size: 16px;
+		font-family: 'Fira Sans Bold';
+		display: inline-block;
+		margin: 31px 0;
+		padding: 15px 18px;
+	}
+	&__content-wrap {
+		margin: 0 -30px 0 0;
+		position: relative;
+		z-index: 20;
+	}
+}
+// блок с акцией
+.action {
+	&__block {
+		margin-top: 19px;
+		text-align: center;
+		position: relative;
+		z-index: 10;
+		&.docs_bg {
+			&:before {
+				content: '';
+				position: absolute;
+				background: url(/img/docs.png) 0 0 no-repeat;
+				width: 674px;
+				height: 1145px;
+				top: 243px;
+				left: -393px;
+				z-index: -2;
+			}
+		}
+	}
+	&__block-content {
+		background: url(/img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+		padding: 25px 16px;
+	}
+	&__title {
+		font-size: 38px;
+		color: #fff;
+		text-transform: uppercase;
+		font-family: 'Fira Sans Bold';
+		margin: 0;
+	}
+	&__text {
+		font-family: 'Fira Sans Light';
+		color: #fff;
+		line-height: 20px;
+		margin: 0 0 28px;
+		font-size: 16px;
+	}
+	&__countdown-text {
+		color: #fff;
+		font-size: 20px;
+		margin: 0 0 8px;
+		font-family: 'Fira Sans Regular';
+	}
+	&__btn {
+	    padding: 18px 27px 15px 27px!important;
+	    font-size: 16px!important;
+	    margin-top: 24px;
+	}
+}
