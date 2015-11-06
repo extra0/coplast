@@ -125,7 +125,7 @@ $(function() {
 		material = 0;
 
 	function calculation() {
-		
+
 		$('.replace').each(function() {	$(this).html(numberWithCommas($(this).html()));	});
 
 		sum = 0;
@@ -458,6 +458,18 @@ $(function() {
 		}
 
 		$('.header__menu-list.fixed').slideToggle(500);
+	});
+
+	// ------  организация табов на странице клиентов
+	$('.univ__tab-link').each(function(i){$(this).attr('data-index', 'tab-'+ (i+1) +'');}); // проставление индексов
+	$('.univ__tab-inner').each(function(i){$(this).attr('data-index', 'tab-'+ (i+1) +'');}); // проставление индексов
+
+	$('.univ__tab-link').click(function(){
+		$('.univ__tab-link').removeClass('active');
+		$(this).addClass('active');
+		$('.univ__tab-inner').removeClass('active');
+		$('.univ__tab-inner[data-index='+$(this).attr('data-index')+']').addClass('active');
+
 	});
 
 });

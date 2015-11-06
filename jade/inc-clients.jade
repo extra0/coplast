@@ -1,0 +1,145 @@
+extends _layout
+block content
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail.hidden-sm узнайте подробнее 
+			a(href="#") о производстве
+	.slider__block
+		ul.slider__list
+			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
+				.container
+					.row
+						.col-sm-7.text-right.padding-top-50
+							p.slider__title Скидка 20%
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							.slider__countdown
+								p.slider__countdown-text закончится через
+								#countdown_dashboard
+									.dash.hours_dash
+										.digit 0
+										.digit 0
+										span.dash_title Часов
+									.dash.minutes_dash
+										.digit 0
+										.digit 0
+										span.dash_title Минут
+									.dash.seconds_dash
+										.digit 0
+										.digit 0
+										span.dash_title Секунд
+						.col-sm-5.padding-top-50
+							.slider__text-wrap
+								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+								a.btn.btn-yellow(href="#") Спешите заказать!
+			li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
+				.container
+			li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
+				.container
+	.main__content
+		.container
+			h1.title Корпоративным клиентам
+			.row
+				.col-sm-12.col-md-8.col-lg-9
+					.univ__content-wrap
+						.univ__block
+							p.univ__title Компания "Копласт" - дружная команда профессионалов, надежный партнер в бизнесе для строительных компаний, бригадиров и дизайнеров.
+							p.univ__text КОПЛАСТ — федеральная сеть, специализирующаяся исключительно на оказании услуг по производству, продаже и установке натяжных потолков. Региональная сеть Копласт является единственной организацией в отрасли, развернувшей собственную розничную сеть по продаже натяжных потолков в крупнейших городах России.
+							.univ__tab-block
+								ul.univ__tab-list
+									li.univ__tab-item
+										a.univ__tab-link.active(href="javascript:void(0);") 
+											img.univ__tab-img(src="img/content/img.png", alt="")
+											span.univ__tab-link-text Бригадирам
+									li.univ__tab-item
+										a.univ__tab-link(href="javascript:void(0);") 
+											img.univ__tab-img(src="img/content/img.png", alt="")
+											span.univ__tab-link-text Дизайнерам
+									li.univ__tab-item
+										a.univ__tab-link(href="javascript:void(0);") 
+											img.univ__tab-img(src="img/content/img.png", alt="")
+											span.univ__tab-link-text Стройкомпаниям
+								.univ__tab-inner.active
+									.univ__tab-content
+										p.univ__text Сотрудничество с нами помогает бригадирам и прорабам быстро и качественно выполнять монтаж натяжных потолков помещений любых размеров, что обеспечивает дополнительную прибыль. Мы гарантируем:
+										ul.univ__list-text
+											li.univ__item
+												img.univ__item-img(src="img/content/img.png", alt="")
+												p.univ__item-text Безупречное качество работы
+											li.univ__item
+												img.univ__item-img(src="img/content/img2.png", alt="")
+												p.univ__item-text Строгое соблюдение сроков монтажа
+											li.univ__item
+												img.univ__item-img(src="img/content/img3.png", alt="")
+												p.univ__item-text Заключение договора о сотрудничестве
+											li.univ__item
+												img.univ__item-img(src="img/content/img2.png", alt="")
+												p.univ__item-text Выгодные ценовые предложения
+											li.univ__item
+												img.univ__item-img(src="img/content/img3.png", alt="")
+												p.univ__item-text Сертификаты качества на все материалы
+								.univ__tab-inner
+									.univ__tab-content
+										p.univ__text Сотрудничество с нами помогает бригадирам и прорабам быстро и качественно выполнять монтаж натяжных потолков помещений любых размеров, что обеспечивает дополнительную прибыль. Мы гарантируем:
+										p.univ__text Сотрудничество с нами помогает бригадирам и прорабам быстро и качественно выполнять монтаж натяжных потолков помещений любых размеров, что обеспечивает дополнительную прибыль. Мы гарантируем:
+								.univ__tab-inner
+									.univ__tab-content
+										p 3123123123
+							p.univ__text Наша компания предлагает сотрудничество всем операторам рынка строительных услуг Москвы и Подмосковья - дизайнерам, монтажникам, ремонтно-строительным бригадам, прорабам крупных строительных корпораций, бригадирам. Давайте развиваться вместе! Мы знаем специфику вашей работы и предлагаем выгодные условия своим постоянным партнерам. Взаимодействие строится на основе индивидуального договора, где установлен идеальный баланс наших возможностей и ваших пожеланий. Сотрудничать с нами выгодно!
+							button.univ__btn.btn.btn-blue(type="button") Приступить к сотрудничеству
+				.col-md-4.col-lg-3.hidden-sm
+					.action__block.suit_bg
+						.action__block-content
+							h3.action__title Cкидка 20%
+							p.action__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard_action').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							p.action__countdown-text закончится через
+							#countdown_dashboard_action
+								.dash.hours_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Часов
+								.dash.minutes_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Минут
+								.dash.seconds_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Секунд
+							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
