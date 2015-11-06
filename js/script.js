@@ -17,8 +17,8 @@ $(function() {
 	});
 
 	// ф-я разбивки на разряды
-	function numberWithCommas(x) {
-		return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");
+	function numberWithCommas(number) {
+		return number.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");
 	}
 
 	$('.replace').each(function() {
@@ -128,7 +128,7 @@ $(function() {
 		sum = 0;
 		amount = parseInt($(".calculation__amount").val());
 		k = $('.calculation__lights-input').val() * oneLightSum;
-		x = $('.calculation__amount').val() * metrSum;
+		b = $('.calculation__amount').val() * metrSum;
 		sum = sum + k + amount;
 
 		oldSum.html(sum * 5);
@@ -141,11 +141,9 @@ $(function() {
 
 		totalSum.html(sum);
 		totalSum.html(numberWithCommas(totalSum.html()));
-
-		
 	}
-
-	calculation();
+	
+	// calculation();
 
 	// карта
 	function init() {
