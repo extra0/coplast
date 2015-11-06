@@ -125,6 +125,9 @@ $(function() {
 		material = 0;
 
 	function calculation() {
+		
+		$('.replace').each(function() {	$(this).html(numberWithCommas($(this).html()));	});
+
 		sum = 0;
 		amount = parseInt($(".calculation__amount").val());
 		k = $('.calculation__lights-input').val() * oneLightSum;
@@ -132,7 +135,6 @@ $(function() {
 		sum = sum + k + amount;
 
 		oldSum.html(sum * 5);
-		oldSum.html(numberWithCommas(oldSum.html()));
 
 		var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
 
@@ -140,10 +142,9 @@ $(function() {
 		oldSum.animateNumber({ number: sum*5, numberStep: comma_separator_number_step });
 
 		totalSum.html(sum);
-		totalSum.html(numberWithCommas(totalSum.html()));
 	}
-	
-	// calculation();
+
+	calculation();
 
 	// карта
 	function init() {
