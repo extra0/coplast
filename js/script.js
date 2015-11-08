@@ -12,7 +12,8 @@ $(function() {
 	$('.slider__list').bxSlider({
 		pager: false,
 		auto: true,
-		pause: 7000
+		pause: 7000,
+		adaptiveHeight: true
 
 	});
 
