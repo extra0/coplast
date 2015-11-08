@@ -15,49 +15,49 @@ block content
 		p.clarification__detail.hidden-sm узнайте подробнее 
 			a(href="#") о производстве
 	.slider__block
-		ul.slider__list
-			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
-				.container
-					.row
-						.col-sm-7.slider__discount
-							p.slider__title Скидка 20%
-							// вызов счетчика обратного отсчета
-							script.
-								$(document).ready(function(){
-									$('#countdown_dashboard').countDown({
-										targetDate: {
-											'day': 25,
-											'month': 11,
-											'year': 2015,
-											'hour': 13,
-											'min': 0,
-											'sec': 0
-										}
+			ul.slider__list
+				li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
+					.container
+						.row
+							.col-md-7.col-sm-12.slider__discount
+								p.slider__title Скидка 20%
+								// вызов счетчика обратного отсчета
+								script.
+									$(document).ready(function(){
+										$('#countdown_dashboard').countDown({
+											targetDate: {
+												'day': 25,
+												'month': 11,
+												'year': 2015,
+												'hour': 13,
+												'min': 0,
+												'sec': 0
+											}
+										});
 									});
-								});
-							.slider__countdown
-								p.slider__countdown-text закончится через
-								#countdown_dashboard
-									.dash.hours_dash
-										.digit 0
-										.digit 0
-										span.dash_title Часов
-									.dash.minutes_dash
-										.digit 0
-										.digit 0
-										span.dash_title Минут
-									.dash.seconds_dash
-										.digit 0
-										.digit 0
-										span.dash_title Секунд
-						.col-sm-5.slider__discount-description
-							.slider__text-wrap
-								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
-								a.btn.btn-yellow(href="#") Спешите заказать!
-			li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
-				.container
-			li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
-				.container
+								.slider__countdown
+									p.slider__countdown-text закончится через
+									#countdown_dashboard
+										.dash.hours_dash
+											.digit 0
+											.digit 0
+											span.dash_title Часов
+										.dash.minutes_dash
+											.digit 0
+											.digit 0
+											span.dash_title Минут
+										.dash.seconds_dash
+											.digit 0
+											.digit 0
+											span.dash_title Секунд
+							.col-md-5.col-sm-12.slider__discount-description
+								.slider__text-wrap
+									p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+									a.btn.btn-yellow(href="#") Спешите заказать!
+				li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
+					.container
+				li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
+					.container
 	.main__content
 		.container
 			h1.title Тканевые потолки

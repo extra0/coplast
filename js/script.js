@@ -3,6 +3,9 @@ $(function() {
 	// вызов фенсибокса
 	$('.fancybox').fancybox();
 
+	// маска на телефон
+	$('.mask').mask('+9 (999) 999-99-99');
+
 	//  открываем список городов
 	$('.toggle').click(function() {
 		$('.header__city-list').slideToggle();
@@ -11,7 +14,7 @@ $(function() {
 	// слайдер на главной
 	$('.slider__list').bxSlider({
 		pager: false,
-		auto: true,
+		// auto: true,
 		pause: 7000,
 		adaptiveHeight: true
 
@@ -381,10 +384,26 @@ $(function() {
 
 		}
 
-		$('.map__tab-link').click(function() {
-			$('.map__tab-link').removeClass('active');
+		// изменение города по клику на главной 
+		$('.map__tab-link, .city-list__link').click(function() {
+			$('.map__tab-link, .city-list__link').removeClass('active');
 			$(this).addClass('active');
 			var city = $(this).html();
+			for (var i = 0, l = offices.length; i < l; i++) {
+				if (city == offices[i].city) {
+					MapPlaces.panTo(offices[i].center, {
+						delay: 1500
+					});
+				}
+			}
+		});
+
+		// изменения города по клику на скписок в контактах
+		$('.city-list__link').click(function() {
+			$('.city-list__link').removeClass('active');
+			$('.contact__office-name').html($(this).children('span').html());
+			$(this).addClass('active');
+			var city = $(this).children('span').html();
 			for (var i = 0, l = offices.length; i < l; i++) {
 				if (city == offices[i].city) {
 					MapPlaces.panTo(offices[i].center, {
@@ -401,6 +420,7 @@ $(function() {
 
 	var offices = [
 		// ВАЖНО ПРОПИСЫВАТЬ название городов как в HTML
+		// офисы на главной
 		{
 			city: 'Москве и МО,',
 			center: [55.725045, 37.646961],
@@ -415,6 +435,39 @@ $(function() {
 			address: [
 				{
 				center: [59.934439, 30.301115],
+				},
+			]},
+		// офисы в контактах
+		{
+			city: 'Барнаул',
+			center: [53.277283, 83.532717],
+			address: [
+				{
+				center: [53.277283, 83.532717],
+				},
+			]},
+		{
+			city: 'Москва',
+			center: [55.725045, 37.646961],
+			address: [
+				{
+				center: [55.725045, 37.646961],
+				},
+			]},
+		{
+			city: 'Балашиха',
+			center: [55.769323, 37.910039],
+			address: [
+				{
+				center: [55.769323, 37.910039],
+				},
+			]},
+		{
+			city: 'Асбест',
+			center: [53.277283, 83.532717],
+			address: [
+				{
+				center: [53.277283, 83.532717],
 				},
 			]}
 	];

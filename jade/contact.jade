@@ -1,0 +1,272 @@
+extends _layout
+block content
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail.hidden-sm узнайте подробнее 
+			a(href="##") о производстве
+	.slider__block
+		ul.slider__list
+			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
+				.container
+					.row
+						.col-md-7.col-sm-12.slider__discount
+							p.slider__title Скидка 20%
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2015,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							.slider__countdown
+								p.slider__countdown-text закончится через
+								#countdown_dashboard
+									.dash.hours_dash
+										.digit 0
+										.digit 0
+										span.dash_title Часов
+									.dash.minutes_dash
+										.digit 0
+										.digit 0
+										span.dash_title Минут
+									.dash.seconds_dash
+										.digit 0
+										.digit 0
+										span.dash_title Секунд
+						.col-md-5.col-sm-12.slider__discount-description
+							.slider__text-wrap
+								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+								a.btn.btn-yellow(href="##") Спешите заказать!
+			li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
+				.container
+			li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
+				.container
+	.main__content
+		.container
+			h1.title Контактная информация
+			.row
+				.col-md-4.col-sm-5.col-lg-3
+					.sidebar.fix
+						.city-list__wrapper
+							ul.city-list__list
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link.active(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Москва
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Санкт-Петербург
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Асбест
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Балашиха
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Барнаул
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Березники
+								li.city-list__item
+									a.city-list__link(href="javascript:void(0);") 
+										span.line Верхняя Пышма
+				.col-md-8.col-sm-7.col-lg-9
+					.contact__content-block
+						.contact__content-wrapper
+							p.contact__text Офис в <span class="contact__office-name">Санкт-Петербурге</span>:
+							p.contact__address 08300, Ленинградская область, Санкт-Петербург, ул. Привокзальная, 54.
+							.row
+								.col-lg-5.col-sm-12.col-md-6
+									p.contact__text Контактный телефон:
+									a.contact__phone(href="tel:+88003334910") 8 (800) 333-49-10 
+									a.contact__phone(href="tel:+84996537877") 8 (499) 653-78-77
+								.col-lg-7.col-sm-12.col-md-6
+									p.contact__text Электронная почта:
+									a.contact__email(href="mailto:moskva@coplast.ru") 
+										span.line moskva@coplast.ru
+						.contact__map-block
+							#map
+						.contact__content-wrapper
+							.contact__form-block
+								p.contact__form-title вызвать замерщика в <span class="contact__office-name">санкт-петербурге</span>
+								p.contact__text Оставьте номер телефона, мы свяжемся с вами и уточним адрес и удобное вам время для замера.
+								form.contact__form(action="#" method="post")
+									input.contact__form-input.mask(type="text" required placeholder="Ваш номер телефона")
+									button.btn.btn-blue.contact__form-btn(type="submit") Отправить заявку
+									span.contact__form-detail Перезвоним через 5 минут ;) 
