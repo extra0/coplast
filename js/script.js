@@ -125,7 +125,7 @@ $(function() {
 	var totalSum = $('.calculation__total-price'),
 		oldSum = $('.calculation__total-old-price'),
 		oneLightSum = 1000,
-		metrSum = 750;
+		metrSum = 75;
 
 	$('.calculation__material-input').change(function(){ calculation();	}); // пересчитываем при отмеченном радобаттоне материала
 
@@ -134,17 +134,17 @@ $(function() {
 		$('.replace').each(function() {	$(this).html(numberWithCommas($(this).html()));	});
 
 		sum = 0;
-		amount = parseInt($(".calculation__amount").val());
-		k = $('.calculation__lights-input').val() * oneLightSum;
-		b = $('.calculation__amount').val() * metrSum;
+		sumSquare = parseInt($(".calculation__amount").val()) * metrSum;
+		sumLights = $('.calculation__lights-input').val() * oneLightSum;
+		sumMaterial = 0;
 
 		$('.calculation__material-input').each(function(){
 			if ($(this).is(':checked')) {
-				z = parseInt($(this).val());
+				sumMaterial = parseInt($(this).val());
 			}
 		});
 
-		sum = sum + k + amount + z; // подсчитываем общую сумму
+		sum += sumLights + sumSquare + sumMaterial; // подсчитываем общую сумму
 
 		oldSum.html(sum * 5); // заносим общую сумму в html
 
