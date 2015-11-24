@@ -509,16 +509,14 @@ $(function() {
 	});
 
 	// закрываем меню по клику вне его области
-    // $(document).click(function(event) {
-    //     if ($(event.target).closest(".header__menu-list").length)
-    //         return;
-
-    //     $('.header__menu-list').removeClass('active');
-    //     $('.header__menu-list').slideUp(500);
-    //     $('.header__fixed-menu-btn').removeClass('active');
-    //     indexClick = 1;
-    //     event.stopPropagation();
-    // });
+	$(document).mouseup(function (e) {
+	    var container = $(".header__menu-list");
+	    if (container.has(e.target).length === 0){
+	    	$('.header__fixed-menu-btn').removeClass('active');
+	        container.slideUp('500');
+	        container.removeClass('active');
+	    }
+	});
 
 	// показываем меню по клику на кнопку при минимизированной шапке
 	$('.header__fixed-menu-btn').click(function(){
