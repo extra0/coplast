@@ -17,7 +17,11 @@ $(function() {
 		// auto: true,
 		pause: 7000,
 		adaptiveHeight: true
+	});
 
+	$('.slider__img').bxSlider({
+		pager: true,
+		controls: false
 	});
 
 	// ф-я разбивки на разряды
@@ -438,7 +442,7 @@ $(function() {
 				},
 			]},
 		{
-			city: 'Питеру, и Ленинградской области!',
+			city: 'Питеру и Ленинградской области!',
 			center: [59.934439, 30.301115],
 			address: [
 				{
@@ -504,6 +508,18 @@ $(function() {
 		}
 	});
 
+	// закрываем меню по клику вне его области
+    // $(document).click(function(event) {
+    //     if ($(event.target).closest(".header__menu-list").length)
+    //         return;
+
+    //     $('.header__menu-list').removeClass('active');
+    //     $('.header__menu-list').slideUp(500);
+    //     $('.header__fixed-menu-btn').removeClass('active');
+    //     indexClick = 1;
+    //     event.stopPropagation();
+    // });
+
 	// показываем меню по клику на кнопку при минимизированной шапке
 	$('.header__fixed-menu-btn').click(function(){
 
@@ -532,6 +548,15 @@ $(function() {
 		$('.univ__tab-inner').removeClass('active');
 		$('.univ__tab-inner[data-index='+$(this).attr('data-index')+']').addClass('active');
 
+	});
+
+    // закрываем меню по ESC
+	$(document).keyup(function(d) {
+		if (d.keyCode == 27) {
+			$('.header__menu-list').slideUp(500);
+			$('.header__menu-list').removeClass('active');
+			$('.header__fixed-menu-btn').removeClass('active');
+		}
 	});
 
 });

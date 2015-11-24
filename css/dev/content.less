@@ -36,7 +36,7 @@
 		&:before {
 			content: '';
 		    position: absolute;
-		    background: url(/img/line.png) 0 0 no-repeat;
+		    background: url(../img/line.png) 0 0 no-repeat;
 		    width: 64px;
 		    height: 43px;
 		    top: -23px;
@@ -137,7 +137,7 @@
 			&:before {
 				content: '';
 				position: absolute;
-			    background: url(/img/triangle.png) 0 0 no-repeat;
+			    background: url(../img/triangle.png) 0 0 no-repeat;
 			    width: 52px;
 			    height: 35px;
 			    bottom: -35px;
@@ -276,7 +276,7 @@
 		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 		display: none;
 		&:checked ~ label {
-			background: url(/img/active_circle.png) 0 0 no-repeat;
+			background: url(../img/active_circle.png) 0 0 no-repeat;
 		}
 	}
 	&__light-block {
@@ -287,7 +287,7 @@
 	&__light-label {
 		width: 34px;
 		height: 34px;
-		background: url(/img/circle.png) 5px 5px no-repeat;
+		background: url(../img/circle.png) 5px 5px no-repeat;
 		display: inline-block;
 		vertical-align: top;
 		margin-right: -6px;
@@ -325,7 +325,7 @@
 				&:after {
 					content: '';
 					position: absolute;
-					background: url(/img/check.png) 0 0 no-repeat;
+					background: url(../img/check.png) 0 0 no-repeat;
 					width: 41px;
 					height: 32px;
 					bottom: 7px;
@@ -473,7 +473,7 @@
 			}
 		}
 		&-price-wrap {
-			background: url(/img/price_bg.png) center 5px no-repeat;
+			background: url(../img/price_bg.png) center 5px no-repeat;
 			width: 180px;
 			height: 64px;
 			text-align: center;
@@ -516,7 +516,7 @@
 			&:before {
 				content: '';
 				position: absolute;
-				background: url(/img/mini-line.png) 0 0 no-repeat;
+				background: url(../img/mini-line.png) 0 0 no-repeat;
 				width: 26px;
 				height: 26px;
 				top: -16px;
@@ -669,7 +669,7 @@
 	&__tab-link {
 		color: #2f83d6;
 		font-size: 32px;
-		border-bottom: 1px dotted #e0ecf7;
+		border-bottom: 1px dotted rgba(47, 131, 214, 0.84);
 		display: inline-block;
 		line-height: 30px;
 		font-family: 'Fira Sans Light';
@@ -711,12 +711,12 @@
 		}
 		&._calc {
 			&:before {
-				background: url(/img/calc.png) 0 0 no-repeat;
+				background: url(../img/calc.png) 0 0 no-repeat;
 			}
 		}
 		&._phone {
 			&:before {
-				background: url(/img/phone.png) 0 0 no-repeat;
+				background: url(../img/phone.png) 0 0 no-repeat;
 			}
 		}
 	}
@@ -1061,7 +1061,7 @@
 			&:before {
 				content: '';
 				position: absolute;
-				background: url(/img/docs.png) 0 0 no-repeat;
+				background: url(../img/docs.png) 0 0 no-repeat;
 				width: 674px;
 				height: 1145px;
 				top: 243px;
@@ -1073,7 +1073,7 @@
 			&:before {
 				content: '';
 				position: absolute;
-				background: url(/img/mouthpiece.png) 0 0 no-repeat;
+				background: url(../img/mouthpiece.png) 0 0 no-repeat;
 				width: 479px;
 				height: 609px;
 				top: 328px;
@@ -1085,7 +1085,7 @@
 			&:before {
 				content: '';
 				position: absolute;
-				background: url(/img/suit.png) 0 0 no-repeat;
+				background: url(../img/suit.png) 0 0 no-repeat;
 				width: 740px;
 				height: 959px;
 				top: 368px;
@@ -1095,7 +1095,7 @@
 		}
 	}
 	&__block-content {
-		background: url(/img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+		background: url(../img/univ_sidebar_bg.jpg) 0 0 no-repeat;
 		padding: 25px 16px;
 		background-size: cover;
 	}
@@ -1159,11 +1159,11 @@
 		position: relative;
 		width: 105px;
 		height: 19px;
-		background: url(/img/star.png) 0 0 repeat-x;
+		background: url(../img/star.png) 0 0 repeat-x;
 	}
 	&__rating-active {
 		height: 19px;
-		background: url(/img/active_star.png) 0 0 repeat-x;
+		background: url(../img/active_star.png) 0 0 repeat-x;
 		display: block;
 		width: 21px;
 	}
@@ -1350,11 +1350,21 @@
 		&:before {
 			content: '';
 			position: absolute;
-			background: url(/img/form-line.png) 0 0 no-repeat;
+			background: url(../img/form-line.png) 0 0 no-repeat;
 			width: 77px;
 			height: 17px;
 			top: -4px;
 			left: 7px;
 		}
+	}
+}
+// слайдеры картинок на главной
+.slider__img-wrap {
+	.bx-wrapper .bx-viewport {
+		padding-bottom: 15px;
+		box-sizing: content-box;
+	}
+	.bx-wrapper .bx-pager {
+		bottom: 30px;
 	}
 }
