@@ -14,6 +14,45 @@ block content
 				| На 9% дешевле
 		p.clarification__detail.hidden-sm узнайте подробнее 
 			a(href="#") о производстве
+	.modal__block
+		.modal__line
+		.modal
+			.container
+				a.modal__btn-close(href="javascript:void(0);") Закрыть
+				form(action="#" method="post")
+					.row
+						.col-sm-12
+							h3.modal__title ВЫЗВАТЬ ЗАМЕРЩИКА
+					.row.margin-bottom-40
+						.col-sm-4
+							label.modal__label Ваше имя:
+							input.margin-left-15.modal__input.width-230(type="text")
+						.col-sm-4
+							label.modal__label Телефон:
+							input.margin-left-15.modal__input.width-230(type="text")
+						.col-sm-4
+							.pull-right
+								label.modal__label Эл.почта:
+								input.margin-left-15.modal__input.width-230(type="email" placeholder="опционально")
+					.row
+						.col-sm-8
+							label.modal__label Полный адрес:
+							input.margin-left-15.modal__input(type="text")
+						.col-sm-4
+							button.pull-right.btn.btn-blue.modal__submit(type="submit") Вызвать замерщика
+	//- .slider__block
+	//- 	p СЛАЙДЕР
+		//- #da-slider.da-slider
+		//- 	.da-slide
+		//- 		.da-img
+		//- 			img(src="img/content/slider_bg_1.jpg", alt="")
+		//- 		<p>Интернет-магазин</p>
+		//- 		<h2>WORLD OF WARCRAFT</h2>
+		//- 	.da-slide
+		//- 		.da-img(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
+		//- 			img(src="img/content/slider_bg_1.jpg", alt="")
+		//- 		<p>Интернет-магазин</p>
+		//- 		<h2>WORLD OF WARCRAFT</h2>
 	.slider__block
 		ul.slider__list
 			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")

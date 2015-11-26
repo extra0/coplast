@@ -8,6 +8,7 @@
     <meta keywords="">
     <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="/favicon.ico">
     <link href="css/grid.css" rel="stylesheet" media="all">
+    <link href="css/settings.css" rel="stylesheet" media="all">
     <link href="css/styles.css" rel="stylesheet" media="all">
     <script src="js/jquery.js"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
@@ -15,6 +16,7 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div class="modal__wrapper"></div>
       <header class="header">
         <div class="container">
           <div class="header__top">
@@ -56,7 +58,7 @@
               <div class="col-sm-9">
                 <div class="row">
                   <div class="col-sm-5 text-right hidden-sm"><a href="tel:+88003334910" class="header__phone">8 (800) 333-49-10</a></div>
-                  <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_call">Вызвать замерщика</span></a></div>
+                  <div class="pull-right header__btn-wrap"><a id="cause" href="javascript:void(0);" class="header__btn"> <span class="_call">Вызвать замерщика</span></a></div>
                   <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_calc">Рассчитать стоимость</span></a></div>
                 </div>
               </div>
@@ -72,6 +74,45 @@
           <p class="clarification__text"> <img src="img/cash.png" alt="" class="clarification__img">На 9% дешевле</p>
         </div>
         <p class="clarification__detail hidden-sm">узнайте подробнее <a href="#">о производстве</a></p>
+      </div>
+      <div class="modal__block">
+        <div class="modal__line"></div>
+        <div class="modal">
+          <div class="container"><a href="javascript:void(0);" class="modal__btn-close">Закрыть</a>
+            <form action="#" method="post">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="modal__title">ВЫЗВАТЬ ЗАМЕРЩИКА</h3>
+                </div>
+              </div>
+              <div class="row margin-bottom-40">
+                <div class="col-sm-4">
+                  <label class="modal__label">Ваше имя:</label>
+                  <input type="text" class="margin-left-15 modal__input width-230">
+                </div>
+                <div class="col-sm-4">
+                  <label class="modal__label">Телефон:</label>
+                  <input type="text" class="margin-left-15 modal__input width-230">
+                </div>
+                <div class="col-sm-4">
+                  <div class="pull-right">
+                    <label class="modal__label">Эл.почта:</label>
+                    <input type="email" placeholder="опционально" class="margin-left-15 modal__input width-230">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-8">
+                  <label class="modal__label">Полный адрес:</label>
+                  <input type="text" class="margin-left-15 modal__input">
+                </div>
+                <div class="col-sm-4">
+                  <button type="submit" class="pull-right btn btn-blue modal__submit">Вызвать замерщика</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <div class="slider__block">
         <ul class="slider__list">
@@ -506,6 +547,8 @@
       </div>
     </footer>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/jquery.themepunch.tools.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

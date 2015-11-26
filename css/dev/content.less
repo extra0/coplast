@@ -928,9 +928,9 @@
 	&__item {
 		display: inline-block;
 		vertical-align: top;
-		width: 31%;
-		padding-right: 8%;
-		margin-bottom: 20px;
+		// width: 31%;
+		// padding-right: 8%;
+		// margin-bottom: 20px;
 	}
 	&__item-text {
 		font-family: 'Fira Sans Light';
@@ -1366,5 +1366,171 @@
 	}
 	.bx-wrapper .bx-pager {
 		bottom: 30px;
+	}
+}
+
+// модальное вызова замерщика
+.modal {
+	background: url(../img/modal_bg.png);
+	position: relative;
+	height: 328px;
+	&__block {
+		position: relative;
+		overflow: hidden;
+		max-height: 0px;
+		margin-top: -58px;
+		padding-top: 58px;
+		-webkit-transition: all 1s 1.5s ease;
+		-moz-transition: all 1s 1.5s ease;
+		-ms-transition: all 1s 1.5s ease;
+		-o-transition: all 1s 1.5s ease;
+		transition: all 1s 1.5s ease;
+		&.active {
+			max-height: 500px;
+			z-index: 3000;
+			.modal__btn-close {
+				opacity: 1;
+				z-index: 1;
+			}
+		}
+	}
+	&__line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #fff;
+		z-index: 4000;
+		-webkit-transition: width 0.4s 0.5s ease;
+		-moz-transition: width 0.4s 0.5s ease;
+		-ms-transition: width 0.4s 0.5s ease;
+		-o-transition: width 0.4s 0.5s ease;
+		transition: width 0.4s 0.5s ease;
+		&.active {
+			position: absolute;
+			top: 56px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+		}
+	}
+	* {
+		-webkit-transition: all 0.4s ease;
+		-moz-transition: all 0.4s ease;
+		-ms-transition: all 0.4s ease;
+		-o-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+	&__btn-close {
+		color: #fff;
+		position: absolute;
+		top: -56px;
+		right: 15px;
+		font-family: 'Fira Sans Light';
+		font-size: 22px;
+		display: inline-block;
+		text-decoration: none;
+		padding-right: 50px;
+		opacity: 0;
+		z-index: -100;
+		-webkit-transition: all 0.5s 2s ease;
+		-moz-transition: all 0.5s 2s ease;
+		-ms-transition: all 0.5s 2s ease;
+		-o-transition: all 0.5s 2s ease;
+		transition: all 0.5s 2s ease;
+		&:active,
+		&:focus,
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+			&:before {
+				-moz-transform: rotate(-180deg);
+				-webkit-transform: rotate(-180deg);
+				-o-transform: rotate(-180deg);
+				-ms-transform: rotate(-180deg);
+				transform: rotate(-180deg);
+			}
+		}
+		&:before {
+			content: '';
+			background: url(../img/close.png) 0 0 no-repeat;
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			top: -2px;
+			right: 0;
+			-webkit-transition: all 0.4s ease;
+			-moz-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
+			-o-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+		}
+	}
+	&__title {
+		font-size: 8em;
+		font-family: 'Fira Sans Hair';
+		font-weight: normal;
+		margin: -6px 0 9px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__label {
+		font-size: 24px;
+		font-family: 'Fira Sans Light';
+	}
+	&__input {
+		background: none;
+		border: none;
+		font-size: 24px;
+		width: 74.67%;
+		padding: 0 10px;
+		box-sizing: border-box;
+		height: 41px;
+		margin: -6px 0 12px 12px;
+		border: 1px solid #dce1e5;
+		border-top-color: #c6cbd1;
+		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+		background: -moz-linear-gradient(top, #f1f1f1, #ffffff);
+		background: -webkit-linear-gradient(top, #f1f1f1, #ffffff);
+		background: -o-linear-gradient(top, #f1f1f1, #ffffff);
+		background: -ms-linear-gradient(top, #f1f1f1, #ffffff);
+		background: linear-gradient(top, #f1f1f1, #ffffff);
+		background-color: white;
+		&::-webkit-input-placeholder {font-family: 'Fira Sans Light';}
+		&:-moz-placeholder {font-family: 'Fira Sans Light';}
+		&::-moz-placeholder {font-family: 'Fira Sans Light';}
+		&:-ms-input-placeholder {font-family: 'Fira Sans Light';}
+		&.width-230 {
+			width: 230px;
+		}
+	}
+	&__submit {
+		font-size: 22px;
+		width: 285px;
+		line-height: 55px;
+		border-radius: 10px!important;
+		text-align: center;
+		font-family: 'Fira Sans Bold';
+		margin: -11px 0 0 0;
+	}
+	&__wrapper {
+		background: #08335e;
+		opacity: 0;
+		z-index: -100;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		-webkit-filter: blur(1px);
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+		&.active {
+			opacity: 0.9;
+			z-index: 2200;
+		}
 	}
 }

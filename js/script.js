@@ -131,18 +131,22 @@ $(function() {
 		oneLightSum = 1000,
 		metrSum = 75;
 
-	$('.calculation__material-input').change(function(){ calculation();	}); // пересчитываем при отмеченном радобаттоне материала
+	$('.calculation__material-input').change(function() {
+		calculation();
+	}); // пересчитываем при отмеченном радобаттоне материала
 
 	function calculation() {
 
-		$('.replace').each(function() {	$(this).html(numberWithCommas($(this).html()));	});
+		$('.replace').each(function() {
+			$(this).html(numberWithCommas($(this).html()));
+		});
 
 		sum = 0;
 		sumSquare = parseInt($(".calculation__amount").val()) * metrSum;
 		sumLights = $('.calculation__lights-input').val() * oneLightSum;
 		sumMaterial = 0;
 
-		$('.calculation__material-input').each(function(){
+		$('.calculation__material-input').each(function() {
 			if ($(this).is(':checked')) {
 				sumMaterial = parseInt($(this).val());
 			}
@@ -154,8 +158,14 @@ $(function() {
 
 		var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ');
 
-		totalSum.animateNumber({ number: sum, numberStep: comma_separator_number_step });
-		oldSum.animateNumber({ number: sum * 5, numberStep: comma_separator_number_step });
+		totalSum.animateNumber({
+			number: sum,
+			numberStep: comma_separator_number_step
+		});
+		oldSum.animateNumber({
+			number: sum * 5,
+			numberStep: comma_separator_number_step
+		});
 
 		totalSum.html(sum);
 	}
@@ -171,202 +181,202 @@ $(function() {
 		});
 
 		MapPlaces.geoObjects
-			
-				.add(new ymaps.Placemark([55.777697023347606, 37.70197299999995], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6701370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6701370232536, 37.57420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([54.6701370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6501370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6401370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.81326802337879, 37.48407599999996], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.1501370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.5501370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.51326802337879, 37.48407599999996], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
+
+			.add(new ymaps.Placemark([55.777697023347606, 37.70197299999995], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6701370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6701370232536, 37.57420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([54.6701370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6501370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6401370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.81326802337879, 37.48407599999996], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.1501370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.5501370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.51326802337879, 37.48407599999996], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
 
 
 
-			.add(new ymaps.Placemark([54.777697023347606, 37.70197299999995], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([54.5701370232536, 37.77420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6701370232536, 36.57420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([54.6701370232536, 36.23420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([54.6701370232536, 34.77440299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.0501370232536, 37.17420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.4401370232536, 37.47420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.86326802337879, 37.68407599999996], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6301370232536, 37.87440299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.6601370232536, 37.17420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.2201370232536, 37.17420299999994], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
-				.add(new ymaps.Placemark([55.71326802337879, 37.45407599999996], {
-					hintContent: 'Собственный значок метки'
-				}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/marker.png',
-					iconImageSize: [35, 42],
-					iconImageOffset: [-31, -42]
-				}))
+		.add(new ymaps.Placemark([54.777697023347606, 37.70197299999995], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([54.5701370232536, 37.77420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6701370232536, 36.57420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([54.6701370232536, 36.23420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([54.6701370232536, 34.77440299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.0501370232536, 37.17420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.4401370232536, 37.47420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.86326802337879, 37.68407599999996], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6301370232536, 37.87440299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.6601370232536, 37.17420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.2201370232536, 37.17420299999994], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
+			.add(new ymaps.Placemark([55.71326802337879, 37.45407599999996], {
+				hintContent: 'Собственный значок метки'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/marker.png',
+				iconImageSize: [35, 42],
+				iconImageOffset: [-31, -42]
+			}))
 
 		for (var i = 0, l = offices.length; i < l; i++) {
 			createGroup(offices[i]);
@@ -425,7 +435,7 @@ $(function() {
 			}
 		});
 
-		MapPlaces.behaviors.disable('scrollZoom'); 
+		MapPlaces.behaviors.disable('scrollZoom');
 		MapPlaces.setBounds(MapPlaces.geoObjects);
 
 	};
@@ -436,52 +446,42 @@ $(function() {
 		{
 			city: 'Москве и МО,',
 			center: [55.725045, 37.646961],
-			address: [
-				{
+			address: [{
 				center: [55.725045, 37.646961],
-				},
-			]},
-		{
+			}, ]
+		}, {
 			city: 'Питеру и Ленинградской области!',
 			center: [59.934439, 30.301115],
-			address: [
-				{
+			address: [{
 				center: [59.934439, 30.301115],
-				},
-			]},
+			}, ]
+		},
 		// офисы в контактах
 		{
 			city: 'Барнаул',
 			center: [53.277283, 83.532717],
-			address: [
-				{
+			address: [{
 				center: [53.277283, 83.532717],
-				},
-			]},
-		{
+			}, ]
+		}, {
 			city: 'Москва',
 			center: [55.725045, 37.646961],
-			address: [
-				{
+			address: [{
 				center: [55.725045, 37.646961],
-				},
-			]},
-		{
+			}, ]
+		}, {
 			city: 'Балашиха',
 			center: [55.769323, 37.910039],
-			address: [
-				{
+			address: [{
 				center: [55.769323, 37.910039],
-				},
-			]},
-		{
+			}, ]
+		}, {
 			city: 'Асбест',
 			center: [53.277283, 83.532717],
-			address: [
-				{
+			address: [{
 				center: [53.277283, 83.532717],
-				},
-			]}
+			}, ]
+		}
 	];
 
 	ymaps.ready(init);
@@ -509,17 +509,17 @@ $(function() {
 	});
 
 	// закрываем меню по клику вне его области
-	$(document).mouseup(function (e) {
-	    var container = $(".header__menu-list");
-	    if (container.has(e.target).length === 0){
-	    	$('.header__fixed-menu-btn').removeClass('active');
-	        container.slideUp('500');
-	        container.removeClass('active');
-	    }
+	$(document).mouseup(function(e) {
+		var container = $(".header__menu-list.fixed");
+		if (container.has(e.target).length === 0) {
+			$('.header__fixed-menu-btn').removeClass('active');
+			container.slideUp('500');
+			container.removeClass('active');
+		}
 	});
 
 	// показываем меню по клику на кнопку при минимизированной шапке
-	$('.header__fixed-menu-btn').click(function(){
+	$('.header__fixed-menu-btn').click(function() {
 
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active');
@@ -537,18 +537,22 @@ $(function() {
 	});
 
 	// ------  организация табов на странице клиентов
-	$('.univ__tab-link').each(function(i){$(this).attr('data-index', 'tab-'+ (i+1) +'');}); // проставление индексов
-	$('.univ__tab-inner').each(function(i){$(this).attr('data-index', 'tab-'+ (i+1) +'');}); // проставление индексов
+	$('.univ__tab-link').each(function(i) {
+		$(this).attr('data-index', 'tab-' + (i + 1) + '');
+	}); // проставление индексов
+	$('.univ__tab-inner').each(function(i) {
+		$(this).attr('data-index', 'tab-' + (i + 1) + '');
+	}); // проставление индексов
 
-	$('.univ__tab-link').click(function(){
+	$('.univ__tab-link').click(function() {
 		$('.univ__tab-link').removeClass('active');
 		$(this).addClass('active');
 		$('.univ__tab-inner').removeClass('active');
-		$('.univ__tab-inner[data-index='+$(this).attr('data-index')+']').addClass('active');
+		$('.univ__tab-inner[data-index=' + $(this).attr('data-index') + ']').addClass('active');
 
 	});
 
-    // закрываем меню по ESC
+	// закрываем меню по ESC
 	$(document).keyup(function(d) {
 		if (d.keyCode == 27) {
 			$('.header__menu-list').slideUp(500);
@@ -556,5 +560,29 @@ $(function() {
 			$('.header__fixed-menu-btn').removeClass('active');
 		}
 	});
+
+
+	//слайдер
+	$('#da-slider').cslider({
+		autoplay: false,
+		interval: 4000
+	});
+
+	// обработка анимации на вызове замерщика
+	$('#cause').click(function(){
+		$("html, body").animate({scrollTop: 0}, 500); // поднимаем экран вверх
+		setTimeout(function(){$('.modal__wrapper, .main-wrapper, .modal__block, .modal__line, .modal__btn-close').addClass('active');},800);
+	});
+
+	// закрываем модальное замерщика и плавно убираем окно
+	$('.modal__btn-close').click(function(){
+		$(this).fadeOut(500);
+		setTimeout(function(){$('.modal').slideUp('fast');},1000);
+		setTimeout(function(){$('.modal__line').css('width', '0');},1500);
+		setTimeout(function(){$('.modal__block').hide();},2500);
+		setTimeout(function(){$('.modal__wrapper, .modal__block, .modal__btn-close, .modal__line').removeClass('active');},3000);
+		setTimeout(function(){$('.modal__line, .modal, .modal__block, .modal__btn-close').removeAttr('style');},3100); // удаляем всякий мусор css
+	});
+
 
 });
