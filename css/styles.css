@@ -3424,9 +3424,12 @@ textarea {
   max-width: 200px;
   margin-bottom: 6px;
 }
-.univ__item {
+.univ__list-item {
   display: inline-block;
   vertical-align: top;
+  width: 31%;
+  padding-right: 8%;
+  margin-bottom: 20px;
 }
 .univ__item-text {
   font-family: 'Fira Sans Light';
@@ -3439,6 +3442,17 @@ textarea {
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: normal;
+}
+.univ__subtitle a {
+  font-size: 50%;
+  color: #2f83d6;
+  border-bottom: 2px solid #2f83d6;
+}
+.univ__subtitle a:active,
+.univ__subtitle a:focus,
+.univ__subtitle a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 .univ__tab-list {
   padding: 0;

@@ -925,12 +925,12 @@
 		max-width: 200px;
 		margin-bottom: 6px;
 	}
-	&__item {
+	&__list-item {
 		display: inline-block;
 		vertical-align: top;
-		// width: 31%;
-		// padding-right: 8%;
-		// margin-bottom: 20px;
+		width: 31%;
+		padding-right: 8%;
+		margin-bottom: 20px;
 	}
 	&__item-text {
 		font-family: 'Fira Sans Light';
@@ -943,6 +943,17 @@
 		text-transform: uppercase;
 		letter-spacing: -1px;
 		font-weight: normal;
+		a {
+			font-size: 50%;
+			color: #2f83d6;
+			border-bottom: 2px solid #2f83d6;
+			&:active,
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				border-bottom: 2px solid transparent;
+			}
+		}
 	}
 	// блок табов на странице корпоративных клиентов
 	&__tab-list {
