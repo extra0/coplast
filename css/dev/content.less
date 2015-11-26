@@ -1382,9 +1382,11 @@
 
 // модальное вызова замерщика
 .modal {
-	background: url(../img/modal_bg.png);
-	position: relative;
-	height: 328px;
+	&__inner {
+		background: url(../img/modal_bg.png);
+		position: relative;
+		padding-bottom: 35px;
+	}
 	&__block {
 		position: relative;
 		overflow: hidden;

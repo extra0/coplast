@@ -3853,10 +3853,10 @@ textarea {
 .slider__img-wrap .bx-wrapper .bx-pager {
   bottom: 30px;
 }
-.modal {
+.modal__inner {
   background: url(../img/modal_bg.png);
   position: relative;
-  height: 328px;
+  padding-bottom: 35px;
 }
 .modal__block {
   position: relative;
@@ -4261,6 +4261,10 @@ textarea {
     display: block;
     margin: 20px 0 -10px 30px;
   }
+  .modal__submit {
+    font-size: 17px;
+    width: 217px;
+  }
 }
 @media (min-width: 992px) {
   .header__menu-item {
@@ -4271,6 +4275,23 @@ textarea {
   }
   .header__btn {
     padding: 15px 10px 13px 31px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .modal__title {
+    font-size: 66px;
+    margin: 7px 0;
+  }
+  .modal__label {
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .modal__input {
+    margin: -6px 0 12px 0px;
+    width: 100%!important;
+  }
+  .modal__submit {
+    margin: 29px 0px 0 0px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
