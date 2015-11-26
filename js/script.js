@@ -570,6 +570,7 @@ $(function() {
 
 	// обработка анимации на вызове замерщика
 	$('#cause').click(function(){
+		$('.main-wrapper').prepend('<div class="modal__wrapper"></div>');
 		$("html, body").animate({scrollTop: 0}, 500); // поднимаем экран вверх
 		setTimeout(function(){$('.modal__wrapper, .main-wrapper, .modal__block, .modal__line, .modal__btn-close').addClass('active');},800);
 	});
@@ -582,6 +583,7 @@ $(function() {
 		setTimeout(function(){$('.modal__block').hide();},2500);
 		setTimeout(function(){$('.modal__wrapper, .modal__block, .modal__btn-close, .modal__line').removeClass('active');},3000);
 		setTimeout(function(){$('.modal__line, .modal, .modal__block, .modal__btn-close').removeAttr('style');},3100); // удаляем всякий мусор css
+		setTimeout(function(){$('.modal__wrapper').remove();},3200);
 	});
 
 
