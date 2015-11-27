@@ -645,76 +645,78 @@ $(function(){
 // анимация на айпеде
 $(function(){
 
-	var messageBlock = $('.estimation__message'),
-		btn = $('.estimation__btn'),
-		n = 1;
+	window.onload = function () { // вся прелесть после загрузки документа
+		var messageBlock = $('.estimation__message'),
+			btn = $('.estimation__btn'),
+			n = 1;
 
-	// устанавливаем якоря на сообщения
-	messageBlock.each(function(k){
-		$(this).attr('data-number', k+1);
-	});
+		// устанавливаем якоря на сообщения
+		messageBlock.each(function(k){
+			$(this).attr('data-number', k+1);
+		});
 
-	$('html, body').scrollTo('170px', 1000);
+		$('html, body').scrollTo('170px', 1000);
 
-	// функция докрутки до нового сообщения
-	function scrolling() {
-		$('html, body').stop().animate({
-			scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
-		}, 1000);
-	}
-
-	// функция показа сообщения
-	function get_message() {
-		$('.estimation__message[data-number="'+n+'"]').addClass('active');
-		scrolling();
-		n++;
-	}
-
-	setTimeout(function(){
-		$('.estimation__header').fadeIn(800);
-	},1000);
-
-	
-	setTimeout(function(){get_message();},2500); // показ первого сообщения
-	setTimeout(function(){get_message();},5000); // показ второго
-
-	btn.click(function(){
-		setTimeout(function(){get_message();},1000);
-		$(this).prop('disabled', true);
-		if (n == 3) {
-			setTimeout(function(){get_message();},4000);
-			setTimeout(function(){get_message();},6500);
+		// функция докрутки до нового сообщения
+		function scrolling() {
+			$('html, body').stop().animate({
+				scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
+			}, 1000);
 		}
-		if (n == 6) {
-			setTimeout(function(){get_message();},4000);
-		}
-		if (n == 10) {
-			setTimeout(function(){get_message();},4000);
-		}
-		if (n == 12) {
-			setTimeout(function(){get_message();},4000);
-			setTimeout(function(){get_message();},7500);
-			setTimeout(function(){get_message();},10000);
-			setTimeout(function(){get_message();},14000);
-		}
-	});
 
-	// кликаем на показать приблизительный рассчет
-	$('#result').click(function(){
-		$('#detail').prop('disabled', true);
-		n = 12;
-		setTimeout(function(){get_message();},3000);
-		setTimeout(function(){get_message();},7500);
-		setTimeout(function(){get_message();},9000);
-	});
+		// функция показа сообщения
+		function get_message() {
+			$('.estimation__message[data-number="'+n+'"]').addClass('active');
+			scrolling();
+			n++;
+		}
 
-	// кликаем на подробный рассчет
-	$('#detail').click(function(){
-		$('#result').prop('disabled', true);
-		if (n == 8) {
+		setTimeout(function(){
+			$('.estimation__header').fadeIn(800);
+		},1000);
+
+		
+		setTimeout(function(){get_message();},2500); // показ первого сообщения
+		setTimeout(function(){get_message();},5000); // показ второго
+
+		btn.click(function(){
+			setTimeout(function(){get_message();},1000);
+			$(this).prop('disabled', true);
+			if (n == 3) {
+				setTimeout(function(){get_message();},4000);
+				setTimeout(function(){get_message();},6500);
+			}
+			if (n == 6) {
+				setTimeout(function(){get_message();},4000);
+			}
+			if (n == 10) {
+				setTimeout(function(){get_message();},4000);
+			}
+			if (n == 12) {
+				setTimeout(function(){get_message();},4000);
+				setTimeout(function(){get_message();},7500);
+				setTimeout(function(){get_message();},10000);
+				setTimeout(function(){get_message();},14000);
+			}
+		});
+
+		// кликаем на показать приблизительный рассчет
+		$('#result').click(function(){
+			$('#detail').prop('disabled', true);
+			n = 12;
 			setTimeout(function(){get_message();},3000);
-		}
-	});
+			setTimeout(function(){get_message();},7500);
+			setTimeout(function(){get_message();},9000);
+		});
 
+		// кликаем на подробный рассчет
+		$('#detail').click(function(){
+			$('#result').prop('disabled', true);
+			if (n == 8) {
+				setTimeout(function(){get_message();},3000);
+			}
+		});
+	}
+	
 
 });
