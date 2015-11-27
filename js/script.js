@@ -562,14 +562,14 @@ $(function() {
 	});
 
 	// закрываем меню по клику вне его области
-	$(document).mouseup(function(e) {
-		var container = $(".header__menu-list.fixed");
-		if (container.has(e.target).length === 0) {
-			$('.header__fixed-menu-btn').removeClass('active');
-			container.slideUp('500');
-			container.removeClass('active');
-		}
-	});
+	// $(document).mouseup(function(e) {
+	// 	var container = $(".header__menu-list.fixed");
+	// 	if (container.has(e.target).length === 0) {
+	// 		$('.header__fixed-menu-btn').removeClass('active');
+	// 		container.slideUp('500');
+	// 		container.removeClass('active');
+	// 	}
+	// });
 
 	// показываем меню по клику на кнопку при минимизированной шапке
 	$('.header__fixed-menu-btn').click(function() {
@@ -654,25 +654,25 @@ $(function(){
 		$(this).attr('data-number', k+1);
 	});
 
+	$('html, body').scrollTo('170px', 1000);
+
+	// функция докрутки до нового сообщения
 	function scrolling() {
 		$('html, body').stop().animate({
 			scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
 		}, 1000);
 	}
 
+	// функция показа сообщения
 	function get_message() {
 		$('.estimation__message[data-number="'+n+'"]').addClass('active');
 		scrolling();
 		n++;
 	}
 
-	function new_count() {
-		
-	}
-
 	setTimeout(function(){
 		$('.estimation__header').fadeIn(800);
-	},1);
+	},1000);
 
 	
 	setTimeout(function(){get_message();},2500); // показ первого сообщения
