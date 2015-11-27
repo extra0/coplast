@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="/favicon.ico">
+    <link href="css/grid.css" rel="stylesheet" media="all">
+    <link href="css/settings.css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="row">
+              <div class="col-sm-10 header__menu-list-block"><span class="header__fixed-menu-btn"></span>
+                <ul class="header__menu-list static">
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">О потолках</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Цены</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Работы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Отзывы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Корпоративным клиентам</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-2 text-right pull-right header__city-block"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link toggle">Москва</a>
+                <ul class="header__city-list">
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Санкт-Петербург</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Москва</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Асбест</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Барнаул</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Балашиха</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Березники</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Верхняя Пышма</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Выкса</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Воронеж</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Тула</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Кемерово</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Ростов-на-Дону</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Донецк</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Долгопрудный</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="row">
+              <div class="col-sm-3"><a href="/" class="header__logo">
+                  <p class="header__logo-text">coplast</p></a></div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-5 text-right hidden-sm"><a href="tel:+88003334910" class="header__phone">8 (800) 333-49-10</a></div>
+                  <div class="pull-right header__btn-wrap"><a id="cause" href="javascript:void(0);" class="header__btn"> <span class="_call">Вызвать замерщика</span></a></div>
+                  <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_calc">Рассчитать стоимость</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="estimation__section">
+        <div class="container">
+          <div class="estimation__block">
+            <form action="#">
+              <div class="estimation__header"><img src="img/ava.jpg" alt="" class="estimation__header-img">
+                <h3 class="estimation__header-title">Рассчитайте стоимость вашего супер-потолка!</h3>
+              </div>
+              <div class="estimation__body">
+                <div class="row">
+                  <div class="col-sm-10">
+                    <div class="estimation__message admin">Здравствуйте. Давайте я помогу вам выбрать потолок. Пожалуйста выберите <span>Марку потолка</span> который желаете заказать.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-11 pull-right">
+                    <div class="estimation__message transparent">
+                      <div class="calculation__material-section">
+                        <div class="calculation__material-block">
+                          <div class="calculation__tooltip tooltip-right">
+                            <p class="calculation__tooltip-text">Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.</p>
+                          </div>
+                          <input id="material-1" type="radio" name="material" value="20" checked class="calculation__material-input">
+                          <label for="material-1" data-text="Классный потолок у меня будет самыый лучшиий" class="calculation__material-label"><img src="img/content/material_1.jpg" alt="" class="calculation__material-img"></label>
+                          <p class="calculation__material-name"><img src="img/rus.png" alt="" class="calculation__material-country-production">DESCOR (Тканевые потолки)</p>
+                        </div>
+                        <div class="calculation__material-block">
+                          <div class="calculation__tooltip tooltip-right">
+                            <p class="calculation__tooltip-text">Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.</p>
+                          </div>
+                          <input id="material-2" type="radio" name="material" value="30" class="calculation__material-input">
+                          <label for="material-2" data-text="Соседи умрут от зависти от такого потолка, а тем более практически бесплатно" class="calculation__material-label"><img src="img/content/material_2.jpg" alt="" class="calculation__material-img"></label>
+                          <p class="calculation__material-name"><img src="img/fr.png" alt="" class="calculation__material-country-production">Polyplast (Бельгия)</p>
+                        </div>
+                        <div class="calculation__material-block">
+                          <div class="calculation__tooltip tooltip-left">
+                            <p class="calculation__tooltip-text">Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.</p>
+                          </div>
+                          <input id="material-3" type="radio" name="material" value="40" class="calculation__material-input">
+                          <label for="material-3" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga incidunt delectus eius quasi possimus repellendus vitae voluptates magnam. Nihil, vero!" class="calculation__material-label"><img src="img/content/material_3.jpg" alt="" class="calculation__material-img"></label>
+                          <p class="calculation__material-name"><img src="img/not_ger.png" alt="" class="calculation__material-country-production">Clipso (Тканевые)</p>
+                        </div>
+                        <div class="calculation__material-block">
+                          <div class="calculation__tooltip tooltip-right">
+                            <p class="calculation__tooltip-text">Достойный экономичный вариант.вете и в 3х фактурах: мат, глянец и сатин.</p>
+                          </div>
+                          <input id="material-4" type="radio" name="material" value="50" class="calculation__material-input">
+                          <label for="material-4" data-text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, incidunt." class="calculation__material-label"><img src="img/content/material_4.jpg" alt="" class="calculation__material-img"></label>
+                          <p class="calculation__material-name"><img src="img/ger.png" alt="" class="calculation__material-country-production">CeilBlank</p>
+                        </div>
+                        <div class="calculation__material-block">
+                          <div class="calculation__tooltip tooltip-left">
+                            <p class="calculation__tooltip-text">Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.</p>
+                          </div>
+                          <input id="material-5" type="radio" name="material" value="60" class="calculation__material-input">
+                          <label for="material-5" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, in delectus qui." class="calculation__material-label"><img src="img/content/material_5.jpg" alt="" class="calculation__material-img"></label>
+                          <p class="calculation__material-name"><img src="img/rus.png" alt="" class="calculation__material-country-production">Pongs (ПВХ)</p>
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <button type="button" class="estimation__btn btn-uppercase">Отправить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 pull-right">
+                    <div class="estimation__message user new-message">Мне нравится <span>CeliBlank</span>, буду поддерживать отечественного производителя ;)</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10">
+                    <div class="estimation__message admin">Спасибо, скажите на какой <span>площади</span> планируете установку.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-11 pull-right">
+                    <div class="estimation__message transparent">
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <input type="text" readonly class="calculation__amount">
+                          <div class="calculation__slider"><span class="calculation__metrs">M<sup>2</readonly sup></span></div>
+                        </div>
+                        <div class="col-sm-4">
+                          <button type="button" class="estimation__btn btn-uppercase">Отправить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10">
+                    <div class="estimation__message admin">Хотите расчитать подробнее выбрав дополнительные опции или показать вам приблизительный расчет?</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 pull-right text-center">
+                    <div class="estimation__message transparent">
+                      <button id="detail" type="button" class="estimation__btn full-width margin-bottom-10">Рассчитать подробнее</button>
+                      <button id="result" type="button" class="estimation__btn full-width">Покажите<br>приблизительный расчет</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="estimation__message admin">Выберите дополнительные опции</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9 pull-right">
+                    <div class="estimation__message transparent">
+                      <div class="estimation__checkbox-block">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_1" type="checkbox" data-price="100" class="estimation__checkbox">
+                            <label for="type_1" class="estimation__checkbox-label">Нужна вставка по периметру</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">м2</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_2" type="checkbox" data-price="300" class="estimation__checkbox">
+                            <label for="type_2" class="estimation__checkbox-label">Есть трубы уходящие в потолок</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_3" type="checkbox" data-price="200" class="estimation__checkbox">
+                            <label for="type_3" class="estimation__checkbox-label">Есть дополнительные углы</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_4" type="checkbox" data-price="300" class="estimation__checkbox">
+                            <label for="type_4" class="estimation__checkbox-label">Нужна закладная под карниз</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">пм</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_5" type="checkbox" data-price="200" class="estimation__checkbox">
+                            <label for="type_5" class="estimation__checkbox-label">Количество люстр</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input id="type_6" type="checkbox" data-price="400" class="estimation__checkbox">
+                            <label for="type_6" class="estimation__checkbox-label">Количество светильников</label>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                          </div>
+                        </div><br>
+                        <div class="row">
+                          <div class="col-sm-12 text-right">
+                            <button type="button" class="estimation__btn">Отправить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="estimation__message admin">Спасибо, напишите пожалуйста где территориально находится объект</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9 pull-right">
+                    <div class="estimation__message transparent">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <input type="text" class="estimation__input full-width margin-top-5">
+                        </div>
+                        <div class="col-sm-5">
+                          <button type="button" class="estimation__btn">Отправить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9">
+                    <div class="estimation__message admin">Спасибо, мы все посчитали и поняли, что стоимость вашего потолка - <span class="replace old">24390</span><i class="rubl">a</i></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10">
+                    <div class="estimation__message admin"> 
+                      <div>Давайте оформим заказ, сейчас у нас проходят акция при которой <p class="dib font-italic">ваша экономия составит <span class="replace discount">1390</span><i class="rubl">a</i></p></div>
+                      <div>
+                        вы заплатите не 
+                        <span class="estimation__old-price replace">24390</span><span class="rubl">a</span>, а 
+                        <div class="estimation__current-price-wrapper"><span class="estimation__current-price replace">23090</span><span class="rubl">a</span></div>
+                        <br>а еще <p class="font-italic dib">мы подарим вам светильники!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9">
+                    <div class="estimation__message admin">И учтите что в отличии от конкурентов наш расчет максимально точен при верно введенных параметрах.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-9 pull-right">
+                    <div class="estimation__message transparent">
+                      <form action="#">
+                        <div class="row">
+                          <div class="col-sm-5 text-right">
+                            <label class="estimation__form-label">Ваше имя:</label>
+                          </div>
+                          <div class="col-sm-7">
+                            <input type="text" class="estimation__input full-width text-left">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-5 text-right">
+                            <label class="estimation__form-label">Телефон:</label>
+                          </div>
+                          <div class="col-sm-7">
+                            <input type="text" class="estimation__input full-width mask text-left">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-5 text-right">
+                            <label class="estimation__form-label">Эл.почта:</label>
+                          </div>
+                          <div class="col-sm-7">
+                            <input type="email" placeholder="опционально" class="estimation__input full-width text-left">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-5 text-right">
+                            <label class="estimation__form-label">Полный адрес:</label>
+                          </div>
+                          <div class="col-sm-7">
+                            <textarea rows="3" class="estimation__textarea text-left"></textarea>
+                          </div>
+                        </div><br>
+                        <div class="text-center">
+                          <button type="submit" class="estimation__btn">Вызвать замерщика</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-sm-5 col-md-4">
+              <p class="footer__text">115035, Москва, <br>ул. Артиллерийская, 58, стр. 1, оф. 18</p>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-2">
+              <p class="footer__text _phone-marg">Телефон:<br>8 (800) 333-49-10</p>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-3">
+              <p class="footer__text _email-marg">Электронная почта:<br><a class="footer__link" href="mailto:hello@coplast.ru">hello@coplast.ru</a></p>
+            </div>
+            <div class="col-md-3 hidden-sm">
+              <div class="footer__link-wrap pull-right"><a href="#">Написать нам</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="footer__text">© 2015 - Coplast</p>
+            </div>
+            <div class="col-sm-7 text-center"><span class="footer__text">Мы в соц.сетях:</span><a href="#" class="footer__social-link"><img src="img/y.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/vk.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/fb.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/tw.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/inst.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/ok.png" alt=""></a></div>
+            <div class="col-sm-2"><a href="#" class="pull-right">
+                <p class="footer__develop"></p></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

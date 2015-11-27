@@ -1,0 +1,187 @@
+extends _layout
+block content
+	.estimation__section
+		.container
+			.estimation__block
+				form(action="#")
+					.estimation__header
+						img.estimation__header-img(src="img/ava.jpg", alt="")
+						h3.estimation__header-title Рассчитайте стоимость вашего супер-потолка!
+					.estimation__body
+						.row
+							.col-sm-10
+								.estimation__message.admin Здравствуйте. Давайте я помогу вам выбрать потолок. Пожалуйста выберите <span>Марку потолка</span> который желаете заказать.
+						.row
+							.col-sm-11.pull-right
+								.estimation__message.transparent
+									.calculation__material-section
+										.calculation__material-block
+											.calculation__tooltip.tooltip-right
+												p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+											input.calculation__material-input#material-1(type="radio" name="material" value="20" checked)
+											label.calculation__material-label(for="material-1" data-text="Классный потолок у меня будет самыый лучшиий")
+												img.calculation__material-img(src="img/content/material_1.jpg", alt="")
+											p.calculation__material-name
+												img.calculation__material-country-production(src="img/rus.png", alt="")
+												| DESCOR (Тканевые потолки)
+										.calculation__material-block
+											.calculation__tooltip.tooltip-right
+												p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+											input.calculation__material-input#material-2(type="radio" name="material" value="30")
+											label.calculation__material-label(for="material-2" data-text="Соседи умрут от зависти от такого потолка, а тем более практически бесплатно")
+												img.calculation__material-img(src="img/content/material_2.jpg", alt="")
+											p.calculation__material-name
+												img.calculation__material-country-production(src="img/fr.png", alt="")
+												| Polyplast (Бельгия)
+										.calculation__material-block
+											.calculation__tooltip.tooltip-left
+												p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+											input.calculation__material-input#material-3(type="radio" name="material" value="40")
+											label.calculation__material-label(for="material-3" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga incidunt delectus eius quasi possimus repellendus vitae voluptates magnam. Nihil, vero!")
+												img.calculation__material-img(src="img/content/material_3.jpg", alt="")
+											p.calculation__material-name
+												img.calculation__material-country-production(src="img/not_ger.png", alt="")
+												| Clipso (Тканевые)
+										.calculation__material-block
+											.calculation__tooltip.tooltip-right
+												p.calculation__tooltip-text Достойный экономичный вариант.вете и в 3х фактурах: мат, глянец и сатин.
+											input.calculation__material-input#material-4(type="radio" name="material" value="50")
+											label.calculation__material-label(for="material-4" data-text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, incidunt.")
+												img.calculation__material-img(src="img/content/material_4.jpg", alt="")
+											p.calculation__material-name
+												img.calculation__material-country-production(src="img/ger.png", alt="")
+												| CeilBlank
+										.calculation__material-block
+											.calculation__tooltip.tooltip-left
+												p.calculation__tooltip-text Достойный экономичный вариант. Отлично подходит для небольших квартир, для квартир, которые планируется сдавать в аренду. Существуют только в белом цвете и в 3х фактурах: мат, глянец и сатин.
+											input.calculation__material-input#material-5(type="radio" name="material" value="60")
+											label.calculation__material-label(for="material-5" data-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, in delectus qui.")
+												img.calculation__material-img(src="img/content/material_5.jpg", alt="")
+											p.calculation__material-name
+												img.calculation__material-country-production(src="img/rus.png", alt="")
+												| Pongs (ПВХ)
+									.text-center
+										button.estimation__btn.btn-uppercase(type="button") Отправить
+						.row
+							.col-sm-10.pull-right
+								.estimation__message.user.new-message Мне нравится <span>CeliBlank</span>, буду поддерживать отечественного производителя ;)
+						.row
+							.col-sm-10
+								.estimation__message.admin Спасибо, скажите на какой <span>площади</span> планируете установку.
+						.row
+							.col-sm-11.pull-right
+								.estimation__message.transparent
+									.row
+										.col-sm-8
+											input.calculation__amount(type="text" readonly)
+											.calculation__slider
+												span.calculation__metrs M<sup>2</readonly sup>
+										.col-sm-4
+											button.estimation__btn.btn-uppercase(type="button") Отправить
+						.row
+							.col-sm-10
+								.estimation__message.admin Хотите расчитать подробнее выбрав дополнительные опции или показать вам приблизительный расчет?
+						.row
+							.col-sm-6.pull-right.text-center
+								.estimation__message.transparent
+									button.estimation__btn.full-width.margin-bottom-10#detail(type="button") Рассчитать подробнее
+									button.estimation__btn.full-width#result(type="button") Покажите<br>приблизительный расчет
+						.row
+							.col-sm-8
+								.estimation__message.admin Выберите дополнительные опции
+						.row
+							.col-sm-9.pull-right
+								.estimation__message.transparent
+									.estimation__checkbox-block
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_1(type="checkbox" data-price="100")
+												label.estimation__checkbox-label(for="type_1") Нужна вставка по периметру
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity м2
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_2(type="checkbox" data-price="300")
+												label.estimation__checkbox-label(for="type_2") Есть трубы уходящие в потолок
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity шт.
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_3(type="checkbox" data-price="200")
+												label.estimation__checkbox-label(for="type_3") Есть дополнительные углы
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity шт.
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_4(type="checkbox" data-price="300")
+												label.estimation__checkbox-label(for="type_4") Нужна закладная под карниз
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity пм
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_5(type="checkbox" data-price="200")
+												label.estimation__checkbox-label(for="type_5") Количество люстр
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity шт.
+										.row
+											.col-sm-12
+												input.estimation__checkbox#type_6(type="checkbox" data-price="400")
+												label.estimation__checkbox-label(for="type_6") Количество светильников
+												input.estimation__input.only-numbers(type="text" readonly value="0")
+												span.estimation__quantity шт.
+										br
+										.row
+											.col-sm-12.text-right
+												button.estimation__btn(type="button") Отправить
+						.row
+							.col-sm-8
+								.estimation__message.admin Спасибо, напишите пожалуйста где территориально находится объект
+						.row
+							.col-sm-9.pull-right
+								.estimation__message.transparent
+									.row
+										.col-sm-7
+											input.estimation__input.full-width.margin-top-5(type="text")
+										.col-sm-5
+											button.estimation__btn(type="button") Отправить
+						.row
+							.col-sm-9
+								.estimation__message.admin Спасибо, мы все посчитали и поняли, что стоимость вашего потолка - <span class="replace old">24390</span><i class="rubl">a</i>
+						.row
+							.col-sm-10
+								.estimation__message.admin 
+									div Давайте оформим заказ, сейчас у нас проходят акция при которой <p class="dib font-italic">ваша экономия составит <span class="replace discount">1390</span><i class="rubl">a</i></p>
+									div вы заплатите не 
+										| <span class="estimation__old-price replace">24390</span><span class="rubl">a</span>, а 
+										| <div class="estimation__current-price-wrapper"><span class="estimation__current-price replace">23090</span><span class="rubl">a</span></div>
+										| <br>а еще <p class="font-italic dib">мы подарим вам светильники!</p>
+						.row
+							.col-sm-9
+								.estimation__message.admin И учтите что в отличии от конкурентов наш расчет максимально точен при верно введенных параметрах.
+						.row
+							.col-sm-9.pull-right
+								.estimation__message.transparent
+									form(action="#")
+										.row
+											.col-sm-5.text-right
+												label.estimation__form-label Ваше имя:
+											.col-sm-7
+												input.estimation__input.full-width.text-left(type="text")
+										.row
+											.col-sm-5.text-right
+												label.estimation__form-label Телефон:
+											.col-sm-7
+												input.estimation__input.full-width.mask.text-left(type="text")
+										.row
+											.col-sm-5.text-right
+												label.estimation__form-label Эл.почта:
+											.col-sm-7
+												input.estimation__input.full-width.text-left(type="email" placeholder="опционально")
+										.row
+											.col-sm-5.text-right
+												label.estimation__form-label Полный адрес:
+											.col-sm-7
+												textarea.estimation__textarea.text-left(rows="3")
+										br
+										.text-center
+											button.estimation__btn(type="submit") Вызвать замерщика

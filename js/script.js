@@ -71,6 +71,7 @@ $(function() {
 		},
 		stop: function(event, ui) {
 			calculation();
+			page_calculator();
 		}
 	});
 	$(".calculation__amount").val($(".calculation__slider").slider("value"));
@@ -132,7 +133,9 @@ $(function() {
 		metrSum = 75;
 
 	$('.calculation__material-input').change(function() {
+		$('.new-message').html($(this).next().attr('data-text')); // меняем текст в следующем сообщении на странице калькулятора
 		calculation();
+		page_calculator();
 	}); // пересчитываем при отмеченном радобаттоне материала
 
 	function calculation() {
@@ -148,7 +151,7 @@ $(function() {
 
 		$('.calculation__material-input').each(function() {
 			if ($(this).is(':checked')) {
-				sumMaterial = parseInt($(this).val());
+				sumMaterial += parseInt($(this).val());
 			}
 		});
 
@@ -171,6 +174,56 @@ $(function() {
 	}
 
 	calculation();
+
+
+	// РАССЧЕТЫ НА СТРАНИЦЕ КАЛЬКУЛЯТОРА
+	$('.estimation__checkbox').change(function() { // меняем чекбокс и пересчитываем сумму
+		page_calculator();
+	});
+
+	// меняем значение в инпутах дополнительных опций и пересчитываем сумму
+	$('.estimation__checkbox-block .estimation__input').keyup(function(){
+		if ($(this).val() == '') {
+			$(this).val('0');
+		}
+		page_calculator();
+	});
+
+	// функция рассчета на странице калькулятора
+	function page_calculator() {
+		var endSum = 0,
+			currentPrice = $('.estimation__current-price');
+			oldPrice = $('.estimation__old-price');
+
+		//  меняем материал и переситываем сумму
+		$('.calculation__material-input').each(function() {
+			if ($(this).is(':checked')) {
+				endSum += parseInt($(this).val()) * parseInt($(".calculation__amount").val());
+			}
+		});
+
+		// проверяем каждый чекбокс и просчитываем сумму
+		$('.estimation__checkbox').each(function(){
+			if ($(this).is(':checked')) {
+				$(this).parent().find('.estimation__input').removeAttr('readonly');
+				endSum += parseInt($(this).parent().find('.estimation__input').val()) * parseInt($(this).attr('data-price'));
+			} else {
+				$(this).parent().find('.estimation__input').prop('readonly', true);
+				$(this).parent().find('.estimation__input').val('0'); // обнуляем значение если отключаем чекбокс
+			}
+		});
+
+		currentPrice.html(endSum * 0.8);
+		oldPrice.html(endSum);
+		$('.old').html(endSum);
+		$('.discount').html(endSum - (endSum * 0.8));
+
+		$('.replace').each(function() {
+			$(this).html(numberWithCommas($(this).html()));
+		});
+	}
+
+	page_calculator();
 
 	// карта
 	function init() {
@@ -555,8 +608,8 @@ $(function() {
 	// закрываем меню по ESC
 	$(document).keyup(function(d) {
 		if (d.keyCode == 27) {
-			$('.header__menu-list').slideUp(500);
-			$('.header__menu-list').removeClass('active');
+			$('.header__menu-list.fixed').slideUp(500);
+			$('.header__menu-list.fixed').removeClass('active');
 			$('.header__fixed-menu-btn').removeClass('active');
 		}
 	});
@@ -567,8 +620,10 @@ $(function() {
 		autoplay: false,
 		interval: 4000
 	});
+});
 
-	// обработка анимации на вызове замерщика
+// обработка анимации на вызове замерщика
+$(function(){
 	$('#cause').click(function(){
 		$('.main-wrapper').prepend('<div class="modal__wrapper"></div>');
 		$("html, body").animate({scrollTop: 0}, 200); // поднимаем экран вверх
@@ -584,6 +639,81 @@ $(function() {
 		setTimeout(function(){$('.modal__wrapper, .modal__block, .modal__btn-close, .modal__line').removeClass('active');},3000);
 		setTimeout(function(){$('.modal__line, .modal__inner, .modal__block, .modal__btn-close').removeAttr('style');},3100); // удаляем всякий мусор css
 		setTimeout(function(){$('.modal__wrapper').remove();},3200);
+	});
+});
+
+// анимация на айпеде
+$(function(){
+
+	var messageBlock = $('.estimation__message'),
+		btn = $('.estimation__btn'),
+		n = 1;
+
+	// устанавливаем якоря на сообщения
+	messageBlock.each(function(k){
+		$(this).attr('data-number', k+1);
+	});
+
+	function scrolling() {
+		$('html, body').stop().animate({
+			scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
+		}, 1000);
+	}
+
+	function get_message() {
+		$('.estimation__message[data-number="'+n+'"]').addClass('active');
+		scrolling();
+		n++;
+	}
+
+	function new_count() {
+		
+	}
+
+	setTimeout(function(){
+		$('.estimation__header').fadeIn(800);
+	},1);
+
+	
+	setTimeout(function(){get_message();},2500); // показ первого сообщения
+	setTimeout(function(){get_message();},5000); // показ второго
+
+	btn.click(function(){
+		setTimeout(function(){get_message();},1000);
+		$(this).prop('disabled', true);
+		if (n == 3) {
+			setTimeout(function(){get_message();},4000);
+			setTimeout(function(){get_message();},6500);
+		}
+		if (n == 6) {
+			setTimeout(function(){get_message();},4000);
+		}
+		if (n == 10) {
+			setTimeout(function(){get_message();},4000);
+		}
+		if (n == 12) {
+			setTimeout(function(){get_message();},4000);
+			setTimeout(function(){get_message();},7500);
+			setTimeout(function(){get_message();},10000);
+			setTimeout(function(){get_message();},14000);
+		}
+	});
+
+	// кликаем на показать приблизительный рассчет
+	$('#result').click(function(){
+		$('#detail').prop('disabled', true);
+		n = 12;
+		setTimeout(function(){get_message();},3000);
+		setTimeout(function(){get_message();},7500);
+		setTimeout(function(){get_message();},9000);
+	});
+
+	// кликаем на подробный рассчет
+	$('#detail').click(function(){
+		$('#result').prop('disabled', true);
+		if (n == 8) {
+			setTimeout(function(){get_message();},3000);
+		}
 	});
 
 
