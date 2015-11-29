@@ -616,13 +616,6 @@ $(function() {
 		}
 	});
 
-
-	//слайдер
-	$('#da-slider').cslider({
-		autoplay: false,
-		interval: 4000
-	});
-
 });
 
 // обработка анимации на вызове замерщика

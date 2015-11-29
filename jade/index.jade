@@ -39,63 +39,7 @@ block content
 							input.margin-left-15.modal__input(type="text")
 						.col-sm-4
 							button.pull-right.btn.btn-blue.modal__submit(type="submit") Вызвать замерщика
-	//- .slider__block
-	//- 	p СЛАЙДЕР
-		//- #da-slider.da-slider
-		//- 	.da-slide
-		//- 		.da-img
-		//- 			img(src="img/content/slider_bg_1.jpg", alt="")
-		//- 		<p>Интернет-магазин</p>
-		//- 		<h2>WORLD OF WARCRAFT</h2>
-		//- 	.da-slide
-		//- 		.da-img(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
-		//- 			img(src="img/content/slider_bg_1.jpg", alt="")
-		//- 		<p>Интернет-магазин</p>
-		//- 		<h2>WORLD OF WARCRAFT</h2>
-	.slider__block
-		ul.slider__list
-			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
-				.container
-					.row
-						.col-md-7.col-sm-12.slider__discount
-							p.slider__title Скидка 20%
-							// вызов счетчика обратного отсчета
-							script.
-								$(document).ready(function(){
-									$('#countdown_dashboard').countDown({
-										targetDate: {
-											'day': 25,
-											'month': 11,
-											'year': 2015,
-											'hour': 13,
-											'min': 0,
-											'sec': 0
-										}
-									});
-								});
-							.slider__countdown
-								p.slider__countdown-text закончится через
-								#countdown_dashboard
-									.dash.hours_dash
-										.digit 0
-										.digit 0
-										span.dash_title Часов
-									.dash.minutes_dash
-										.digit 0
-										.digit 0
-										span.dash_title Минут
-									.dash.seconds_dash
-										.digit 0
-										.digit 0
-										span.dash_title Секунд
-						.col-md-5.col-sm-12.slider__discount-description
-							.slider__text-wrap
-								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
-								a.btn.btn-yellow(href="#") Спешите заказать!
-			li.slider__list-item(style="background: url(img/content/slider_bg_4.jpg) top center no-repeat;")
-				.container
-			li.slider__list-item(style="background: url(img/content/slider_bg_5.jpg) top center no-repeat;")
-				.container
+	include includes/_slider
 	.item-top__block
 		.container
 			h2.subtitle Сатиновый натяжной потолок на кухню
