@@ -109,7 +109,7 @@ textarea {
   text-align: center;
 }
 .text-left {
-  text-align: left;
+  text-align: left!important;
 }
 .padding-top-50 {
   padding-top: 50px;
@@ -130,7 +130,7 @@ textarea {
   margin-top: 5px;
 }
 .font-italic {
-  font-family: 'Fira Sans Italic';
+  font-family: 'Fira Sans Light Italic';
 }
 .font-light {
   font-family: 'Fira Sans Light';
@@ -3622,9 +3622,49 @@ textarea {
   z-index: -2;
 }
 .action__block-content {
-  background: url(../img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+  text-align: center;
   padding: 25px 16px;
-  background-size: cover;
+  background-size: cover!important;
+}
+.action__block-content.v-1 {
+  background: url(../img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+}
+.action__block-content.v-1 .action__title {
+  font-size: 36px;
+}
+.action__block-content.v-2 {
+  background: url(../img/orange_bg.png) 0 0 no-repeat;
+}
+.action__block-content.v-2 .action__title {
+  font-size: 30px;
+}
+.action__block-content.v-2 .action__text {
+  font-size: 24px;
+  font-family: 'Fira Sans Bold';
+  text-transform: uppercase;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.action__block-content.v-3 {
+  background: url(../img/red_bg.png) 0 0 no-repeat;
+}
+.action__block-content.v-3 .action__title {
+  font-size: 30px;
+}
+.action__block-content.v-3 .action__btn {
+  padding: 18px 18px 15px 18px!important;
+  margin-top: 5px;
+}
+.action__block-content.v-3 .action__text {
+  font-size: 24px;
+  font-family: 'Fira Sans Bold';
+}
+.action__block-content.v-3 .action__title {
+  font-size: 36px;
+  font-family: 'Fira Sans Bold';
+  display: inline-block;
+  color: #fff;
+  margin: 10px 0 20px;
 }
 .action__title {
   font-size: 38px;
@@ -3634,11 +3674,11 @@ textarea {
   margin: 0;
 }
 .action__text {
-  font-family: 'Fira Sans Light';
+  font-family: 'Fira Sans Regular';
   color: #fff;
   line-height: 20px;
-  margin: 0 0 28px;
-  font-size: 16px;
+  margin: 0 0 5px;
+  font-size: 15px;
 }
 .action__countdown-text {
   color: #fff;

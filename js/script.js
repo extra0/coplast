@@ -206,12 +206,14 @@ $(function() {
 		$('.estimation__checkbox').each(function(){
 			if ($(this).is(':checked')) {
 				$(this).parent().find('.estimation__input').removeAttr('readonly');
-				endSum += parseInt($(this).parent().find('.estimation__input').val()) * parseInt($(this).attr('data-price'));
+				endSum += parseInt($(this).parent().find('.estimation__input').val()) * parseInt($(this).attr('data-price')); // рассчет
 			} else {
 				$(this).parent().find('.estimation__input').prop('readonly', true);
 				$(this).parent().find('.estimation__input').val('0'); // обнуляем значение если отключаем чекбокс
 			}
 		});
+
+		$('.calc-square').html($(".calculation__amount").val()); // записываем выбранную площадь в сообщение
 
 		currentPrice.html(endSum * 0.8);
 		oldPrice.html(endSum);
@@ -620,6 +622,7 @@ $(function() {
 		autoplay: false,
 		interval: 4000
 	});
+
 });
 
 // обработка анимации на вызове замерщика
@@ -642,26 +645,31 @@ $(function(){
 	});
 });
 
-// анимация на айпеде
+// анимация на айпаде
 $(function(){
 
 	window.onload = function () { // вся прелесть после загрузки документа
 		var messageBlock = $('.estimation__message'),
-			btn = $('.estimation__btn'),
+			btn = $('.estimation__btn[type="button"]'),
 			n = 1;
+
+		// заносим название города в сообщение
+		$('#city').change(function(){
+			$('.result-city').html($(this).val());
+		});	
 
 		// устанавливаем якоря на сообщения
 		messageBlock.each(function(k){
 			$(this).attr('data-number', k+1);
 		});
 
-		$('html, body').scrollTo('170px', 1000);
+		// $('html, body').scrollTo($('.estimation__header'), 1000); // доскролл при загрузке на странице калькулятора
 
 		// функция докрутки до нового сообщения
 		function scrolling() {
-			$('html, body').stop().animate({
-				scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
-			}, 1000);
+			// $('html, body').stop().animate({
+			// 	scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
+			// }, 1000);
 		}
 
 		// функция показа сообщения
@@ -676,45 +684,60 @@ $(function(){
 		},1000);
 
 		
-		setTimeout(function(){get_message();},2500); // показ первого сообщения
-		setTimeout(function(){get_message();},5000); // показ второго
+		setTimeout(function(){get_message();},2500); // показ первого сообщение от админа
+		setTimeout(function(){get_message();},5000); // вопрос о выборе материалов
 
 		btn.click(function(){
-			setTimeout(function(){get_message();},1000);
-			$(this).prop('disabled', true);
+			// $(this).prop('disabled', true);
 			if (n == 3) {
-				setTimeout(function(){get_message();},4000);
-				setTimeout(function(){get_message();},6500);
+				setTimeout(function(){get_message();},1000); // сообщение пользователя о выбранном материале
+				setTimeout(function(){get_message();},4000); // вопрос админа
+				setTimeout(function(){get_message();},6500); // сообщение о выборе площади
+				$(this).parent().parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
 			}
 			if (n == 6) {
-				setTimeout(function(){get_message();},4000);
-			}
-			if (n == 10) {
-				setTimeout(function(){get_message();},4000);
+				setTimeout(function(){get_message();},1000); // сообщение пользователя с площадью
+				setTimeout(function(){get_message();},2500); // сообщение от админа
+				setTimeout(function(){get_message();},4000); // выбор подробного или сокращенного вариантов расчета
+				$(this).parent().parent().parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
 			}
 			if (n == 12) {
-				setTimeout(function(){get_message();},4000);
-				setTimeout(function(){get_message();},7500);
-				setTimeout(function(){get_message();},10000);
-				setTimeout(function(){get_message();},14000);
+				setTimeout(function(){get_message();},1000); // сообщение от пользователя
+				setTimeout(function(){get_message();},4000); // вопрос от админа с указанием города
+				setTimeout(function(){get_message();},7000); // форма указания города
+				$(this).parent().parent().parent().parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
+			}
+			if (n == 15) {
+				setTimeout(function(){get_message();},1000); // сообщение о выбранном городе от пользователя
+				setTimeout(function(){get_message();},2000); // небольшое сообщение с суммой
+				setTimeout(function(){get_message();},4000); // детальное указание суммы
+				setTimeout(function(){get_message();},7500); // дополнительное сообщение после расчетов
+				setTimeout(function(){get_message();},10000); // вывод формы
+				$(this).parent().parent().parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
 			}
 		});
 
 		// кликаем на показать приблизительный рассчет
 		$('#result').click(function(){
-			$('#detail').prop('disabled', true);
+			$('.result-message').html($(this).attr('data-text')); // пишем сообщение ответа
+			$(this).parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
+			setTimeout(function(){get_message();},1000); // сообщение от пользователя
+			setTimeout(function(){get_message();},2000); // вывод небольшого сообщения с суммой
+			// $('#detail').prop('disabled', true);
 			n = 12;
-			setTimeout(function(){get_message();},3000);
-			setTimeout(function(){get_message();},7500);
-			setTimeout(function(){get_message();},9000);
+			setTimeout(function(){get_message();},3000); // вывод общей суммы
+			setTimeout(function(){get_message();},7500); // короткое сообщение
+			setTimeout(function(){get_message();},9000); // вывод формы
 		});
 
 		// кликаем на подробный рассчет
 		$('#detail').click(function(){
-			$('#result').prop('disabled', true);
-			if (n == 8) {
-				setTimeout(function(){get_message();},3000);
-			}
+			$(this).parent().parent().find('.transparent').slideUp(500); // скрываем сообщение вопроса
+			$('.result-message').html($(this).attr('data-text')); // пишем сообщние ответа
+			setTimeout(function(){get_message();},1000); // сообщение от пользователя
+			setTimeout(function(){get_message();},2000); // сообщение от админа
+			// $('#result').prop('disabled', true);
+			setTimeout(function(){get_message();},4000); // выбор дополнительных опций
 		});
 	}
 	

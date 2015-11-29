@@ -28,7 +28,7 @@ block content
 										targetDate: {
 											'day': 25,
 											'month': 11,
-											'year': 2015,
+											'year': 2016,
 											'hour': 13,
 											'min': 0,
 											'sec': 0
@@ -111,9 +111,15 @@ block content
 							button.univ__btn.btn.btn-blue(type="button") Приступить к сотрудничеству
 				.col-md-4.col-lg-3.hidden-sm
 					.action__block.suit_bg
-						.action__block-content
+						.action__block-content.v-1(style="display: none;")
 							h3.action__title Cкидка 20%
-							p.action__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
+							p.action__text Действует до 10 декабря
+							img(src="img/calendar.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
+						.action__block-content.v-2
+							h3.action__title АКЦИЯ!
+							p.action__text Светильники<br>в подарок!
+							img(src="img/lamp.png", alt="")
 							// вызов счетчика обратного отсчета
 							script.
 								$(document).ready(function(){
@@ -121,14 +127,13 @@ block content
 										targetDate: {
 											'day': 25,
 											'month': 11,
-											'year': 2015,
+											'year': 2016,
 											'hour': 13,
 											'min': 0,
 											'sec': 0
 										}
 									});
 								});
-							p.action__countdown-text закончится через
 							#countdown_dashboard_action
 								.dash.hours_dash.widthS
 									.digit.sizeS 0
@@ -142,4 +147,11 @@ block content
 									.digit.sizeS 0
 									.digit.sizeS 0
 									span.dash_title.sizeS Секунд
-							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
+							a.btn.btn-yellow.action__btn(href="#") Получите подарок!
+						.action__block-content.v-3(style="display: none;")
+							h3.action__title Натяжные потолки
+							p.action__text от 
+								span.action__subtitle 179
+								|  руб./м<sup>2</sup>
+							img(src="img/action_cash.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Заказать по этой цене

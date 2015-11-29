@@ -145,13 +145,18 @@
                       <div class="row">
                         <div class="col-sm-8">
                           <input type="text" readonly class="calculation__amount">
-                          <div class="calculation__slider"><span class="calculation__metrs">M<sup>2</readonly sup></span></div>
+                          <div class="calculation__slider"><span class="calculation__metrs">M<sup>2</sup></span></div>
                         </div>
                         <div class="col-sm-4">
                           <button type="button" class="estimation__btn btn-uppercase">Отправить</button>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 pull-right">
+                    <div class="estimation__message user">Площадь моего потолка <strong class="calc-square"></strong> м<sup>2</sup></div>
                   </div>
                 </div>
                 <div class="row">
@@ -162,9 +167,14 @@
                 <div class="row">
                   <div class="col-sm-6 pull-right text-center">
                     <div class="estimation__message transparent">
-                      <button id="detail" type="button" class="estimation__btn full-width margin-bottom-10">Рассчитать подробнее</button>
-                      <button id="result" type="button" class="estimation__btn full-width">Покажите<br>приблизительный расчет</button>
+                      <button id="detail" type="button" data-text="Я хочу более точный расчет, задавайте больше вопросов" class="estimation__btn full-width margin-bottom-10">Рассчитать подробнее</button>
+                      <button id="result" type="button" data-text="Покажите мне, пожалуйста, сразу предварительный рассчет" class="estimation__btn full-width">Покажите<br>приблизительный расчет</button>
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 pull-right">
+                    <div class="estimation__message user"><span class="result-message"></span></div>
                   </div>
                 </div>
                 <div class="row">
@@ -180,42 +190,42 @@
                           <div class="col-sm-12">
                             <input id="type_1" type="checkbox" data-price="100" class="estimation__checkbox">
                             <label for="type_1" class="estimation__checkbox-label">Нужна вставка по периметру</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">м2</span>
+                            <input type="text" readonly value="0" data-text="Вставка по периметру - " class="estimation__input only-numbers"><span class="estimation__quantity">м<sup>2</sup></span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_2" type="checkbox" data-price="300" class="estimation__checkbox">
                             <label for="type_2" class="estimation__checkbox-label">Есть трубы уходящие в потолок</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" data-text="Есть трубы уходящие в потолок -" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_3" type="checkbox" data-price="200" class="estimation__checkbox">
                             <label for="type_3" class="estimation__checkbox-label">Есть дополнительные углы</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" data-text="Есть дополнительные углы - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_4" type="checkbox" data-price="300" class="estimation__checkbox">
                             <label for="type_4" class="estimation__checkbox-label">Нужна закладная под карниз</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">пм</span>
+                            <input type="text" readonly value="0" data-text="Нужна закладная под карниз - " class="estimation__input only-numbers"><span class="estimation__quantity">пм</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_5" type="checkbox" data-price="200" class="estimation__checkbox">
                             <label for="type_5" class="estimation__checkbox-label">Количество люстр</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" data-text="Количество люстр - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_6" type="checkbox" data-price="400" class="estimation__checkbox">
                             <label for="type_6" class="estimation__checkbox-label">Количество светильников</label>
-                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" data-text="Количество светильников - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div><br>
                         <div class="row">
@@ -224,6 +234,14 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 pull-right">
+                    <div class="estimation__message user">
+                      <div>Мне нужны следующие опции:</div>
+                      <div class="extra-option"></div>
                     </div>
                   </div>
                 </div>
@@ -237,13 +255,18 @@
                     <div class="estimation__message transparent">
                       <div class="row">
                         <div class="col-sm-7">
-                          <input type="text" class="estimation__input full-width margin-top-5">
+                          <input id="city" type="text" class="estimation__input full-width margin-top-5">
                         </div>
                         <div class="col-sm-5">
                           <button type="button" class="estimation__btn">Отправить</button>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 pull-right">
+                    <div class="estimation__message user">Расположение моего объекта - <span class="result-city"></span></div>
                   </div>
                 </div>
                 <div class="row">

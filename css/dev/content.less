@@ -1067,7 +1067,7 @@
 		margin-top: 19px;
 		text-align: center;
 		position: relative;
-		z-index: 10;
+		z-index: 10; 
 		&.docs_bg {
 			&:before {
 				content: '';
@@ -1106,9 +1106,49 @@
 		}
 	}
 	&__block-content {
-		background: url(../img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+		text-align: center;
 		padding: 25px 16px;
-		background-size: cover;
+		background-size: cover!important;
+		&.v-1 {
+			background: url(../img/univ_sidebar_bg.jpg) 0 0 no-repeat;
+			.action__title {
+				font-size: 36px;
+			}
+		}
+		&.v-2 {
+			background: url(../img/orange_bg.png) 0 0 no-repeat;
+			.action__title {
+				font-size: 30px;
+			}
+			.action__text {
+				font-size: 24px;
+				font-family: 'Fira Sans Bold';
+				text-transform: uppercase;
+				line-height: 26px;
+			    margin-bottom: 20px;
+			}
+		}
+		&.v-3 {
+			background: url(../img/red_bg.png) 0 0 no-repeat;
+			.action__title {
+				font-size: 30px;
+			}
+			.action__btn {
+				padding: 18px 18px 15px 18px!important;
+				margin-top: 5px;
+			}
+			.action__text {
+				font-size: 24px;
+				font-family: 'Fira Sans Bold';
+			}
+			.action__title {
+				font-size: 36px;
+				font-family: 'Fira Sans Bold';
+				display: inline-block;
+				color: #fff;
+				margin: 10px 0 20px;
+			}
+		}
 	}
 	&__title {
 		font-size: 38px;
@@ -1118,11 +1158,11 @@
 		margin: 0;
 	}
 	&__text {
-		font-family: 'Fira Sans Light';
+		font-family: 'Fira Sans Regular';
 		color: #fff;
 		line-height: 20px;
-		margin: 0 0 28px;
-		font-size: 16px;
+		margin: 0 0 5px;
+		font-size: 15px;
 	}
 	&__countdown-text {
 		color: #fff;
@@ -1139,6 +1179,25 @@
 #countdown_dashboard_action {
 	margin: 0 auto;
 	display: inline-block;
+	// .dash  {
+	// 	width: 75px;
+	// }
+	// .dash .digit {
+	//   font-size: 38px;
+	//   font-weight: bold;
+	//   float: left;
+	//   width: 29px;
+	//   text-align: center;
+	//   font-family: 'Uni Sans';
+	//   color: #343434;
+	//   position: relative;
+	//   top: 0px;
+	//   left: 4px;
+	//   margin: 0 3px;
+	// }
+	// .dash_title {
+	// 	bottom: -4px;
+	// }
 }
 // блок с отзывом
 .review {
