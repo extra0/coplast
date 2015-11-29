@@ -73,61 +73,13 @@
         </div>
         <p class="clarification__detail hidden-sm">узнайте подробнее <a href="##">о производстве</a></p>
       </div>
-      <div class="slider__block">
-        <ul class="slider__list">
-          <li style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-7 col-sm-12 slider__discount">
-                  <p class="slider__title">Скидка 20%</p>
-                  <!-- вызов счетчика обратного отсчета-->
-                  <script>
-                    $(document).ready(function(){
-                    	$('#countdown_dashboard').countDown({
-                    		targetDate: {
-                    			'day': 25,
-                    			'month': 11,
-                    			'year': 2016,
-                    			'hour': 13,
-                    			'min': 0,
-                    			'sec': 0
-                    		}
-                    	});
-                    });
-                  </script>
-                  <div class="slider__countdown">
-                    <p class="slider__countdown-text">закончится через</p>
-                    <div id="countdown_dashboard">
-                      <div class="dash hours_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Часов</span>
-                      </div>
-                      <div class="dash minutes_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Минут</span>
-                      </div>
-                      <div class="dash seconds_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Секунд</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-5 col-sm-12 slider__discount-description">
-                  <div class="slider__text-wrap">
-                    <p class="slider__text">При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже</p><a href="#" class="btn btn-yellow">Спешите заказать!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container"></div>
-          </li>
-          <li style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container"></div>
-          </li>
-        </ul>
+      <div id="full-slider-wrapper" class="slider__block">
+        <div id="layerslider" style="height: 288px;">
+          <div data-ls="slidedelay: 7000; transition2d: all;" class="ls-layer"><img src="img/content/slider_bg_1.jpg" alt="" class="ls-bg">
+            <p style="top:20px;left:300px;font-size: 78px;text-transform: uppercase;color: #fff; font-family: 'Fira Sans Bold';" data-ls="offsetxin:0;durationin:3000;delayin:1200;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" class="ls-l">Cкидка 20%</p>
+            <p style="top:120px;left:413px;font-family:'Fira Sans Regular'; font-size: 30px; color:#fff;" data-ls="offsetxin:0;durationin:2000;delayin:2000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% 50% 0;offsetxout:-400;" class="ls-l">действует до 10 декабря</p><a href="#" data-ls="offsetxin:0;durationin:2000;delayin:2700;easingin:easeOutElastic;rotatexin:90;rotateyin:190;transformoriginin:50% top 0;offsetxout:-400;" style="top: 185px;left: 455px;width: 200px;" class="ls-l btn btn-yellow">Спешите заказать!</a><img src="img/calendar.png" alt="" style="top:27px;left:970px;white-space: nowrap;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;" class="ls-l">
+          </div>
+        </div>
       </div>
       <div class="main__content">
         <div class="container">
@@ -265,6 +217,9 @@
         </div>
       </div>
     </footer>
+    <script src="js/greensock.js"></script>
+    <script src="js/layerslider.transitions.js"></script>
+    <script src="js/layerslider.kreaturamedia.jquery.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
   </body>

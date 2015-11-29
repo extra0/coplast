@@ -539,7 +539,7 @@ $(function() {
 		}
 	];
 
-	ymaps.ready(init);
+	// ymaps.ready(init);
 
 	// фикс шапки при скролле
 	var $header = $(".header");
@@ -616,6 +616,10 @@ $(function() {
 		}
 	});
 
+	$('#layerslider').layerSlider({
+		
+	});
+
 });
 
 // обработка анимации на вызове замерщика
@@ -660,9 +664,9 @@ $(function(){
 
 		// функция докрутки до нового сообщения
 		function scrolling() {
-			// $('html, body').stop().animate({
-			// 	scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
-			// }, 1000);
+			$('html, body').stop().animate({
+				scrollTop: $($('.estimation__message[data-number="'+n+'"]')).offset().top - 150
+			}, 1000);
 		}
 
 		// функция показа сообщения

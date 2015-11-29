@@ -74,60 +74,10 @@
         <p class="clarification__detail hidden-sm">узнайте подробнее <a href="#">о производстве</a></p>
       </div>
       <div class="slider__block">
-        <ul class="slider__list">
-          <li style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-7 col-sm-12 slider__discount">
-                  <p class="slider__title">Скидка 20%</p>
-                  <!-- вызов счетчика обратного отсчета-->
-                  <script>
-                    $(document).ready(function(){
-                    	$('#countdown_dashboard').countDown({
-                    		targetDate: {
-                    			'day': 25,
-                    			'month': 11,
-                    			'year': 2016,
-                    			'hour': 13,
-                    			'min': 0,
-                    			'sec': 0
-                    		}
-                    	});
-                    });
-                  </script>
-                  <div class="slider__countdown">
-                    <p class="slider__countdown-text">закончится через</p>
-                    <div id="countdown_dashboard">
-                      <div class="dash hours_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Часов</span>
-                      </div>
-                      <div class="dash minutes_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Минут</span>
-                      </div>
-                      <div class="dash seconds_dash">
-                        <div class="digit">0</div>
-                        <div class="digit">0</div><span class="dash_title">Секунд</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-5 col-sm-12 slider__discount-description">
-                  <div class="slider__text-wrap">
-                    <p class="slider__text">При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже</p><a href="#" class="btn btn-yellow">Спешите заказать!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container"></div>
-          </li>
-          <li style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;" class="slider__list-item">
-            <div class="container"></div>
-          </li>
-        </ul>
+        <div id="layerslider" style="height: 288px;">
+          <div data-ls="slidedelay: 7000; transition2d: 75,79;" class="ls-layer"><img src="img/content/slider_bg_1.jpg" alt="" class="ls-bg"></div>
+          <div class="ls-layer"></div>
+        </div>
       </div>
       <div class="main__content">
         <div class="container">
@@ -263,6 +213,9 @@
         </div>
       </div>
     </footer>
+    <script src="js/greensock.js"></script>
+    <script src="js/layerslider.transitions.js"></script>
+    <script src="js/layerslider.kreaturamedia.jquery.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/script.js"></script>
   </body>

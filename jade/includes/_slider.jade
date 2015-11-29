@@ -1,44 +1,39 @@
-.slider__block
-		ul.slider__list
-			li.slider__list-item(style="background: url(img/content/slider_bg_1.jpg) top center no-repeat;")
-				.container
-					.row
-						.col-md-7.col-sm-12.slider__discount
-							p.slider__title Скидка 20%
-							// вызов счетчика обратного отсчета
-							script.
-								$(document).ready(function(){
-									$('#countdown_dashboard').countDown({
-										targetDate: {
-											'day': 25,
-											'month': 11,
-											'year': 2016,
-											'hour': 13,
-											'min': 0,
-											'sec': 0
-										}
-									});
-								});
-							.slider__countdown
-								p.slider__countdown-text закончится через
-								#countdown_dashboard
-									.dash.hours_dash
-										.digit 0
-										.digit 0
-										span.dash_title Часов
-									.dash.minutes_dash
-										.digit 0
-										.digit 0
-										span.dash_title Минут
-									.dash.seconds_dash
-										.digit 0
-										.digit 0
-										span.dash_title Секунд
-						.col-md-5.col-sm-12.slider__discount-description
-							.slider__text-wrap
-								p.slider__text При покупке натяжного потолка с установкой - вы сэкономите 20% на материалах и монтаже
-								a.btn.btn-yellow(href="#") Спешите заказать!
-			li.slider__list-item(style="background: url(img/content/slider_bg_2.jpg) top center no-repeat;")
-				.container
-			li.slider__list-item(style="background: url(img/content/slider_bg_3.jpg) top center no-repeat;")
-				.container
+.slider__block#full-slider-wrapper
+	#layerslider(style="height: 288px;")
+		.ls-layer(data-ls="slidedelay: 7000; transition2d: all;")
+			img.ls-bg(src="img/content/slider_bg_1.jpg", alt="")
+			p.ls-l(style="top:20px;left:300px;font-size: 78px;text-transform: uppercase;color: #fff; font-family: 'Fira Sans Bold';" data-ls="offsetxin:0;durationin:3000;delayin:1200;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;") Cкидка 20%
+			p.ls-l(style="top:120px;left:413px;font-family:'Fira Sans Regular'; font-size: 30px; color:#fff;" data-ls="offsetxin:0;durationin:2000;delayin:2000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% 50% 0;offsetxout:-400;") действует до 10 декабря
+			a.ls-l.btn.btn-yellow(href="#" data-ls="offsetxin:0;durationin:2000;delayin:2700;easingin:easeOutElastic;rotatexin:90;rotateyin:190;transformoriginin:50% top 0;offsetxout:-400;" style="top: 185px;left: 455px;width: 200px;") Спешите заказать!
+			img.ls-l(src="img/calendar.png", alt="" style="top:27px;left:970px;white-space: nowrap;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;")
+		//- .ls-layer(data-ls="slidedelay: 7000; transition2d: all;")
+		//- 	img.ls-bg(src="img/content/slider_bg_2.jpg", alt="")
+		//- 	div.ls-l(style="top:20px;left:300px;font-size: 78px;text-transform: uppercase;color: #fff; font-family: 'Fira Sans Bold';" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:50% top 0;offsetxout:-200;durationout:1000;") 
+		//- 		// вызов счетчика обратного отсчета
+		//- 		script.
+		//- 			$(document).ready(function(){
+		//- 				$('#countdown_dashboard').countDown({
+		//- 					targetDate: {
+		//- 						'day': 25,
+		//- 						'month': 11,
+		//- 						'year': 2016,
+		//- 						'hour': 13,
+		//- 						'min': 0,
+		//- 						'sec': 0
+		//- 					}
+		//- 				});
+		//- 			});
+		//- 		.slider__countdown
+		//- 			#countdown_dashboard
+		//- 				.dash.hours_dash
+		//- 					.digit 0
+		//- 					.digit 0
+		//- 					span.dash_title Часов
+		//- 				.dash.minutes_dash
+		//- 					.digit 0
+		//- 					.digit 0
+		//- 					span.dash_title Минут
+		//- 				.dash.seconds_dash
+		//- 					.digit 0
+		//- 					.digit 0
+		//- 					span.dash_title Секунд

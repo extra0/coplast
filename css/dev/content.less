@@ -58,48 +58,35 @@
 // слайдер на главной
 .slider {
 	&__block {
-		margin-top: 5px;
-		overflow: hidden;
+		padding-top: 25px;
+		max-width: 1920px;
+		margin: 0 auto;
 	}
-	&__title {
-		font-size: 78px;
-		font-family: 'Fira Sans Bold';
-		margin: 0 15px 15px 0;
-		text-transform: uppercase;
-		color: #fff;
-		padding-right: 50px;
-		border-right: 1px solid #9ac6dc;
-	}
-	&__list-item {
-		padding-bottom: 20px;
-		min-height: 288px;
-		background-size: cover!important;
-	}
-	&__countdown-text {
-		color: #fff;
-		font-size: 30px;
-		margin: 12px 9px 0 0;
-		display: inline-block;
-		font-family: 'Fira Sans Regular';
-		vertical-align: top;
-	}
-	&__text-wrap {
-		margin-left: 14px;
-	}
-	&__text {
-		color: #fff;
-		margin: 6px 25px 34px 0;
-		line-height: 30px;
-		font-family: 'Fira Sans Light';
-		font-size: 20px;
-	}
-	&__discount {
-		padding-top: 50px;
-		text-align: right;
-	}
-	&__discount-description {
-		padding-top: 50px;
-	}
+}
+.ls-nav-prev {
+	background: url(../img/arrow.png) 0 0 no-repeat;
+	z-index: 7000;
+	top: 25%;
+	margin-top: 0px;
+	position: absolute;
+	left: 30px;
+	width: 30px;
+	height: 152px;
+}
+.ls-nav-next {
+	background: url(../img/arrow.png) 0 0 no-repeat;
+	z-index: 7000;
+	top: 25%;
+	margin-top: 0px;
+	position: absolute;
+	right: 30px;
+	width: 30px;
+	height: 152px;
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 // блок с топовыми предложениями на главной
 .item-top {
@@ -1683,6 +1670,40 @@
 			z-index: 1;
 			max-height: 2000px;
 			overflow: visible;
+			// -webkit-animation: scale 1.5s ease-in-out;
+			// -moz-animation:    scale 1.5s ease-in-out;
+			// -o-animation:      scale 1.5s ease-in-out;
+			// animation:         scale 1.5s ease-in-out;
+			// @-webkit-keyframes scale {
+			//     0%   {
+			//     	transform: scale(0);
+			//     }
+			//     50% {
+			//     	transform: scale(0.6);
+			//     }
+			//     75%  {
+			// 		transform: scale(1.1);
+			//     }
+			//     100% {
+			// 		transform: scale(1);
+			//     }
+			// } 
+
+			// /* Standard syntax */ 
+			// @keyframes scale {
+			//     0%   {
+			//     	transform: scale(0);
+			//     }
+			//     50% {
+			//     	transform: scale(0.6);
+			//     }
+			//     75%  {
+			// 		transform: scale(1.1);
+			//     }
+			//     100% {
+			// 		transform: scale(1);
+			//     }
+			// }
 		}
 		& > span {
 			font-family: 'Fira Sans Medium';
