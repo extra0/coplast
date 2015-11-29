@@ -2092,13 +2092,53 @@ body * .ls-container .ls-webkit-hack,
   max-width: 1920px;
   margin: 0 auto;
 }
+.slider__slide-v1 .slider__title {
+  font-size: 78px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Fira Sans Bold';
+}
+.slider__slide-v1 .slider__text {
+  font-family: 'Fira Sans Regular';
+  font-size: 30px;
+  color: #fff;
+}
+.slider__slide-v1 .slider__btn {
+  width: 200px;
+}
+.slider__slide-v2 .slider__title {
+  color: #fff;
+  text-align: right;
+  font-size: 48px;
+  line-height: 48px;
+  width: 515px;
+  text-transform: uppercase;
+  font-family: 'Fira Sans Bold';
+}
+.slider__slide-v3 .slider__title {
+  color: #fff;
+  margin-top: -24px;
+  text-align: right;
+  font-size: 48px;
+  line-height: 60px;
+  width: 515px;
+  text-transform: uppercase;
+  font-family: 'Fira Sans Bold';
+}
+.slider__slide-v3 .slider__price {
+  font-size: 78px;
+  display: inline-block;
+}
+.slider__slide-v3 .slider__btn {
+  padding: 18px 32px 15px;
+}
 .ls-nav-prev {
   background: url(../img/arrow.png) 0 0 no-repeat;
   z-index: 7000;
   top: 25%;
   margin-top: 0px;
   position: absolute;
-  left: 30px;
+  left: 5%;
   width: 30px;
   height: 152px;
 }
@@ -2108,7 +2148,7 @@ body * .ls-container .ls-webkit-hack,
   top: 25%;
   margin-top: 0px;
   position: absolute;
-  right: 30px;
+  right: 5%;
   width: 30px;
   height: 152px;
   -moz-transform: rotate(180deg);

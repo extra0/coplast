@@ -617,7 +617,9 @@ $(function() {
 	});
 
 	$('#layerslider').layerSlider({
-		
+		responsive: false,
+		responsiveUnder: 1200,
+		layersContainer: 1200,
 	});
 
 });
