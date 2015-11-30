@@ -103,37 +103,37 @@ block content
 											.col-sm-12
 												input.estimation__checkbox#type_1(type="checkbox" data-price="100" )
 												label.estimation__checkbox-label(for="type_1") Нужна вставка по периметру
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Вставка по периметру - ")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity м<sup>2</sup>
 										.row
 											.col-sm-12
 												input.estimation__checkbox#type_2(type="checkbox" data-price="300" )
 												label.estimation__checkbox-label(for="type_2") Есть трубы уходящие в потолок
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Есть трубы уходящие в потолок -")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity шт.
 										.row
 											.col-sm-12
 												input.estimation__checkbox#type_3(type="checkbox" data-price="200" )
 												label.estimation__checkbox-label(for="type_3") Есть дополнительные углы
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Есть дополнительные углы - ")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity шт.
 										.row
 											.col-sm-12
 												input.estimation__checkbox#type_4(type="checkbox" data-price="300" )
 												label.estimation__checkbox-label(for="type_4") Нужна закладная под карниз
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Нужна закладная под карниз - ")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity пм
 										.row
 											.col-sm-12
 												input.estimation__checkbox#type_5(type="checkbox" data-price="200" )
 												label.estimation__checkbox-label(for="type_5") Количество люстр
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Количество люстр - ")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity шт.
 										.row
 											.col-sm-12
 												input.estimation__checkbox#type_6(type="checkbox" data-price="400" )
 												label.estimation__checkbox-label(for="type_6") Количество светильников
-												input.estimation__input.only-numbers(type="text" readonly value="0" data-text="Количество светильников - ")
+												input.estimation__input.only-numbers(type="text" readonly value="0")
 												span.estimation__quantity шт.
 										br
 										.row
@@ -144,6 +144,12 @@ block content
 								.estimation__message.user
 									div Мне нужны следующие опции:
 									.extra-option
+										div.hidden Вставка по периметру - <span></span> м<sup>2</sup>
+										div.hidden Есть трубы уходящие в потолок - <span></span> шт.
+										div.hidden Есть дополнительные углы - <span></span> шт.
+										div.hidden Нужна закладная под карниз - <span></span> пм
+										div.hidden Количество люстр - <span></span> шт.
+										div.hidden Количество светильников - <span></span> шт.
 						.row
 							.col-sm-8
 								.estimation__message.admin Спасибо, напишите пожалуйста где территориально находится объект

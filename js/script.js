@@ -739,6 +739,24 @@ $(function(){
 			setTimeout(function(){get_message();},4000); // выбор дополнительных опций
 		});
 	}
-	
+
+	// формируем показ отмеченных дополнительных опций
+	$('.extra-option div').each(function(n){$(this).attr('data-type', n+1);}); // назначаем индексы 
+	$('.estimation__input.only-numbers').each(function(k){$(this).attr('data-type', k+1);}); // назначаем индексы 
+
+	// изменяем чекбоксы и показываем соответствующие опции в итоговом сообщении
+	$('.estimation__checkbox').change(function(){
+		if ($(this).is(":checked")) {
+			$('.extra-option div[data-type='+ $(this).parent().find('.estimation__input.only-numbers').attr('data-type')+']').removeClass('hidden');
+			$('.extra-option div[data-type='+ $(this).parent().find('.estimation__input.only-numbers').attr('data-type')+'] span').html($(this).parent().find('.estimation__input.only-numbers').val());
+		} else {
+			$('.extra-option div[data-type='+ $(this).parent().find('.estimation__input.only-numbers').attr('data-type')+']').addClass('hidden');
+		}
+	});
+
+	//  записываем данные в сообщение
+	$('.estimation__input.only-numbers').keyup(function(){
+		$('.extra-option div[data-type='+ $(this).attr('data-type')+'] span').html($(this).val());
+	});
 
 });

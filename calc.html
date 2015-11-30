@@ -189,42 +189,42 @@
                           <div class="col-sm-12">
                             <input id="type_1" type="checkbox" data-price="100" class="estimation__checkbox">
                             <label for="type_1" class="estimation__checkbox-label">Нужна вставка по периметру</label>
-                            <input type="text" readonly value="0" data-text="Вставка по периметру - " class="estimation__input only-numbers"><span class="estimation__quantity">м<sup>2</sup></span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">м<sup>2</sup></span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_2" type="checkbox" data-price="300" class="estimation__checkbox">
                             <label for="type_2" class="estimation__checkbox-label">Есть трубы уходящие в потолок</label>
-                            <input type="text" readonly value="0" data-text="Есть трубы уходящие в потолок -" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_3" type="checkbox" data-price="200" class="estimation__checkbox">
                             <label for="type_3" class="estimation__checkbox-label">Есть дополнительные углы</label>
-                            <input type="text" readonly value="0" data-text="Есть дополнительные углы - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_4" type="checkbox" data-price="300" class="estimation__checkbox">
                             <label for="type_4" class="estimation__checkbox-label">Нужна закладная под карниз</label>
-                            <input type="text" readonly value="0" data-text="Нужна закладная под карниз - " class="estimation__input only-numbers"><span class="estimation__quantity">пм</span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">пм</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_5" type="checkbox" data-price="200" class="estimation__checkbox">
                             <label for="type_5" class="estimation__checkbox-label">Количество люстр</label>
-                            <input type="text" readonly value="0" data-text="Количество люстр - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-sm-12">
                             <input id="type_6" type="checkbox" data-price="400" class="estimation__checkbox">
                             <label for="type_6" class="estimation__checkbox-label">Количество светильников</label>
-                            <input type="text" readonly value="0" data-text="Количество светильников - " class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
+                            <input type="text" readonly value="0" class="estimation__input only-numbers"><span class="estimation__quantity">шт.</span>
                           </div>
                         </div><br>
                         <div class="row">
@@ -240,7 +240,14 @@
                   <div class="col-sm-10 pull-right">
                     <div class="estimation__message user">
                       <div>Мне нужны следующие опции:</div>
-                      <div class="extra-option"></div>
+                      <div class="extra-option">
+                        <div class="hidden">Вставка по периметру - <span></span> м<sup>2</sup></div>
+                        <div class="hidden">Есть трубы уходящие в потолок - <span></span> шт.</div>
+                        <div class="hidden">Есть дополнительные углы - <span></span> шт.</div>
+                        <div class="hidden">Нужна закладная под карниз - <span></span> пм</div>
+                        <div class="hidden">Количество люстр - <span></span> шт.</div>
+                        <div class="hidden">Количество светильников - <span></span> шт.</div>
+                      </div>
                     </div>
                   </div>
                 </div>
