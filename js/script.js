@@ -241,7 +241,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -249,7 +249,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -257,7 +257,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -265,7 +265,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -273,7 +273,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -281,7 +281,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -289,7 +289,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -297,7 +297,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -305,7 +305,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -313,7 +313,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -321,7 +321,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -329,7 +329,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -340,7 +340,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -348,7 +348,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -356,7 +356,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -364,7 +364,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -372,7 +372,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -380,7 +380,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -388,7 +388,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -396,7 +396,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -404,7 +404,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -412,7 +412,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -420,7 +420,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -428,7 +428,7 @@ $(function() {
 				hintContent: 'Собственный значок метки'
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			}))
@@ -440,7 +440,7 @@ $(function() {
 		function createGroup(office) {
 			collection = new ymaps.GeoObjectCollection(null, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				iconImageSize: [35, 42],
 				iconImageOffset: [-31, -42]
 			});

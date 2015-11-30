@@ -1,0 +1,132 @@
+extends _layout
+block content
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail.hidden-sm узнайте подробнее 
+			a(href="#") о производстве
+	include includes/_slider
+	.main__content
+		.container
+			h1.title тканевые потолки
+			.row
+				.col-sm-12.col-md-8.col-lg-9
+					.univ__content-wrap
+						.univ__block
+							p.univ__title Компания "Копласт" - дружная команда профессионалов, надежный партнер в бизнесе для строительных компаний, бригадиров и дизайнеров.
+							p.univ__text КОПЛАСТ — федеральная сеть, специализирующаяся исключительно на оказании услуг по производству, продаже и установке натяжных потолков. Региональная сеть Копласт является единственной организацией в отрасли, развернувшей собственную розничную сеть по продаже натяжных потолков в крупнейших городах России.
+							ul.univ__list-text
+								li.univ__list-item
+									img.univ__item-img(src="img/content/img.png", alt="")
+									p.univ__item-text Безупречное качество работы
+								li.univ__list-item
+									img.univ__item-img(src="img/content/img2.png", alt="")
+									p.univ__item-text Строгое соблюдение сроков монтажа
+								li.univ__list-item
+									img.univ__item-img(src="img/content/img3.png", alt="")
+									p.univ__item-text Заключение договора о сотрудничестве
+								li.univ__list-item
+									img.univ__item-img(src="img/content/img2.png", alt="")
+									p.univ__item-text Выгодные ценовые предложения
+								li.univ__list-item
+									img.univ__item-img(src="img/content/img3.png", alt="")
+									p.univ__item-text Сертификаты качества на все материалы
+							.univ__price-block 
+								| В среднем по Москве 
+								p.univ__price-old.replace 24390
+									span.rubl a
+								| , у нас 
+								p.univ__price-current.replace 23900
+									span.rubl a
+						.univ__block
+							h3.univ__subtitle тканевый натяжной потолок в прихожую
+							.row
+								.item-top__description-block.col-sm-11.margin-bottom-40
+									a(href="#")
+										img.item-top__description-img(src="img/content/main_img_1.jpg", alt="")
+									.item-top__description-info.top-sm.top-md
+										p.item-top__description-text В среднем по Москве:
+										p.item-top__description-old-price.replace 18970
+											i.rubl a
+										p.item-top__description-text У нас:
+										p.item-top__description-price.replace 16590
+											i.rubl a
+										p.item-top__description-text площадь 9,2 м<sup>2</sup>
+										p.item-top__description-text марка полотна Pinpai
+										p.item-top__description-text цвет белый
+										a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+							h3.univ__subtitle тканевый натяжной потолок в прихожую
+							.row
+								.item-top__description-block.col-sm-11.margin-bottom-40
+									a(href="#")
+										img.item-top__description-img(src="img/content/main_img_1.jpg", alt="")
+									.item-top__description-info.top-sm.top-md
+										p.item-top__description-text В среднем по Москве:
+										p.item-top__description-old-price.replace 18970
+											i.rubl a
+										p.item-top__description-text У нас:
+										p.item-top__description-price.replace 16590
+											i.rubl a
+										p.item-top__description-text площадь 9,2 м<sup>2</sup>
+										p.item-top__description-text марка полотна Pinpai
+										p.item-top__description-text цвет белый
+										a.item-top__description-link.btn.btn-blue(href="#") Рассчитать стоимость вашего потолка
+						.univ__block
+							p.univ__title Компания "Копласт" - дружная команда профессионалов, надежный партнер в бизнесе для строительных компаний, бригадиров и дизайнеров.
+							p.univ__text Наша компания предлагает сотрудничество всем операторам рынка строительных услуг Москвы и Подмосковья - дизайнерам, монтажникам, ремонтно-строительным бригадам, прорабам крупных строительных корпораций, бригадирам. Давайте развиваться вместе! Мы знаем специфику вашей работы и предлагаем выгодные условия своим постоянным партнерам. Взаимодействие строится на основе индивидуального договора, где установлен идеальный баланс наших возможностей и ваших пожеланий. Сотрудничать с нами выгодно!
+							button.univ__btn.btn.btn-blue(type="button") Приступить к сотрудничеству
+				.col-md-4.col-lg-3.hidden-sm
+					.action__block.suit_bg
+						.action__block-content.v-1(style="display: none;")
+							h3.action__title Cкидка 20%
+							p.action__text Действует до 10 декабря
+							img(src="img/calendar.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
+						.action__block-content.v-2
+							h3.action__title АКЦИЯ!
+							p.action__text Светильники<br>в подарок!
+							img(src="img/lamp.png", alt="")
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard_action').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2016,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							#countdown_dashboard_action
+								.dash.hours_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Часов
+								.dash.minutes_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Минут
+								.dash.seconds_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Секунд
+							a.btn.btn-yellow.action__btn(href="#") Получите подарок!
+						.action__block-content.v-3(style="display: none;")
+							h3.action__title Натяжные потолки
+							p.action__text от 
+								span.action__subtitle 179
+								|  руб./м<sup>2</sup>
+							img(src="img/action_cash.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Заказать по этой цене

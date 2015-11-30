@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="/favicon.ico">
+    <link href="css/grid.css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <div class="row">
+              <div class="col-sm-10 header__menu-list-block"><span class="header__fixed-menu-btn"></span>
+                <ul class="header__menu-list static">
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">О потолках</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Цены</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Работы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Отзывы</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Корпоративным клиентам</a></li>
+                  <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-2 text-right pull-right header__city-block"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link toggle">Москва</a>
+                <ul class="header__city-list">
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Санкт-Петербург</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Москва</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Асбест</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Барнаул</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Балашиха</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Березники</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Верхняя Пышма</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Выкса</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Воронеж</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Тула</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Кемерово</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Ростов-на-Дону</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Донецк</a></li>
+                  <li class="header__city-item"><img src="img/moscow_pic.png" alt="" class="header__city-img"><a href="#" class="header__city-link">Долгопрудный</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="row">
+              <div class="col-sm-3"><a href="/" class="header__logo">
+                  <p class="header__logo-text">coplast</p></a></div>
+              <div class="col-sm-9">
+                <div class="row">
+                  <div class="col-sm-5 text-right hidden-sm"><a href="tel:+88003334910" class="header__phone">8 (800) 333-49-10</a></div>
+                  <div class="pull-right header__btn-wrap"><a id="cause" href="javascript:void(0);" class="header__btn"> <span class="_call">Вызвать замерщика</span></a></div>
+                  <div class="pull-right header__btn-wrap"><a href="#" class="header__btn"> <span class="_calc">Рассчитать стоимость</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="clarification__block">
+          <p class="clarification__text">Производим и устанавливаем натяжные потолки</p>
+          <p class="clarification__text"> <img src="img/light.png" alt="" class="clarification__img">На 7% быстрее</p>
+          <p class="clarification__text"> <img src="img/diamond.png" alt="" class="clarification__img">На 6% лучше</p>
+          <p class="clarification__text"> <img src="img/cash.png" alt="" class="clarification__img">На 9% дешевле</p>
+        </div>
+        <p class="clarification__detail hidden-sm">узнайте подробнее <a href="#">о производстве</a></p>
+      </div>
+      <div id="full-slider-wrapper" class="slider__block">
+        <div id="layerslider" style="width: 100%;height: 288px;">
+          <div data-ls="slidedelay: 7000; transition2d: all;" class="ls-layer slider__slide-v1"><img src="img/content/slider_bg_1.jpg" alt="" class="ls-bg">
+            <p style="top:20px;left:200px;" data-ls="offsetxin:0;durationin:3000;delayin:1200;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" class="ls-l slider__title">Cкидка 20%</p>
+            <p style="top:120px;left:313px;" data-ls="offsetxin:0;durationin:2000;delayin:2000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% 50% 0;offsetxout:-400;" class="ls-l slider__text">действует до 10 декабря</p><a href="#" data-ls="offsetxin:0;durationin:2000;delayin:2700;easingin:easeOutElastic;rotatexin:90;rotateyin:190;transformoriginin:50% top 0;offsetxout:-400;" style="top: 175px;left: 355px;" class="ls-l btn btn-yellow slider__btn">Спешите заказать!</a><img src="img/calendar.png" alt="" style="top:27px;left:770px;white-space: nowrap;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;parallaxlevel:7" class="ls-l">
+            <p style="width:1px; height: 180px; top: 50px; left: 750px; opacity: 0.7;background: #fff;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;" class="ls-l"></p>
+          </div>
+          <div data-ls="slidedelay: 7000; transition2d: all;" class="ls-layer slider__slide-v2"><img src="img/content/slider_bg_2.jpg" alt="" class="ls-bg">
+            <p style="top:50px;left:200px;" data-ls="offsetxin:0;durationin:2000;delayin:1000;rotatein:-45;rotateyin:-1;scalexin:0.5;scaleyin:0.5;transformoriginin:left bottom 0;offsetxout:0;durationout:1000;rotateout:45;scalexout:2;scaleyout:2;transformoriginout:right bottom 0;" class="ls-l slider__title">Акция светильники в подарок</p>
+            <div style="top:173px;left:120px;font-size: 78px;text-transform: uppercase;color: #fff; font-family: 'Fira Sans Bold';" data-ls="offsetxin:50;durationin:3000;rotateyin:60;transformoriginin:right 50% 0;offsetxout:-50;durationout:3000;rotateyout:-60;transformoriginout:left 50% 0;" class="ls-l"> 
+              <!-- вызов счетчика обратного отсчета-->
+              <script>
+                $(document).ready(function(){
+                	$('#countdown_dashboard').countDown({
+                		targetDate: {
+                			'day': 25,
+                			'month': 11,
+                			'year': 2016,
+                			'hour': 13,
+                			'min': 0,
+                			'sec': 0
+                		}
+                	});
+                });
+              </script>
+              <div class="slider__countdown">
+                <div id="countdown_dashboard">
+                  <div class="dash hours_dash">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div><span class="dash_title">Часов</span>
+                  </div>
+                  <div class="dash minutes_dash">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div><span class="dash_title">Минут</span>
+                  </div>
+                  <div class="dash seconds_dash">
+                    <div class="digit">0</div>
+                    <div class="digit">0</div><span class="dash_title">Секунд</span>
+                  </div>
+                </div>
+              </div>
+            </div><a href="#" data-ls="offsetxin:0;durationin:2000;delayin:2000;rotateyin:450;transformoriginin:right 50% 0;offsetxout:0;easingout:easeInBack;rotateyout:-90;transformoriginout:right 50% 0;" style="top: 175px;left: 415px;" class="ls-l btn btn-yellow slider__btn">Получить подарок!</a><img src="img/lamp.png" alt="" style="top:60px;left:840px;white-space: nowrap;" data-ls="offsetxin:200;durationin:2000;delayin:1500;offsetxout:200;durationout:1000;parallaxlevel:3;" class="ls-l">
+            <p style="width:1px; height: 180px; top: 50px; left: 790px; opacity: 0.7;background: #fff;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;" class="ls-l"></p>
+          </div>
+          <div data-ls="slidedelay: 7000; transition2d: all;" class="ls-layer slider__slide-v3"><img src="img/content/slider_bg_3.jpg" alt="" class="ls-bg">
+            <p style="top:25px;left:170px;" data-ls="offsetxin:0;durationin:2000;rotatein:-45;rotateyin:-1;scalexin:0.5;scaleyin:0.5;transformoriginin:left bottom 0;offsetxout:0;durationout:1000;rotateout:45;scalexout:2;scaleyout:2;transformoriginout:right bottom 0;" class="ls-l slider__title">натяжные потолки от <span class="slider__price">179</span> руб./м2</p><a href="#" data-ls="offsetxin:0;durationin:2000;delayin:2300;rotatein:-90;scalexin:2.5;scaleyin:2.5;offsetxout:0;durationout:1000;rotateout:-90;scalexout:0;scaleyout:0;;" style="top: 175px;left: 385px;" class="ls-l btn btn-yellow slider__btn">Заказать по этой цене!</a><img src="img/action_cash.png" alt="" style="top:40px;left:840px;white-space: nowrap;" data-ls="offsetxin:0;durationin:2500;delayin:3500;easingin:easeOutElastic;rotateyin:-90;transformoriginin:right 50% 0;offsetxout:0;rotateyout:-90;transformoriginout:right 50% 0;parallaxlevel:3;" class="ls-l">
+            <p style="width:1px; height: 180px; top: 50px; left: 780px; opacity: 0.7;background: #fff;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeInOutQuad;scalexin:1.1;scaleyin:1.1;offsetxout:0;durationout:1000;scalexout:0.9;scaleyout:0.9;" class="ls-l"></p>
+          </div>
+        </div>
+      </div>
+      <div class="main__content">
+        <div class="container">
+          <h1 class="title">тканевые потолки</h1>
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-9">
+              <div class="univ__content-wrap">
+                <div class="univ__block">
+                  <p class="univ__title">Компания "Копласт" - дружная команда профессионалов, надежный партнер в бизнесе для строительных компаний, бригадиров и дизайнеров.</p>
+                  <p class="univ__text">КОПЛАСТ — федеральная сеть, специализирующаяся исключительно на оказании услуг по производству, продаже и установке натяжных потолков. Региональная сеть Копласт является единственной организацией в отрасли, развернувшей собственную розничную сеть по продаже натяжных потолков в крупнейших городах России.</p>
+                  <ul class="univ__list-text">
+                    <li class="univ__list-item"><img src="img/content/img.png" alt="" class="univ__item-img">
+                      <p class="univ__item-text">Безупречное качество работы</p>
+                    </li>
+                    <li class="univ__list-item"><img src="img/content/img2.png" alt="" class="univ__item-img">
+                      <p class="univ__item-text">Строгое соблюдение сроков монтажа</p>
+                    </li>
+                    <li class="univ__list-item"><img src="img/content/img3.png" alt="" class="univ__item-img">
+                      <p class="univ__item-text">Заключение договора о сотрудничестве</p>
+                    </li>
+                    <li class="univ__list-item"><img src="img/content/img2.png" alt="" class="univ__item-img">
+                      <p class="univ__item-text">Выгодные ценовые предложения</p>
+                    </li>
+                    <li class="univ__list-item"><img src="img/content/img3.png" alt="" class="univ__item-img">
+                      <p class="univ__item-text">Сертификаты качества на все материалы</p>
+                    </li>
+                  </ul>
+                  <div class="univ__price-block">
+                     
+                    В среднем по Москве 
+                    <p class="univ__price-old replace">24390<span class="rubl">a</span></p>, у нас 
+                    <p class="univ__price-current replace">23900<span class="rubl">a</span></p>
+                  </div>
+                </div>
+                <div class="univ__block">
+                  <h3 class="univ__subtitle">тканевый натяжной потолок в прихожую</h3>
+                  <div class="row">
+                    <div class="item-top__description-block col-sm-11 margin-bottom-40"><a href="#"><img src="img/content/main_img_1.jpg" alt="" class="item-top__description-img"></a>
+                      <div class="item-top__description-info top-sm top-md">
+                        <p class="item-top__description-text">В среднем по Москве:</p>
+                        <p class="item-top__description-old-price replace">18970<i class="rubl">a</i></p>
+                        <p class="item-top__description-text">У нас:</p>
+                        <p class="item-top__description-price replace">16590<i class="rubl">a</i></p>
+                        <p class="item-top__description-text">площадь 9,2 м<sup>2</sup></p>
+                        <p class="item-top__description-text">марка полотна Pinpai</p>
+                        <p class="item-top__description-text">цвет белый</p><a href="#" class="item-top__description-link btn btn-blue">Рассчитать стоимость вашего потолка</a>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="univ__subtitle">тканевый натяжной потолок в прихожую</h3>
+                  <div class="row">
+                    <div class="item-top__description-block col-sm-11 margin-bottom-40"><a href="#"><img src="img/content/main_img_1.jpg" alt="" class="item-top__description-img"></a>
+                      <div class="item-top__description-info top-sm top-md">
+                        <p class="item-top__description-text">В среднем по Москве:</p>
+                        <p class="item-top__description-old-price replace">18970<i class="rubl">a</i></p>
+                        <p class="item-top__description-text">У нас:</p>
+                        <p class="item-top__description-price replace">16590<i class="rubl">a</i></p>
+                        <p class="item-top__description-text">площадь 9,2 м<sup>2</sup></p>
+                        <p class="item-top__description-text">марка полотна Pinpai</p>
+                        <p class="item-top__description-text">цвет белый</p><a href="#" class="item-top__description-link btn btn-blue">Рассчитать стоимость вашего потолка</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="univ__block">
+                  <p class="univ__title">Компания "Копласт" - дружная команда профессионалов, надежный партнер в бизнесе для строительных компаний, бригадиров и дизайнеров.</p>
+                  <p class="univ__text">Наша компания предлагает сотрудничество всем операторам рынка строительных услуг Москвы и Подмосковья - дизайнерам, монтажникам, ремонтно-строительным бригадам, прорабам крупных строительных корпораций, бригадирам. Давайте развиваться вместе! Мы знаем специфику вашей работы и предлагаем выгодные условия своим постоянным партнерам. Взаимодействие строится на основе индивидуального договора, где установлен идеальный баланс наших возможностей и ваших пожеланий. Сотрудничать с нами выгодно!</p>
+                  <button type="button" class="univ__btn btn btn-blue">Приступить к сотрудничеству</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 hidden-sm">
+              <div class="action__block suit_bg">
+                <div style="display: none;" class="action__block-content v-1">
+                  <h3 class="action__title">Cкидка 20%</h3>
+                  <p class="action__text">Действует до 10 декабря</p><img src="img/calendar.png" alt=""><a href="#" class="btn btn-yellow action__btn">Спешите заказать!</a>
+                </div>
+                <div class="action__block-content v-2">
+                  <h3 class="action__title">АКЦИЯ!</h3>
+                  <p class="action__text">Светильники<br>в подарок!</p><img src="img/lamp.png" alt="">
+                  <!-- вызов счетчика обратного отсчета-->
+                  <script>
+                    $(document).ready(function(){
+                    	$('#countdown_dashboard_action').countDown({
+                    		targetDate: {
+                    			'day': 25,
+                    			'month': 11,
+                    			'year': 2016,
+                    			'hour': 13,
+                    			'min': 0,
+                    			'sec': 0
+                    		}
+                    	});
+                    });
+                  </script>
+                  <div id="countdown_dashboard_action">
+                    <div class="dash hours_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Часов</span>
+                    </div>
+                    <div class="dash minutes_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Минут</span>
+                    </div>
+                    <div class="dash seconds_dash widthS">
+                      <div class="digit sizeS">0</div>
+                      <div class="digit sizeS">0</div><span class="dash_title sizeS">Секунд</span>
+                    </div>
+                  </div><a href="#" class="btn btn-yellow action__btn">Получите подарок!</a>
+                </div>
+                <div style="display: none;" class="action__block-content v-3">
+                  <h3 class="action__title">Натяжные потолки</h3>
+                  <p class="action__text">от <span class="action__subtitle">179</span> руб./м<sup>2</sup></p><img src="img/action_cash.png" alt=""><a href="#" class="btn btn-yellow action__btn">Заказать по этой цене</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="row">
+            <div class="col-sm-5 col-md-4">
+              <p class="footer__text">115035, Москва, <br>ул. Артиллерийская, 58, стр. 1, оф. 18</p>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-2">
+              <p class="footer__text _phone-marg">Телефон:<br>8 (800) 333-49-10</p>
+            </div>
+            <div class="col-sm-4 col-md-2 col-lg-3">
+              <p class="footer__text _email-marg">Электронная почта:<br><a class="footer__link" href="mailto:hello@coplast.ru">hello@coplast.ru</a></p>
+            </div>
+            <div class="col-md-3 hidden-sm">
+              <div class="footer__link-wrap pull-right"><a href="#">Написать нам</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-sm-3">
+              <p class="footer__text">© 2015 - Coplast</p>
+            </div>
+            <div class="col-sm-7 text-center"><span class="footer__text">Мы в соц.сетях:</span><a href="#" class="footer__social-link"><img src="img/y.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/vk.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/fb.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/tw.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/inst.png" alt=""></a><a href="#" class="footer__social-link"><img src="img/ok.png" alt=""></a></div>
+            <div class="col-sm-2"><a href="#" class="pull-right">
+                <p class="footer__develop"></p></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/greensock.js"></script>
+    <script src="js/layerslider.transitions.js"></script>
+    <script src="js/layerslider.kreaturamedia.jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
