@@ -539,7 +539,7 @@ $(function() {
 		}
 	];
 
-	// ymaps.ready(init);
+	ymaps.ready(init);
 
 	// фикс шапки при скролле
 	var $header = $(".header");
