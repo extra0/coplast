@@ -2984,11 +2984,8 @@ body * .ls-container .ls-webkit-hack,
   display: inline-block;
 }
 .univ__tab-img {
-  margin: auto;
-  display: block;
-  max-height: 108px;
-  max-width: 200px;
   margin-bottom: 6px;
+  margin-right: 5px;
 }
 .univ__tab-link {
   font-size: 24px;
@@ -3069,6 +3066,19 @@ body * .ls-container .ls-webkit-hack,
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+.univ__tab-content-list {
+  padding: 0;
+}
+.univ__tab-content-list li {
+  font-size: 24px;
+  color: #2f3948;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  background: url(../img/list-type.png) left center no-repeat;
+}
+.univ__tab-content-img {
+  margin-top: 30px;
 }
 .action__block {
   margin-top: 19px;
