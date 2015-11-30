@@ -1,0 +1,96 @@
+extends _layout
+block content
+	.container
+		.clarification__block
+			p.clarification__text Производим и устанавливаем натяжные потолки
+			p.clarification__text 
+				img.clarification__img(src="img/light.png", alt="")
+				| На 7% быстрее
+			p.clarification__text 
+				img.clarification__img(src="img/diamond.png", alt="")
+				| На 6% лучше
+			p.clarification__text 
+				img.clarification__img(src="img/cash.png", alt="")
+				| На 9% дешевле
+		p.clarification__detail.hidden-sm узнайте подробнее 
+			a(href="#") о производстве
+	include includes/_slider
+	.main__content
+		.container
+			h1.title Натяжные потолки в зеленограде - недорого
+			.row
+				.col-md-8.col-sm-12.col-lg-9
+					.contact__content-block._margin-right.auto-height
+						.contact__content-wrapper
+							p.contact__text Офис в <span class="contact__office-name">Санкт-Петербурге</span>:
+							p.contact__address 08300, Ленинградская область, Санкт-Петербург, ул. Привокзальная, 54.
+						.contact__map-block
+							#map
+						.contact__content-wrapper
+							.row
+								.col-lg-5.col-sm-6
+									p.contact__text Контактный телефон:
+									a.contact__phone(href="tel:+88003334910") 8 (800) 333-49-10 
+									a.contact__phone(href="tel:+84996537877") 8 (499) 653-78-77
+								.col-lg-7.col-sm-6
+									p.contact__text Электронная почта:
+									a.contact__email(href="mailto:moskva@coplast.ru") 
+										span.line moskva@coplast.ru
+							p.univ__text Компания "Coplast" предлагает установить натяжные потолки в Зеленограде для частных лиц и организаций. Такой выбор - правильный во всех смыслах: это быстро, недорого и красиво.
+							p.univ__text Натяжные потолки, в установке которые используют матовые либо глянцевые пленки, не просто модные. Сегодня многие отдают предпочтение надежным, практичным, легким в уходе, долговечным отделочным материалам. Именно поэтому на натяжные потолки в Зеленограде растет спрос. Было время, когда большинство россиян осознали пользу от пластиковых окон, затем стали активно использовать в отделке ламинат. Точечные светильники получили заслуженную любовь и в столице, и в Подмосковье, и наконец, пришла очередь устанавливать натяжные потолки. Зеленоград, вслед за Москвой, стал активно монтировать высокотехнологичные потолочные покрытия - тканевые и пвх, ведущих мировых производителей.
+							p.univ__text Любое помещение, будь то спальня, кухня, гостиная, ванная комната, с помощью натяжного потолка приобретает оригинальность: можно создать "звездное небо", нанести любое изображение методом фотопечати, сделать сложную геометрическую форму (волны, каскад, перетекание в арку и др.). Огромное разнообразие фактур позволяет выбрать потолок в безупречном соответствии с общим стилем квартиры. Чтобы установить такой потолок, конечно же, требуется опыт. Мастер, оценив сложность конструкции, достаточно точно сможет сказать необходимое для монтажа время. Установка может проводиться несколькими способами. Гарпунный метод дает прочный крепеж полотна, а при необходимости, его можно легко демонтировать и установить снова. Как правило, чтобы смонтировать натяжные потолки в Зеленограде, потребуется несколько часов. В отдельных случаях, при сложном дизайне, монтаж займет 2 дня. Звоните, наши мастера приедут и произведут все необходимые замеры абсолютно бесплатно. Цены и сроки вас приятно удивят.
+							br 
+						.contact__content-wrapper
+							.contact__form-block
+								p.contact__form-title вызвать замерщика в <span class="contact__office-name">санкт-петербурге</span>
+								p.contact__text Оставьте номер телефона, мы свяжемся с вами и уточним адрес и удобное вам время для замера.
+								form.contact__form(action="#" method="post")
+									input.contact__form-input.mask(type="text" required placeholder="Ваш номер телефона")
+									button.btn.btn-blue.contact__form-btn(type="submit") Отправить заявку
+									span.contact__form-detail._sm-display-ib Перезвоним через 5 минут ;) 
+				.col-md-4.col-lg-3.hidden-sm
+					.action__block.suit_bg
+						.action__block-content.v-1(style="display: none;")
+							h3.action__title Cкидка 20%
+							p.action__text Действует до 10 декабря
+							img(src="img/calendar.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Спешите заказать!
+						.action__block-content.v-2
+							h3.action__title АКЦИЯ!
+							p.action__text Светильники<br>в подарок!
+							img(src="img/lamp.png", alt="")
+							// вызов счетчика обратного отсчета
+							script.
+								$(document).ready(function(){
+									$('#countdown_dashboard_action').countDown({
+										targetDate: {
+											'day': 25,
+											'month': 11,
+											'year': 2016,
+											'hour': 13,
+											'min': 0,
+											'sec': 0
+										}
+									});
+								});
+							#countdown_dashboard_action
+								.dash.hours_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Часов
+								.dash.minutes_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Минут
+								.dash.seconds_dash.widthS
+									.digit.sizeS 0
+									.digit.sizeS 0
+									span.dash_title.sizeS Секунд
+							a.btn.btn-yellow.action__btn(href="#") Получите подарок!
+						.action__block-content.v-3(style="display: none;")
+							h3.action__title Натяжные потолки
+							p.action__text от 
+								span.action__subtitle 179
+								|  руб./м<sup>2</sup>
+							img(src="img/action_cash.png", alt="")
+							a.btn.btn-yellow.action__btn(href="#") Заказать по этой цене
