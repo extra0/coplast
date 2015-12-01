@@ -22,8 +22,83 @@ block content
 				.col-sm-12.col-md-8.col-lg-9
 					.univ__content-wrap
 						.univ__title-block
-							a.univ__title-btn.btn.btn-blue(href="#") Оставить отзыв
+							a.univ__title-btn.btn.btn-blue.pull-right(href="javascript:void(0);") Оставить отзыв
 							p.univ__title-text Оставьте отзыв и получите 3% скидку на следующий заказ!
+							.feedback__block
+								h3.feedback__title Добавление отзыва
+								p.feedback__text Чтобы оставить отзыв авторизуйтесь через любую социальную сеть:
+								a.feedback__social-link(href="#")
+									img(src="img/ent_vk.png", alt="")
+								a.feedback__social-link(href="#")
+									img(src="img/ent_fb.png", alt="")
+								a.feedback__social-link(href="#")
+									img(src="img/ent_tw.png", alt="")
+								a.feedback__social-link(href="#")
+									img(src="img/ent_ok.png", alt="")
+								.feedback__form-block
+									form(action="#")
+										.row.margin-bottom-20
+											.col-sm-4.col-lg-3
+												label.feedback__form-label № Договора:
+											.col-sm-5.col-lg-4
+												input.feedback__form-input(type="text")
+										.row.margin-bottom-20
+											.col-sm-4.col-lg-3
+												label.feedback__form-label Ваш отзыв:
+											.col-sm-7.col-lg-6
+												textarea.feedback__form-textarea(rows="3")
+										.row.margin-bottom-20
+											.col-sm-4.col-lg-3
+												label.feedback__form-label Фото 1:
+											.col-sm-5.col-lg-4
+												div.feedback__form-file-wrap
+													div.feedback__form-file-text Выбрать файл
+													input.feedback__form-input-file(type="file")
+										.row.margin-bottom-20
+											.col-sm-4.col-lg-3
+												label.feedback__form-label Фото 2:
+											.col-sm-5.col-lg-4
+												div.feedback__form-file-wrap
+													div.feedback__form-file-text Выбрать файл
+													input.feedback__form-input-file(type="file")
+										.row.margin-bottom-20
+											.col-sm-4.col-lg-3
+												label.feedback__form-label Фото 3:
+											.col-sm-5.col-lg-4
+												div.feedback__form-file-wrap
+													div.feedback__form-file-text Выбрать файл
+													input.feedback__form-input-file(type="file")
+										.row.margin-bottom-40
+											.col-sm-4.col-lg-3
+												label.feedback__form-label Видео:
+											.col-sm-5.col-lg-4
+												div.feedback__form-file-wrap
+													div.feedback__form-file-text Выбрать файл
+													input.feedback__form-input-file(type="file")
+										.row.margin-bottom-20
+											.col-sm-12
+												label.feedback__form-label Ваша оценка нашей работы:
+										.row
+											.col-sm-3.col-md-6.col-lg-3.margin-bottom-20
+												p.feedback__form-rating-title Общее впечатление:
+												.rating
+												input(type="hidden" name="rating-result")
+											.col-sm-3.col-md-6.col-lg-3.margin-bottom-20
+												p.feedback__form-rating-title Обслуживание:
+												.rating
+												input(type="hidden" name="rating-result")
+											.col-sm-3.col-md-6.col-lg-3.margin-bottom-20
+												p.feedback__form-rating-title Качество:
+												.rating
+												input(type="hidden" name="rating-result")
+											.col-sm-3.col-md-6.col-lg-3.margin-bottom-20
+												p.feedback__form-rating-title Скорость:
+												.rating
+												input(type="hidden" name="rating-result")
+										.row
+											.col-sm-12
+												button.feedback__form-btn.btn.btn-blue(type="submit") Оставить отзыв
+										
 						.univ__block
 							p.univ__text Бесшовный сатиновый натяжной потолок в квартире 26,4 м2 за <span class="univ__text-bold">34100 руб</span>
 							.row

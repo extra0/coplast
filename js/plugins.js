@@ -424,3 +424,111 @@ if(b.numberStep){var h=this.each(function(){this._animateNumberSetter=b.numberSt
 	// AMD requirement
 	return $scrollTo;
 });
+
+!function(i) {
+    i.rating = function(t, e) {
+        this.options = i.extend({
+            fx: "float",
+            image: "/images/stars.png",
+            width: 32,
+            stars: 5,
+            minimal: 0,
+            titles: ["голос", "голоса", "голосов"],
+            readOnly: !1,
+            url: "",
+            type: "post",
+            loader: "/images/ajax-loader.gif",
+            click: function() {}
+        }, e || {}), this.el = i(t), this.left = 0, this.val = parseFloat(i(".val", t).val()) || 0, this.val > this.options.stars && (this.val = this.options.stars), this.val < 0 && (this.val = 0), this.old = this.val, this.votes = parseInt(i(".votes", t).val()) || "", this.voteID = i(".vote-id", t).val() || "", this.vote_wrap = i('<div class="vote-wrap"></div>'), this.vote_block = i('<div class="vote-block"></div>'), this.vote_hover = i('<div class="vote-hover"></div>'), this.vote_stars = i('<div class="vote-stars"></div>'), this.vote_active = i('<div class="vote-active"></div>'), this.vote_result = i('<div class="vote-result"></div>'), this.vote_success = i('<div class="vote-success">0</div>'), this.loader = i('<img src="' + this.options.loader + '" alt="load...">'), this.init()
+    };
+    var t = i.rating;
+    t.fn = t.prototype = {
+        rating: "0.1"
+    }, t.fn.extend = t.extend = i.extend, t.fn.extend({
+        init: function() {
+            if (this.render(), !this.options.readOnly) {
+                var t = this,
+                    e = 0,
+                    o = 0;
+                this.vote_hover.bind("mousemove mouseover", function(s) {
+                    if (!t.options.readOnly) {
+                        var n = i(this),
+                            l = 0;
+                        e = s.clientX > 0 ? s.clientX : s.pageX, o = e - n.offset().left - 2;
+                        var r = t.options.width * t.options.stars,
+                            a = t.options.minimal * t.options.width;
+                        o > r && (o = r), a > o && (o = a), l = Math.round(o / t.options.width * 10) / 10, "half" == t.options.fx ? o = Math.ceil(o / t.options.width * 2) * t.options.width / 2 : "float" != t.options.fx && (o = Math.ceil(o / t.options.width) * t.options.width), l = Math.round(o / t.options.width * 10) / 10, t.vote_active.css({
+                            width: o,
+                            "background-position": "left center"
+                        })
+                    }
+                }).bind("mouseout", function() {
+                    t.options.readOnly
+                }).bind("click.rating", function() {
+                    if (!t.options.readOnly) {
+                        var i = Math.round(o / t.options.width * 10) / 10;
+                        i > t.options.stars && (i = t.options.stars), 0 > i && (i = 0), t.old = t.val, t.val = (t.val * t.votes + i) / (t.votes + 1), t.val.toFixed(1), t.vote_success.html(i), "" != t.options.url && t.send(i), t.options.readOnly = !0, t.options.click.apply(this, [i])
+                    }
+                })
+            }
+        },
+        set: function() {
+            this.vote_active.css({
+                width: this.val * this.options.width,
+                "background-position": "left bottom"
+            })
+        },
+        reset: function() {
+            this.vote_active.css({
+                width: this.old * this.options.width,
+                "background-position": "left bottom"
+            })
+        },
+        setvoters: function() {
+            this.vote_result.html(this.declOfNum(this.votes))
+        },
+        render: function() {
+            this.el.html(this.vote_wrap.append(this.vote_hover.css({
+                padding: "0 4px",
+                height: this.options.width,
+                width: this.options.width * this.options.stars
+            }), this.vote_result.text(this.declOfNum(this.votes)), this.vote_success)), this.vote_block.append(this.vote_stars.css({
+                height: this.options.width,
+                width: this.options.width * this.options.stars,
+                background: "url('" + this.options.image + "') left top"
+            }), this.vote_active.css({
+                height: this.options.width,
+                width: this.val * this.options.width,
+                background: "url('" + this.options.image + "') left bottom"
+            })).appendTo(this.vote_hover)
+        },
+        send: function(t) {
+            var e = this;
+            this.vote_result.html(this.loader), i.ajax({
+                url: e.options.url,
+                type: e.options.type,
+                data: {
+                    id: this.voteID,
+                    score: t
+                },
+                dataType: "json",
+                success: function(i) {
+                    "OK" == i.status ? (e.votes++, e.set()) : e.reset(), e.setvoters(), i.msg && e.vote_success.html(i.msg)
+                }
+            })
+        },
+        declOfNum: function(i) {
+            return 0 >= i ? "" : (i = Math.abs(Math.floor(i)), cases = [2, 0, 1, 1, 1, 2], i + " " + this.options.titles[i % 100 > 4 && 20 > i % 100 ? 2 : cases[5 > i % 10 ? i % 10 : 5]])
+        }
+    }), i.fn.rating = function(e) {
+        if ("string" == typeof e) {
+            var o = i(this).data("rating"),
+                s = Array.prototype.slice.call(arguments, 1);
+            return o[e].apply(o, s)
+        }
+        return this.each(function() {
+            var o = i(this).data("rating");
+            o ? (e && i.extend(o.options, e), o.init()) : i(this).data("rating", new t(this, e))
+        })
+    }
+}(jQuery);

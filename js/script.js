@@ -24,6 +24,23 @@ $(function() {
 		controls: false
 	});
 
+	// кастомный инпут файл
+	$('.feedback__form-input-file').change(function(){
+		console.log($(this));
+		$(this).parent().find('.feedback__form-file-text').html($(this).val());
+	});
+
+	// рейтинг
+	$('.rating').rating({
+		fx: 'full',
+		image: '/img/star_sprite.png',
+		width: 21,
+	});
+
+	$('.rating').click(function(){
+		$(this).parent().find('input').val($(this).find('.vote-success').html());
+	});
+
 	// ф-я разбивки на разряды
 	function numberWithCommas(number) {
 		return number.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");
