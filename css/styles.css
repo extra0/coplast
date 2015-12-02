@@ -126,8 +126,14 @@ textarea {
 .margin-bottom-40 {
   margin-bottom: 40px;
 }
+.margin-bottom-100 {
+  margin-bottom: 100px!important;
+}
 .margin-top-5 {
   margin-top: 5px;
+}
+.no-margin {
+  margin: 0!important;
 }
 .font-italic {
   font-family: 'Fira Sans Light Italic';
@@ -4253,6 +4259,44 @@ div.vote-wrap {
   -o-transform: rotate(-12deg);
   -ms-transform: rotate(-12deg);
   transform: rotate(-12deg);
+}
+.material__info-block {
+  margin: 40px 0 20px 0;
+}
+.material__info-text {
+  font-size: 16px;
+  font-family: 'Fira Sans Light';
+  margin: 0;
+  line-height: 24px;
+}
+.material__info-text span {
+  font-family: 'Fira Sans Regular';
+}
+.material__table {
+  width: 100%;
+  text-align: center;
+}
+.material__table th {
+  font-family: 'Fira Sans Regular';
+  font-weight: normal;
+  background: #ececed;
+  font-size: 16px;
+  border: 1px solid #f8f8f8;
+  width: 3%;
+  padding: 17px 0;
+}
+.material__table td {
+  font-size: 16px;
+  font-family: 'Fira Sans Light';
+  border: 1px solid #f8f8f8;
+  padding: 14px 0;
+}
+.material__table tr:nth-child(odd) td {
+  background: #ececed;
+}
+.material__table tr:first-child th:nth-child(1),
+.material__table tr:first-child th:nth-child(2) {
+  width: 1%;
 }
 .footer {
   background: url(../img/footer_bg.png) repeat-x;

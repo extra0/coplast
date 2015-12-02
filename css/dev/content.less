@@ -2318,3 +2318,52 @@ div.vote-wrap {
 		}
 	}
 }
+// описание название материала
+.material {
+	&__info-block {
+		margin: 40px 0 20px 0;
+	}
+	&__info-text {
+		font-size: 16px;
+		font-family: 'Fira Sans Light';
+		margin: 0;
+		line-height: 24px;
+		span {
+			font-family: 'Fira Sans Regular';
+		}
+	}
+	&__table {
+		width: 100%;
+		text-align: center;
+		th {
+			font-family: 'Fira Sans Regular';
+			font-weight: normal;
+			background: #ececed;
+			font-size: 16px;
+			border: 1px solid #f8f8f8;
+			width: 3%;
+			padding: 17px 0;
+		}
+		td {
+			font-size: 16px;
+			font-family: 'Fira Sans Light';
+			border: 1px solid #f8f8f8;
+			padding: 14px 0;
+		}
+		tr {
+			&:nth-child(odd) {
+				td {
+					background: #ececed;
+				}
+			}
+			&:first-child {
+				th {
+					&:nth-child(1),
+					&:nth-child(2) {
+						width: 1%;
+					}
+				}
+			}
+		}
+	}
+}
