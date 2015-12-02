@@ -918,6 +918,9 @@
 		&:nth-child(even) {
 			background: #ececed;
 		}
+		&.bg-light-grey {
+			background: #f8f8f8!important;
+		}
 	}
 	&__title {
 		line-height: 32px;
@@ -1152,6 +1155,37 @@
 		text-align: center;
 		font-family: 'Fira Sans Medium';
 		display: inline-block;
+	}
+	&__subtext {
+		font-size: 24px;
+		font-family: 'Fira Sans Light';
+		line-height: 32px;
+		margin: 0 0 15px 0;
+	}
+	&__blockquote-block {
+		border-radius: 10px;
+	    background: #e4ecf5;
+	    padding: 30px 38px;
+	    box-sizing: border-box;
+	    margin-bottom: 45px;
+	}
+	&__blockquote-text {
+		margin: 0;
+		font-size: 24px;
+		font-family: 'Fira Sans Regular';
+		a {
+			display: inline-block;
+			border-bottom: 1px solid;
+			color: #2f83d6;
+			line-height: 24px;
+			&:hover {
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+		}
+		span {
+			font-family: 'Fira Sans Medium';
+		}
 	}
 }
 // блок с акцией
@@ -2210,4 +2244,77 @@ div.vote-hover {
 }
 div.vote-wrap {
     overflow: hidden;
+}
+
+// страница прайса
+.price-table {
+	&__wrap-block {
+		overflow-x: auto;
+		margin-bottom: 30px;
+	}
+	&__table {
+		width: 100%;
+		thead {
+			background: #9199a4;
+			th {
+				color: #fff;
+				font-size: 16px;
+				font-family: 'Fira Sans Regular';
+				padding: 13px 0;
+				font-weight: normal;
+				text-align: left;
+				&:first-child {
+					padding-left: 40px;
+					width: 70%;
+				}
+			}
+		}
+		tbody {
+			background: #ececed;
+			td {
+				padding: 13px 0;
+				font-size: 16px;
+				&:first-child {
+					color: #2f3948;
+					font-family: 'Fira Sans Light';
+					padding-left: 40px;
+					width: 70%;
+					vertical-align: bottom;
+				}
+				&:last-child {
+					width: 12%;
+					vertical-align: bottom;
+				}
+			}
+		}
+	}
+	&__table-current-price {
+		font-size: 18px;
+		display: inline-block;
+		margin: 0 0 0 0;
+		color: #000;
+	}
+	&__table-old-price {
+		position: relative;
+		top: -5px;
+		margin: 0 0 0 10px;
+		display: inline-block;
+		font-size: 16px;
+		color: #2f3948;
+		font-family: 'Fira Sans Light';
+		&:before {
+			content: '';
+			position: absolute;
+			background: #f20;
+			width: 100%;
+			height: 1px;
+			top: 13px;
+			left: 0;
+			-moz-transform: rotate(-12deg);
+			-webkit-transform: rotate(-12deg);
+			-o-transform: rotate(-12deg);
+			-ms-transform: rotate(-12deg);
+			transform: rotate(-12deg);
+		}
+	}
 }
